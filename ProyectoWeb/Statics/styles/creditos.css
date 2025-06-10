@@ -1,6 +1,6 @@
 body 
 {
-  background-color: rgb(36, 33, 29);
+  background-color: rgb(61, 67, 177);
 }
 h1 {
   color: white;
@@ -14,5 +14,20 @@ p
 ul   {
     color: white;
     text-align: center;
+}
+.Creditos{
+  text-decoration: underline;
+  font-family: fantasy;
+  font-size: 40px;
+  color: rgb(182, 82, 25);
+}
+#Curso{
+    font-family: cursive;
+    color:rgb(167, 145, 49) ;
+}
+.nombres{
+  text-decoration: underline;
+  font-size: 20px;
+  font-family:cursive;
 }
 
