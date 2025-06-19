@@ -1,0 +1,114 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.blur{
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.286);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    transition: transform 1s;
+    transform: scale(1);
+}
+.blur:hover{
+    transform: scale(1.05);
+}
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/22/16/02/black-and-white-4569096_1280.jpg');
+}
+#contenedor_del_contenedor_form_signup{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height:100vh;
+    width:100vw;
+}
+#contenedor_signup
+{
+    background-color: rgba(255, 255, 255, 0.286);
+    margin: 5vh 5vw;
+}
+#signup
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4vh 15vw 4vh 15vw;
+    gap: 16px;
+    color:rgba(255, 255, 255, 0.904);
+}
+#encabezado_signup{
+    cursor:none;
+    transition-duration: 0.3s;
+    margin-bottom: 0%;
+}
+#encabezado_signup:hover{
+    text-shadow: 0px 0px 16px rgba(255, 255, 255, 0.618);
+}
+.img{
+    width: 100px;
+    height: auto;
+}
+#divdatosIngreso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: fit-content;
+}
+#contenedor_usuario{
+    display: flexbox;
+    justify-content: space-evenly;
+}
+#usuario{
+    width: 100%;
+}
+input{
+    background-color: #5a5a5ab6;
+    color:white;
+    border:1px solid #cacacab6;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+input::placeholder{
+    color: rgba(255, 255, 255, 0.67);
+    text-align: center;
+}
+input:hover, input:focus{
+    background-color: #202020;
+    color: rgb(235,235,235)
+}
+@keyframes desvanecido { /*Es la animacion de cuando la contraseña aparece*/
+    from {
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#contraseña{
+    width: 100%;
+}
+.animar-aparicion{
+    animation: desvanecido 0.5s ease;
+}
+/*input[type='submit']
+{
+    background-color: transparent;
+    color:rgb(255, 255, 255);
+    border:1px solid #c5c5c5;
+    box-shadow: 0 0 4px 0px #ffffff;
+    text-shadow: 0 0 4px 8px #ffffff
+}
+input[type='submit']:hover, input[type='submit']:active, input[type='submit']:focus{
+    background-color: #202020;
+    font-size: 15px;
+    border: none;
+    box-shadow: 0 0 4px #20202042;
+}*/
+
+
+
