@@ -118,15 +118,54 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     border: none;
     box-shadow: 0 0 4px #20202042;
 }*/
-#div-pestañas
+#interfaz{
+    display: flex;
+}
+#aside-pestañas
 {
+    display: flex;
     background-color: #303030;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 28vw;
+    height: 100vh;
+    gap: 20px;
+    color: white;
+
 }
 #div_area_home
 {
     display: flex;
     flex-direction: column;
+    width: 100%;
     background-color: #202020;   
+}
+#buscador_sec{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    height: 5vh;
+}
+.recomendado
+{
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+}
+.recomendado_title
+{
+    color: white;
+}
+.horizontal_recom{
+    display: flex;
+    flex: row wrap;
+}
+#Shuffle{
+
+}
+#artistas_recomendados{
+    color: aliceblue;
 }
 
 

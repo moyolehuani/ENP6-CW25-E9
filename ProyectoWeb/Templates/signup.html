@@ -21,11 +21,50 @@
             </form>
         </div>
     </div--->
-    <aside id="aside-pestañas">
-        <div id="cont_home">l</div>
-        <div id="cont_biblioteca">m</div>
-        <div id="cont_playlist">h</div>
-    </aside>
+    <section id="interfaz">
+        <aside id="aside-pestañas">
+            <div id="cont_home">l</div>
+            <div id="cont_biblioteca">m</div>
+            <div id="cont_playlist">h</div>
+        </aside>
+    <section id="div_area_home">
+        <nav id="buscador_sec">
+            <form id="buscador_form">
+                <label for="buscador">
+                    <input type="text" id="buscador_input" name="buscador">
+                </label>
+            </form>
+        </nav>
+        <!-- Sección de recomendaciones -->
+         <!--Artistas recomendados-->
+        <article id="cont_art_recom" class="recomendado">
+            <p id="art_recom_title" class="recomendado_title">
+                Artistas recomendados
+            </p>
+            <div id="btn_y_artistas" class="horizontal_recom">
+                <button id="Shuffle_art" class="shuffle_button">Shuffle</button>
+                <article id="artistas_recomendados">
+                </article>
+            </div>
+        </article>
+        <!--Álbumes recomendados-->
+        <article id="cont_album_recom" class="recomendado">
+            <p id="album_recom_title" class="recomendado_title">
+                Álbumes recomendados
+            </p>
+            <div id="btn_y_albumes" class="horizontal_recom">
+                <button id="Shuffle_album" class="shuffle_button">Shuffle</button>
+                <article id="albumes_recomendados">
+                </article>
+            </div>
+        </article>
+        <!--Reproduciendo-->
+        <article id="cont_reproduciendo" class="recomendado">
+
+        </article>
+    </section>
+    </section>
+    
     <script src="../Dynamics/js/signup.js"></script>
 </body>
 </html>
