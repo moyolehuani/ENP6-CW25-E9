@@ -18,7 +18,6 @@
 }
 body {
      
-
 }
 #contenedor_del_contenedor_form_signup{
      background-image: url('https://cdn.pixabay.com/photo/2019/10/22/16/02/black-and-white-4569096_1280.jpg');
@@ -122,6 +121,12 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
 #div-pestañas
 {
     background-color: #303030;
+}
+#div_area_home
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #202020;   
 }
 
 
