@@ -108,12 +108,12 @@ input:hover, input:focus{
 .animar-aparicion{
     animation: desvanecido 0.5s ease;
 }
-/*input[type='submit']
+input[type='submit']
 {
     background-color: transparent;
     color:rgb(255, 255, 255);
     border:1px solid #c5c5c5;
-    box-shadow: 0 0 4px 0px #ffffff;
+    box-shadow: 0 0 1px 0px #ffffff;
     text-shadow: 0 0 4px 8px #ffffff
 }
 input[type='submit']:hover, input[type='submit']:active, input[type='submit']:focus{
@@ -121,7 +121,7 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     font-size: 15px;
     border: none;
     box-shadow: 0 0 4px #20202042;
-}*/
+}
 #interfaz{
     display: flex;
 }

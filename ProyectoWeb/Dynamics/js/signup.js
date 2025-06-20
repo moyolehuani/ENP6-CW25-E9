@@ -4,6 +4,8 @@ let input_usuario= document.getElementById("usuario");
 let boton_ingreso= document.getElementById("botonIngreso");
 let contraseña= document.getElementById("contraseña");
 let submit_login= document.getElementById("btn_ingresar");
+let interfaz= document.getElementById("interfaz");
+let display_signup= document.getElementById("contenedor_del_contenedor_form_signup");
 input_usuario.addEventListener('keydown', e => {
     if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
     {
@@ -25,5 +27,17 @@ input_usuario.addEventListener('keydown', e => {
             e.preventDefault();
             contraseña.focus();
         }
+    }
+});
+submit_login.addEventListener('click', e => {
+    e.preventDefault();
+    if(input_usuario.value === "" || contraseña.value === "")
+    {
+        alert("Por favor, complete todos los campos.");
+    }
+    else
+    {
+        interfaz.style.display = "flex";
+        display_signup.style.display = "none";
     }
 });
