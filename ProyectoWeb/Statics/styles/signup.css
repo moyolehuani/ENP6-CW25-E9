@@ -16,6 +16,9 @@
 .blur:hover{
     transform: scale(1.05);
 }
+.oculto{
+    display: none;
+}
 body {
      
 }
@@ -63,6 +66,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: fit-content;
 }
 #contenedor_usuario{

@@ -1,27 +1,21 @@
-formulario_signup= document.getElementById("signup");
-div_signup= document.getElementById("divdatosIngreso");
-input_usuario= document.getElementById("usuario");
-boton_ingreso= document.getElementById("botonIngreso") 
+let formulario_signup= document.getElementById("signup");
+let div_signup= document.getElementById("divdatosIngreso");
+let input_usuario= document.getElementById("usuario");
+let boton_ingreso= document.getElementById("botonIngreso");
+let contraseña= document.getElementById("contraseña");
+let submit_login= document.getElementById("btn_ingresar");
 input_usuario.addEventListener('keydown', e => {
-    if( (e.key === 'Enter') && !document.getElementById('contraseña'))
+    if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
     {
         e.preventDefault();
-        let contraseña= document.createElement("input");
-        let submit_login= document.createElement("input");
-        contraseña.type = "password";
-        submit_login.type= "submit";
-        contraseña.id = "contraseña";
-        submit_login.id="botonIngreso";
-        contraseña.placeholder = "password";
-        contraseña.required=true;
-        contraseña.style.display = "block"; 
-        submit_login.style.direction= "block";
-        contraseña.style.marginTop= '10px';
-        submit_login.style.marginTop= '10px';
+        contraseña.classList.remove("oculto");
+        contraseña.style.display = "block";
+        submit_login.classList.remove("oculto");
+        submit_login.style.display = "block";
+        contraseña.style.marginTop = "10px";
+        submit_login.style.marginTop = "10px";
         contraseña.classList.add("animar-aparicion");
         submit_login.classList.add("animar-aparicion");
-        div_signup.appendChild(contraseña);
-        div_signup.appendChild(submit_login);
         contraseña.focus();
     }
     else
@@ -29,7 +23,6 @@ input_usuario.addEventListener('keydown', e => {
         if(e.key === 'Enter')
         {
             e.preventDefault();
-            let contraseña= document.createElement("input");
             contraseña.focus();
         }
     }
