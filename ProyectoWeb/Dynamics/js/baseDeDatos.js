@@ -289,7 +289,13 @@ let busqueda=document.getElementById("canciones");
 let pi=document.getElementById("p");
 let p;
 busqueda.addEventListener("input",function(event){
+    event.preventDefault();
     pi.innerHTML="";
+    let siVacio = busqueda.value.trim();
+    if (siVacio === "")
+    {
+        return;
+    }
     for(let i=0;i<baseDatosJSON.canciones.length;i++)
     {
         let texto=busqueda.value;
