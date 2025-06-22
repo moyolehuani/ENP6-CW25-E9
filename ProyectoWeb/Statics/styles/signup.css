@@ -130,31 +130,70 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
 }
 #aside-pestañas
 {
+    /*position: relative;*/
     display: flex;
-    background-color: #303030;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 28vw;
-    height: 100vh;
-    gap: 20px;
+    background-color: #303030;
     color: white;
 }
-#aside_form
+.icon-select
 {
+    position: relative;
     display: flex;
+    width: 28vw;
+    height: 100vh;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    gap: 20px;
+    justify-content: space-evenly;
+    padding: none;
+    margin: none;
+    z-index: 0;
 }
+.animacion_icono{
+    display: none;
+}
+.icono_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icon{
+    fill: #ffffff88;
+    border: none;
+    margin: none;
+    padding: none;
+}
+.icon path{
+    transition: all .3s ease-in-out;
+}
+.indicator{
+    position: absolute;
+    background-color: #221f1fbf;
+    width: 100%;
+    height: 33%;
+    top: 0;
+    border-radius: 0;
+    border: 1px solid #0303031c;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+input[class='animacion-icono']:checked + label .icon{
+    transition: all .3s ease-in-out;
+}
+input[class='animacion-icono']:checked + label .icon path{
+    fill: #cfd6ff;
+    z-index: 1;
+}
+
 #div_area_home
 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100vh;
     background-color: #202020;   
 }
 #buscador_sec{
@@ -167,7 +206,7 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
 {
     display: flex;
     flex-direction: column;
-    height: 40vh;
+    height: 25vh;
 }
 .recomendado_title
 {
