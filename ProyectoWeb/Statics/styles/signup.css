@@ -4,22 +4,38 @@
     padding: 0;
 }
 /*Estilos*/
+.crezca{
+    transition: transform 1s;
+    transform: scale(1);
+}
+.crezca:hover{
+    transform: scale(1.05);
+}
+.glow{
+    transition: filter 0.6s;
+}
+.glow:hover{
+    filter:drop-shadow(0px 0px 6px #ffffffe3)
+}
+.glow_crezca{
+    transition: transform 1s, filter 0.6s;
+}
+.glow_crezca:hover{
+    transform: scale(1.2);
+    filter:drop-shadow(0px 0px 6px #ffffffe3)
+}
+.oculto{
+    display: none;
+}
 .blur{
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.286);
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    transition: transform 1s;
-    transform: scale(1);
-}
-.blur:hover{
-    transform: scale(1.05);
-}
-.oculto{
-    display: none;
+    
 }
 body {
-     
+    background-color: #202020; 
 }
 /*Display de sign up*/
 #contenedor_del_contenedor_form_signup{
@@ -130,13 +146,12 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
 }
 #aside-pestañas
 {
-    /*position: relative;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     background-color: #303030;
-    color: white;
+    max-width: 140px;
 }
 .icon-select
 {
@@ -166,9 +181,6 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     margin: none;
     padding: none;
 }
-.icon path{
-    transition: all .3s ease-in-out;
-}
 .indicator{
     position: absolute;
     background-color: #221f1fbf;
@@ -177,35 +189,66 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     top: 0;
     border-radius: 0;
     border: 1px solid #0303031c;
-    z-index: -1;
     transition: all .3s ease-in-out;
+    z-index: -1; /*Para que el indicador este detras del icon*/
 }
-input[class='animacion-icono']:checked + label .icon{
-    transition: all .3s ease-in-out;
-}
-input[class='animacion-icono']:checked + label .icon path{
-    fill: #cfd6ff;
-    z-index: 1;
-}
-
 #div_area_home
 {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
     background-color: #202020;   
 }
-#buscador_sec{
+#buscador_sec {
+    position: fixed;
+    right: 0;
+    top: 12px;
+    width: 180px;
+    max-width: 80vh;
+    height: 3.5vh;
+    background: #5a5a5ab6;
+    border-radius: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
-    height: 5vh;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: width 1s cubic-bezier(.4,1.5,.6,1), height 0.4s cubic-bezier(.4,1,.6,1), transform 1s;
+    z-index: 10;
+    padding: 0 10px;
+    overflow: hidden;
+    margin-right: 5px;
+}
+#buscador_sec:focus-within, #buscador_sec.expandido {
+    padding:1%;
+    border: none;
+    width: 65vw;
+    height: 60vh;
+}
+#buscador_input {
+    position: absolute;
+    width: 95%;
+    height: 28px;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 1em;
+    margin-bottom: 0;
+    z-index: 2;
+    margin: none;
+    padding: none;
+    border: none;
+}
+#cont_art_recom{
+    margin-top: 10vh;
 }
 .recomendado
 {
     display: flex;
     flex-direction: column;
+    margin-left: 3vw;
     height: 25vh;
 }
 .recomendado_title
@@ -216,8 +259,38 @@ input[class='animacion-icono']:checked + label .icon path{
     display: flex;
     flex: row wrap;
 }
-#Shuffle{
-
+.cont_reproduciendo{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reproductor{
+    display: flex;
+    flex: row wrap;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    width: 80%;
+    height: 90%;
+    max-width: 480px;
+    max-height: fit-content;
+    background-color: #b0afaf1c;
+    border-radius: 12px;
+}
+.rep_button{
+    background-color: transparent;
+    border: none;
+}
+.icon_reproductor{
+    stroke:#c5c5c5;
+}
+#icon_reproduciendo_regresar{
+    fill: #c5c5c5;
 }
 #artistas_recomendados{
     color: aliceblue;
