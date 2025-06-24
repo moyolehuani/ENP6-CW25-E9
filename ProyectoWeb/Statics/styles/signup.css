@@ -245,16 +245,18 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     margin-top: 16px;
     width: 100%;
 }
-#contenedor_resultados p {
+.estilo_por_resultado
+{
     background: #303030b0;
     color: #fff;
     padding: 8px 12px;
+    border: none;
     border-radius: 8px;
     margin: 0;
     cursor: pointer;
     transition-duration: 0.5s;
 }
-#contenedor_resultados p:hover {
+.estilo_por_resultado p:hover {
     background: #505050;
 }
 .cont_reproduciendo{
