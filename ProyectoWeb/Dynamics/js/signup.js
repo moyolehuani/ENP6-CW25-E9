@@ -6,6 +6,10 @@ let contraseña= document.getElementById("contraseña");
 let submit_login= document.getElementById("btn_ingresar");
 let interfaz= document.getElementById("interfaz");
 let display_signup= document.getElementById("contenedor_del_contenedor_form_signup");
+let contenedor_playlist=document.getElementById("playlist_contenedor");
+let playlist_input=document.getElementById("Playlist_input");
+let recomendaciones=document.getElementById("recomendados");
+let menu_input=document.getElementById("menu_input");
 input_usuario.addEventListener('keydown', e => {
     if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
     {
@@ -63,4 +67,12 @@ Op.forEach((oP, index) => {
     oP.addEventListener('change', () => {
         moverIndicator(index);
     });
+});
+playlist_input.addEventListener("input", ()=>{
+    recomendaciones.style.display = "none";
+    contenedor_playlist.style.display="flex";
+});
+menu_input.addEventListener("input", ()=>{
+    contenedor_playlist.style.display="none";
+    recomendaciones.style.display="block";
 });

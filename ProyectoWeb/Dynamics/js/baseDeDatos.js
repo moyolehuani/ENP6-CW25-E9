@@ -288,8 +288,9 @@ const baseDatosJSON = {
 let busqueda=document.getElementById("buscador_input"); /*input buscador*/
 let pi=document.getElementById("contenedor_resultados"); /*Div que va a contener la busqueda */
 let buscador_form= document.getElementById("buscador_form");
-let p;
-buscador_form.addEventListener("submit", function(e){
+let formato_resultado;
+buscador_form.addEventListener("submit", function(e)
+{ //se le hace prevent para evitar que se recargue la pagina 
   e.preventDefault();
 })
 busqueda.addEventListener("input",function(event){
@@ -305,13 +306,15 @@ busqueda.addEventListener("input",function(event){
         let texto=busqueda.value;
         if(baseDatosJSON.canciones[i].nombre.includes(texto))
         {
-            p=document.createElement("p");
-            p.textContent=baseDatosJSON.canciones[i].nombre;
-            pi.appendChild(p); 
+            formato_resultado=document.createElement("button");
+            formato_resultado.classList.add("estilo_por_resultado");
+            formato_resultado.textContent=baseDatosJSON.canciones[i].nombre;
+            pi.appendChild(formato_resultado); 
         }
     }
     if (pi.children.length === 0) {
         let sinCoincidencias = document.createElement("p");
+        sinCoincidencias.classList.add("estilo_por_resultado");
         sinCoincidencias.textContent = "Sin coincidencias";
         pi.appendChild(sinCoincidencias);
     }
