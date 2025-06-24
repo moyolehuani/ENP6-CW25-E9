@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="../Statics/Styles/signup.css" rel="stylesheet">
-    <title>Sign-up</title>
+    <title>Menu</title>
 </head>
 
 <body>
@@ -65,10 +65,12 @@
         <section id="div_area_home">
             <!--busqueda-->
             <nav id="buscador_sec" class="oculto blur">
-                <form id="buscador_form">
-                <input type="text" id="buscador_input" name="buscador" placeholder="search">
-                <label for="buscador"></label>
-            </form>
+                <form id="buscador_form" onsubmit="return false;">
+                    <input type="text" id="buscador_input" name="buscador" placeholder="search">
+                    <label for="buscador"></label>
+                </form>
+                <div id="contenedor_resultados">
+                </div>
             </nav>
             <!--Reproduciendo-->
             <article id="cont_reproduciendo" class="cont_reproduciendo oculto">
@@ -136,4 +138,5 @@
     </section>
 </body>
 <script src="../Dynamics/js/menu.js"></script>
+<script src="../Dynamics/js/baseDeDatos.js"></script>
 </html>
