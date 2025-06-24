@@ -256,7 +256,7 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     cursor: pointer;
     transition-duration: 0.5s;
 }
-.estilo_por_resultado p:hover {
+.estilo_por_resultado:hover p:hover {
     background: #505050;
 }
 .cont_reproduciendo{
