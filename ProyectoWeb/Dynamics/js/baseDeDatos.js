@@ -285,9 +285,13 @@ const baseDatosJSON = {
   ]
 };
 //console.log(baseDatosJSON.canciones[0].nombre);
-let busqueda=document.getElementById("canciones");
-let pi=document.getElementById("p");
+let busqueda=document.getElementById("buscador_input"); /*input buscador*/
+let pi=document.getElementById("contenedor_resultados"); /*Div que va a contener la busqueda */
+let buscador_form= document.getElementById("buscador_form");
 let p;
+buscador_form.addEventListener("submit", function(e){
+  e.preventDefault();
+})
 busqueda.addEventListener("input",function(event){
     event.preventDefault();
     pi.innerHTML="";
