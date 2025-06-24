@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="../Statics/Styles/signup.css" rel="stylesheet">
-    <title>Sing-up</title>
+    <title>Sign-up</title>
 </head>
 
 <body>
-    <!---div id="contenedor_del_contenedor_form_signup">
+    <!--div id="contenedor_del_contenedor_form_signup">
         <main id="contenedor_signup" class="blur">
             <form id="signup">
                 <header id="encabezado_signup">Inicio de sesión</header>
@@ -23,6 +23,8 @@
             </form>
         </div>
     </div--->
+
+    <!-- Interfaz de usuario -->
     <section id="interfaz" >
         <aside id="aside-pestañas">
             <form id="aside_form">
@@ -62,12 +64,50 @@
         <!--Display que tiiene la barra de home, biblio, playlist, search-->
         <section id="div_area_home">
             <!--busqueda-->
-            <nav id="buscador_sec" class="blur">
+            <nav id="buscador_sec" class="oculto blur">
                 <form id="buscador_form">
-                    <input type="text" id="buscador_input" name="buscador" placeholder="search">
-                    <label for="buscador"></label>
-                </form>
+                <input type="text" id="buscador_input" name="buscador" placeholder="search">
+                <label for="buscador"></label>
+            </form>
             </nav>
+            <!--Reproduciendo-->
+            <article id="cont_reproduciendo" class="cont_reproduciendo oculto">
+                <div id="reproductor" class="reproductor blur crezca">
+                    <button id="btn_reproduciendo_shuffle" class="rep_button glow">
+                    <svg width="25px" height="25px" viewBox="0 0 24 24" class="icon_reproductor" fill="none">
+                            <path d="M18 4L21 7M21 7L18 10M21 7H17C16.0707 7 15.606 7 15.2196 7.07686C13.6329 7.39249 12.3925 8.63288 12.0769 10.2196C12 10.606 12 11.0707 12 12C12 12.9293 12 13.394 11.9231 13.7804C11.6075 15.3671 10.3671 16.6075 8.78036 16.9231C8.39397 17 7.92931 17 7 17H3M18 20L21 17M21 17L18 14M21 17H17C16.0707 17 15.606 17 15.2196 16.9231C15.1457 16.9084 15.0724 16.8917 15 16.873M3 7H7C7.92931 7 8.39397 7 8.78036 7.07686C8.85435 7.09158 8.92758 7.1083 9 7.12698"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button> 
+                    <!--Este es un div para que next play y back esten como en un contenedor-->
+                    <div id="reproduciendo_back_next_play_stop" class="blur">
+                        <button id="btn_reproduciendo_regresar" class="rep_button glow">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24" id="icon_reproduciendo_regresar" class="icon_reproductor icon_reproduciendo_fill">
+                                <path d="M20.2409 7.21957V16.7896C20.2409 18.7496 18.1109 19.9796 16.4109 18.9996L12.2609 16.6096L8.11094 14.2096C6.41094 13.2296 6.41094 10.7796 8.11094 9.79957L12.2609 7.39957L16.4109 5.00957C18.1109 4.02957 20.2409 5.24957 20.2409 7.21957Z"/>
+                                <path d="M3.76172 18.9303C3.35172 18.9303 3.01172 18.5903 3.01172 18.1803V5.82031C3.01172 5.41031 3.35172 5.07031 3.76172 5.07031C4.17172 5.07031 4.51172 5.41031 4.51172 5.82031V18.1803C4.51172 18.5903 4.17172 18.9303 3.76172 18.9303Z"/>
+                            </svg>
+                        </button>
+                        <button id="btn_reproduciendo_play" class="rep_button glow_crezca ">
+                            <svg  class="icon_reproductor icon_reproduciendo_fill" width="25px" height="25px" viewBox="-3 0 28 28" version="1.1">
+                                    <defs>
+                                    </defs>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd" sketch:type="MSPage">
+                                        <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-419.000000, -571.000000)">
+                                            <path d="M440.415,583.554 L421.418,571.311 C420.291,570.704 419,570.767 419,572.946 L419,597.054 C419,599.046 420.385,599.36 421.418,598.689 L440.415,586.446 C441.197,585.647 441.197,584.353 440.415,583.554" id="play" sketch:type="MSShapeGroup">
+                                            </path>
+                                        </g>
+                                    </g>
+                            </svg>
+                        </button>
+                        <button id="btn_reproduciendo_siguiente" class="rep_button glow">
+                            <svg width="25px" height="25px" viewBox="0 0 24 24" id="icon_reproduciendo_regresar" class="icon_reproductor icon_reproduciendo_fill">
+                                <path d="M3.76172 7.21957V16.7896C3.76172 18.7496 5.89172 19.9796 7.59172 18.9996L11.7417 16.6096L15.8917 14.2096C17.5917 13.2296 17.5917 10.7796 15.8917 9.79957L11.7417 7.39957L7.59172 5.00957C5.89172 4.02957 3.76172 5.24957 3.76172 7.21957Z"/>
+                                <path d="M20.2383 18.9303C19.8283 18.9303 19.4883 18.5903 19.4883 18.1803V5.82031C19.4883 5.41031 19.8283 5.07031 20.2383 5.07031C20.6483 5.07031 20.9883 5.41031 20.9883 5.82031V18.1803C20.9883 18.5903 20.6583 18.9303 20.2383 18.9303Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                </div>
+            </article>
             <!-- Sección de recomendaciones -->
             <!--Artistas recomendados-->
             <article id="cont_art_recom" class="recomendado">
@@ -91,23 +131,8 @@
                     </article>
                 </div>
             </article>
-            <!--Reproduciendo-->
         </section>
-        <article id="cont_reproduciendo" class="cont_reproduciendo">
-            <div id="reproductor" class="reproductor blur crezca">
-                <button id="btn_reproduciendo_shuffle" class="rep_button glow">
-                   <svg width="25px" height="25px" viewBox="0 0 24 24" class="icon_reproductor" fill="none">
-                           <path d="M18 4L21 7M21 7L18 10M21 7H17C16.0707 7 15.606 7 15.2196 7.07686C13.6329 7.39249 12.3925 8.63288 12.0769 10.2196C12 10.606 12 11.0707 12 12C12 12.9293 12 13.394 11.9231 13.7804C11.6075 15.3671 10.3671 16.6075 8.78036 16.9231C8.39397 17 7.92931 17 7 17H3M18 20L21 17M21 17L18 14M21 17H17C16.0707 17 15.606 17 15.2196 16.9231C15.1457 16.9084 15.0724 16.8917 15 16.873M3 7H7C7.92931 7 8.39397 7 8.78036 7.07686C8.85435 7.09158 8.92758 7.1083 9 7.12698"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <button id="btn_reproduciendo_regresar" class="rep_button glow">
-                    <svg width="25px" height="25px" viewBox="0 0 24 24" id="icon_reproduciendo_regresar" class="icon_reproductor">
-                        <path d="M20.2409 7.21957V16.7896C20.2409 18.7496 18.1109 19.9796 16.4109 18.9996L12.2609 16.6096L8.11094 14.2096C6.41094 13.2296 6.41094 10.7796 8.11094 9.79957L12.2609 7.39957L16.4109 5.00957C18.1109 4.02957 20.2409 5.24957 20.2409 7.21957Z"/>
-                        <path d="M3.76172 18.9303C3.35172 18.9303 3.01172 18.5903 3.01172 18.1803V5.82031C3.01172 5.41031 3.35172 5.07031 3.76172 5.07031C4.17172 5.07031 4.51172 5.41031 4.51172 5.82031V18.1803C4.51172 18.5903 4.17172 18.9303 3.76172 18.9303Z"/>
-                    </svg>
-                </button>
-            </div>
-        </article>
+        
     </section>
 </body>
 <script src="../Dynamics/js/menu.js"></script>

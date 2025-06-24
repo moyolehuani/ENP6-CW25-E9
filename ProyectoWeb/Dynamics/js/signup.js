@@ -29,6 +29,11 @@ input_usuario.addEventListener('keydown', e => {
         }
     }
 });
+
+//Proceso de login
+buscador_sec= document.getElementById("buscador_sec"); //estas no se pueden ocultar (position:fixed), so se tienen que ocultar una por una
+cont_reproduciendo= document.getElementById("cont_reproduciendo");
+
 submit_login.addEventListener('click', e => {
     e.preventDefault();
     if(input_usuario.value === "" || contraseña.value === "")
@@ -37,8 +42,12 @@ submit_login.addEventListener('click', e => {
     }
     else
     {
-        interfaz.style.display = "flex";
+        //esconder la interfaz del login
         display_signup.style.display = "none";
+        //Para que aparezca ahora el display de home
+        cont_reproduciendo.style.display="flex";
+        buscador_sec.style.display="flex";
+        interfaz.style.display = "flex";
     }
 });
 const Op = document.querySelectorAll(".animacion_icono");

@@ -210,7 +210,6 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     height: 3.5vh;
     background: #5a5a5ab6;
     border-radius: 20px;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -218,7 +217,7 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     z-index: 10;
     padding: 0 10px;
     overflow: hidden;
-    margin-right: 5px;
+    margin-right: 2vw;
 }
 #buscador_sec:focus-within, #buscador_sec.expandido {
     padding:1%;
@@ -241,6 +240,51 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     padding: none;
     border: none;
 }
+.cont_reproduciendo{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reproductor{
+    display: flex;
+    flex: row wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 80%;
+    height: 90%;
+    max-width: 480px;
+    max-height: fit-content;
+    background-color: #b0afaf27;
+    border-radius: 12px;
+}
+.rep_button{
+    background-color: transparent;
+    border: none;
+}
+.icon_reproductor{
+    stroke:#c5c5c5;
+}
+.icon_reproduciendo_fill{
+    fill: #c5c5c5;
+}
+#reproduciendo_back_next_play_stop{
+    transform: scale(0.75);
+    display: flex;
+    flex: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.5vh;
+    width: 30%;
+    border: none;
+    padding: 0.2vh 2vh;
+    background-color: #202020b8;
+}
 #cont_art_recom{
     margin-top: 10vh;
 }
@@ -258,39 +302,6 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
 .horizontal_recom{
     display: flex;
     flex: row wrap;
-}
-.cont_reproduciendo{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 10vh;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.reproductor{
-    display: flex;
-    flex: row wrap;
-    margin-bottom: 20px;
-    justify-content: space-around;
-    width: 80%;
-    height: 90%;
-    max-width: 480px;
-    max-height: fit-content;
-    background-color: #b0afaf1c;
-    border-radius: 12px;
-}
-.rep_button{
-    background-color: transparent;
-    border: none;
-}
-.icon_reproductor{
-    stroke:#c5c5c5;
-}
-#icon_reproduciendo_regresar{
-    fill: #c5c5c5;
 }
 #artistas_recomendados{
     color: aliceblue;

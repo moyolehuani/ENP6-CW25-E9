@@ -12,3 +12,9 @@ Op.forEach((oP, index) => {
         moverIndicator(index);
     });
 });
+//Proceso de login
+buscador_sec= document.getElementById("buscador_sec"); //estas no se pueden ocultar (position:fixed), so se tienen que ocultar una por una
+cont_reproduciendo= document.getElementById("cont_reproduciendo");
+buscador_sec.style.display="flex";
+interfaz.style.display = "flex";
+cont_reproduciendo.style.display="flex";
