@@ -308,13 +308,20 @@ busqueda.addEventListener("input",function(event){
         {
             formato_resultado=document.createElement("button");
             formato_resultado.classList.add("estilo_por_resultado");
+            formato_resultado.id = "cancion_" + baseDatosJSON.canciones[i].nombre;
             formato_resultado.textContent=baseDatosJSON.canciones[i].nombre;
             pi.appendChild(formato_resultado); 
         }
     }
+    let butones = pi.querySelectorAll("button.estilo_por_resultado");
+    butones.forEach(boton => {
+        boton.addEventListener("click", ()=>{
+           console.log("Hola");
+        });
+    });
+    
     if (pi.children.length === 0) {
         let sinCoincidencias = document.createElement("p");
-        sinCoincidencias.classList.add("estilo_por_resultado");
         sinCoincidencias.textContent = "Sin coincidencias";
         pi.appendChild(sinCoincidencias);
     }
