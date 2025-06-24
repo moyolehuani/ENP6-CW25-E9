@@ -8,7 +8,7 @@
 
 <body>
     <div id="contenedor_del_contenedor_form_signup">
-        <main id="contenedor_signup" class="blur">
+        <main id="contenedor_signup" class="blur gris_trans .formato_signup">
             <form id="signup">
                 <header id="encabezado_signup">Inicio de sesión</header>
                 <img class="img" src="https://cdn-icons-png.flaticon.com/512/6492/6492359.png"> 
@@ -17,14 +17,29 @@
                         <label for="usuario"></label>
                         <input type="text" id="usuario" name="usuario" placeholder="example.com or user" required>
                     </div>
-                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" class="oculto" required>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" class="btn oculto" required>
                         <input type="submit" id="btn_ingresar" value="Ingresar" class="oculto">
                 </div>
             </form>
-        </div>
+            <button id="btn_registarte" class="btn">Registrase</button>
+        </main>
+        <main id="contenedor_registarse" class="blur oculto gris_trans ">
+            <form id="registrarse_form" class="formato_signup">
+                <header id="encabezado_registrarse">Registrarse</header>
+                <img class="img" src="https://cdn-icons-png.flaticon.com/512/6492/6492359.png"> 
+                <div id="divdatosIngreso" class="horizontal">
+                    <div id="contendor_usuario">
+                        <label for="usuario_nuevo"></label>
+                        <input type="text" id="usuario_nuevo" name="usuario" placeholder="example.com or user" required style="margin-bottom:10px ;">
+                    </div>
+                    <input type="password" id="contraseña_del usuario nuevo" name="contraseña" placeholder="Contraseña" class="btn" required style="margin-bottom:10px">
+                        <input type="submit" id="btn_registar" value="Login" class="btn">
+                </div>
+            </form>
+        </main>
     </div>
     <!-- Interfaz de usuario -->
-    <section id="interfaz" >
+    <section id="interfaz" class="oculto" >
         <aside id="aside-pestañas">
             <form id="aside_form">
                 <div class="icon-select">
@@ -108,40 +123,32 @@
                     
                 </div>
             </article>
-            <!--Seccion de las playlist-->
-            <div id="playlist_contenedor" class="oculto">
-                <div id="titulo_playlist">Tus playlist</div>
-            </div>
             <!-- Sección de recomendaciones -->
-             <div id="recomendados">
-                <!--Artistas recomendados-->
-                <article id="cont_art_recom" class="recomendado">
-                    <p id="art_recom_title" class="recomendado_title">
-                        Artistas recomendados
-                    </p>
-                    <div id="btn_y_artistas" class="horizontal_recom">
-                        <button id="Shuffle_art" class="shuffle_button">Shuffle</button>
-                        <article id="artistas_recomendados">
-                        </article>
-                    </div>
-                </article>
-                <!--Álbumes recomendados-->
-                <article id="cont_album_recom" class="recomendado">
-                    <p id="album_recom_title" class="recomendado_title">
-                        Álbumes recomendados
-                    </p>
-                    <div id="btn_y_albumes" class="horizontal_recom">
-                        <button id="Shuffle_album" class="shuffle_button">Shuffle</button>
-                        <article id="albumes_recomendados">
-                        </article>
-                    </div>
-                </article>
-             </div>
-        </section>
-        
+            <!--Artistas recomendados-->
+            <article id="cont_art_recom" class="recomendado">
+                <p id="art_recom_title" class="recomendado_title">
+                    Artistas recomendados
+                </p>
+                <div id="btn_y_artistas" class="horizontal_recom">
+                    <button id="Shuffle_art" class="shuffle_button">Shuffle</button>
+                    <article id="artistas_recomendados">
+                    </article>
+                </div>
+            </article>
+            <!--Álbumes recomendados-->
+            <article id="cont_album_recom" class="recomendado">
+                <p id="album_recom_title" class="recomendado_title">
+                    Álbumes recomendados
+                </p>
+                <div id="btn_y_albumes" class="horizontal_recom">
+                    <button id="Shuffle_album" class="shuffle_button">Shuffle</button>
+                    <article id="albumes_recomendados">
+                    </article>
+                </div>
+            </article>
+        </section>     
     </section>
 </body>
 <script src="../Dynamics/js/signup.js"></script>
 <script src="../Dynamics/js/baseDeDatos.js"></script>
- 
 </html>

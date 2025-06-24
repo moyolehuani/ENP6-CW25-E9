@@ -6,10 +6,21 @@ let contraseña= document.getElementById("contraseña");
 let submit_login= document.getElementById("btn_ingresar");
 let interfaz= document.getElementById("interfaz");
 let display_signup= document.getElementById("contenedor_del_contenedor_form_signup");
+let contenedor_signup= document.getElementById("contenedor_signup");
 let contenedor_playlist=document.getElementById("playlist_contenedor");
 let playlist_input=document.getElementById("Playlist_input");
 let recomendaciones=document.getElementById("recomendados");
 let menu_input=document.getElementById("menu_input");
+let btn_registrarse= document.getElementById("btn_registarte");
+let contenedor_registarse= document.getElementById("contenedor_registarse");
+/*------Crear cuentas
+*/
+btn_registrarse.addEventListener("click", e =>{
+    contenedor_signup.style.display="none";
+    contenedor_registarse.style.display="block";
+    contenedor_registarse.classList.add("animar-aparicion");
+
+});
 input_usuario.addEventListener('keydown', e => {
     if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
     {

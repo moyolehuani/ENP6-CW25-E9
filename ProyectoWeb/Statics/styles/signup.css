@@ -37,12 +37,15 @@
 .blur:hover{
     transform: scale(1.02);
 }
+.gris_trans{
+    background-color: #c5c5c533;
+}
 body {
     background-color: #202020; 
 }
 /*Display de sign up*/
 #contenedor_del_contenedor_form_signup{
-     background-image: url('https://cdn.pixabay.com/photo/2019/10/22/16/02/black-and-white-4569096_1280.jpg');
+    background-image: url('https://cdn.pixabay.com/photo/2019/10/22/16/02/black-and-white-4569096_1280.jpg');
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -54,6 +57,9 @@ body {
 }
 #contenedor_signup
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-color: rgba(255, 255, 255, 0.286);
     margin: 5vh 5vw;
 }
@@ -66,6 +72,17 @@ body {
     text-align: center;
     padding: 4vh 15vw 4vh 15vw;
     gap: 16px;
+    color:rgba(255, 255, 255, 0.904);
+}
+.formato_signup{
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:16px;
+    padding: 4vh 15vw 4vh 15vw;
     color:rgba(255, 255, 255, 0.904);
 }
 #encabezado_signup{
@@ -127,8 +144,10 @@ input:hover, input:focus{
 .animar-aparicion{
     animation: desvanecido 0.5s ease;
 }
-input[type='submit']
+.btn
 {
+    width: fit-content;
+    border-radius: 5px;
     background-color: transparent;
     color:rgb(255, 255, 255);
     border:1px solid #c5c5c5;
