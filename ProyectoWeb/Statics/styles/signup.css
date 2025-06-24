@@ -375,6 +375,17 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
     align-items: center;
 }
 
+#fondo_cancion
+{
+    background-image: url("../media/ADO_fondo.png");
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
 
 
 
