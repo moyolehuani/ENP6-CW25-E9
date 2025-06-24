@@ -306,7 +306,9 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
 #artistas_recomendados{
     color: aliceblue;
 }
-
+#titulo_playlist{
+    color: aliceblue;
+}
 
 
 
