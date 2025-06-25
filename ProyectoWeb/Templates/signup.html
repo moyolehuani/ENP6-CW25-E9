@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="../Statics/Styles/signup.css" rel="stylesheet">
     <title>Sign-up</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body>
+    
     <!-- Contenedor del formulario de inicio de sesión y registro -->
     <div id="contenedor_del_contenedor_form_signup">
         <main id="contenedor_signup" class="blur blur_color formato_signup">
@@ -15,7 +17,7 @@
                 <img class="img" src="https://cdn-icons-png.flaticon.com/512/6492/6492359.png"> 
                 <div id="divdatosIngreso" class="horizontal">
                     <div id="contendor_usuario">
-                        <input type="text" id="usuario" class="input_login" name="usuario" placeholder="example.com or user" required>
+                        <input type="text" id="usuario" class="input_login" name="usuario" placeholder="Nombre de la cuenta" required>
                         <label for="usuario"></label>
                     </div>
                     <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" class="input_login oculto" required>
@@ -33,7 +35,7 @@
                         <label for="usuario_nuevo"></label>
                         <input type="text" id="usuario_nuevo" class="input_login" name="usuario" placeholder="example.com or user" required style="margin-bottom:10px ;">
                     </div>
-                    <input type="password" id="contraseña_del usuario nuevo" name="contraseña" placeholder="Contraseña" class="input_login" required style="margin-bottom:10px">
+                    <input type="password" id="contrasena_del_usuario_nuevo" name="contraseña" placeholder="Contraseña" class="input_login" required style="margin-bottom:10px">
                         <input type="submit" id="btn_registar" value="Login" class="btn-login">
                 </div>
             </form>
@@ -120,6 +122,7 @@
                     <label for="buscador"></label>
                 </form>
                 <div id="contenedor_resultados"></div>
+                 
             </nav>
             
             <!--seccion de playlist-->
@@ -171,8 +174,10 @@
             <button id="creditos" class="btn_lineado">Creditos</button>
         </div>       
     </section>
+    
+
 </body>
 <script src="../Dynamics/js/signup.js"></script>
-<script src="https://youtube.com/iframe_api"></script>
 <script src="../Dynamics/js/baseDeDatos.js"></script>
+<script src="../Dynamics/js/Cookies.js"></script>
 </html>

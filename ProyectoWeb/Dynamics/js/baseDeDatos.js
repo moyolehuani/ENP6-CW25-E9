@@ -98,7 +98,62 @@ const baseDatosJSON = {
       link: "T8TtE-enslA",
       genero: "Rock",
       id_genero: 3
-    }
+    },
+    {
+      id: 10,
+      nombre: "Love Hangover",
+      artista: "Jennie",
+      id_artista: 10,
+      album: "Ruby",
+      id_album: 12,
+      link: " oZdSpdbeA44",
+      genero: "R&B",
+      id_genero: 5 
+    },
+    {
+      id: 11,
+      nombre: "Headpones On",
+      artista: "Addison",
+      id_artista: 11,
+      album: "Addison",
+      id_album: 13,
+      link: "2nIMXJl2yk8",
+      genero: "R&B",
+      id_genero: 5
+    },
+    {
+      id: 12,
+      nombre: "How To Dissapear Completely",
+      artista: "Radiohead",
+      id_artista: 12,
+      album: "Kid A",
+      id_album: 14,
+      link: "nZq_jeYsbTs",
+      genero: "Alternativo",
+      id_genero: 2
+    },
+    {
+      id:13,
+      nombre: "Nobody New",
+      artista: "The marias",
+      id_artista: 13,
+      album: "Back To Me -Single",
+      id_album: 15,
+      link: "BfWZsqLBfkE",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id: 14,
+      nombre: "Angels All Around Me",
+      artista: "Kali uchis",
+      id_artista: 14,
+      album: "Sincerely",
+      id_album: 16,
+      link: "ekTB-dy9zT0",
+      genero: "Pop",
+      id_genero: 2
+    },
   ],
   artistas: [
     {
@@ -154,7 +209,38 @@ const baseDatosJSON = {
       nombre: "Daddy Yankee",
       descripcion: "Daddy Yankee es un cantante y compositor puertorriqueño, conocido como el 'Rey del Reguetón' y famoso por su éxito 'Despacito'.",
       url_img: "https://i.scdn.co/image/ab6761610000e5eb99a6ccc4aae5ae5404c9eb30"
+    },
+    {
+      id: 10,
+      nombre: "Jennie",
+      descripcion: "Conocida simplemente como Jennie, es una cantante y bailarina surcoreana. Nacida y criada en Corea del Sur.",
+      url_img: "https://www.musicmundial.com/en/wp-content/uploads/2025/03/BLACKPINKs-Jennie-Ruby-shakes-up-the-Spotify-charts-on-its-first-day-1100x733.jpeg"
+    },
+    {
+      id: 11,
+      nombre: "Addison",
+      descripcion: "Cantautora con una propuesta íntima y personal que conecta con emociones profundas.",
+      url_img: "https://ourculturemag.com/wp-content/uploads/2024/10/addison-rae-e1729848498597.jpeg"
+    },
+    {
+      id: 12,
+      nombre: "Radiohead",
+      descripcion: "Banda británica reconocida por su enfoque innovador y su exploración constante de nuevos sonidos.",
+      url_img: "https://static.stereogum.com/uploads/2024/04/The-Marias-1712432101.jpg"
+    },
+    {
+      id: 13,
+      nombre: "The Marias",
+      descripcion: "Grupo con una identidad visual y sonora muy cuidada, liderado por una voz suave y enigmática.",
+      url_img: "https://static.stereogum.com/uploads/2024/04/The-Marias-1712432101.jpg"
+    },
+    {
+      id: 14,
+      nombre: "Kali Uchis",
+      descripcion: "Artista colombo-estadounidense con una estética única y una narrativa visual marcada por el arte y la introspección.",
+      url_img: "https://www.universalmusic.com.pe/files/2023/10/IMG_7411-min-scaled-e1697833803358.jpeg"
     }
+
   ],
   genero: [
     {
@@ -281,14 +367,90 @@ const baseDatosJSON = {
       id_artista: 8,
       descripcion: "'El Nervio del Volcán' es un álbum que muestra la evolución musical de Caifanes, con letras profundas y una fusión de géneros.",
       url_img: "https://i.scdn.co/image/ab67616d0000b27336aeaab4dc91a8dea53a2d8f"
-    }
+    },
+    {
+      id: 12,
+      nombre: "Ruby",
+      artista: "Jennie",
+      id_artista: 10,
+      descripcion: "El álbum 'True' de Avicii es una mezcla innovadora de música electrónica y folk, con éxitos como 'Wake Me Up' y 'Hey Brother'.",
+      url_img: "https://i.scdn.co/image/ab67616d0000b273e14f11f796cef9f9a82691a7"
+    },
+    {
+      id: 13,
+      nombre: "Addison",
+      artista: "Addison",
+      id_artista: 11,
+      descripcion: "Addison es el álbum de estudio debut de la cantante estadounidense Addison Rae, lanzado el 6 de junio de 2025 a través de Columbia Records, bajo licencia exclusiva de As Long As I'm Dancing LLC. Fue precedido por el lanzamiento de cinco sencillos: «Diet Pepsi», «Aquamarine», «High Fashion», «Headphones On» y «Fame is a Gun».Tras su lanzamiento, Addison recibió críticas generalmente positivas, y los críticos elogiaron el arte único de Rae y su producción experimental",
+      url_img: "https://uproxx.com/wp-content/uploads/2025/04/Addison-Rae-Columbia.jpeg"
+    },
+    {
+      id: 14,
+      nombre: "Kid A",
+      artista: "Radiohead",
+      id_artista: 12,
+      descripcion: "Kid A es el cuarto álbum de estudio de la banda británica de rock alternativo Radiohead, lanzado el 2 de octubre de 2000. Fue un éxito comercial a nivel internacional, llegando a obtener un disco de platino una semana después de su lanzamiento en el Reino Unido. Pese a la falta de un sencillo oficial o videoclip que sirviera como publicidad, Kid A fue el primer álbum de Radiohead en debutar en el primer puesto en Estados Unidos. Su éxito pudo haberse debido a una campaña única de mercadotecnia, su previo lanzamiento por Internet, o a la expectativa generada por su álbum anterior,OK Computer.",
+      url_img: "https://www.sentireascoltare.com/wp-content/uploads/2012/12/radiohead-kid-a.jpeg"
+    },
+    {
+      id: 15,
+      nombre: "Back To me -Single",
+      artista: "The Marias",
+      id_artista: 13,
+      descripcion: "Back to me single Con este single, The Marías logra capturar de forma poética y delicada lo abrumador que puede ser el acto de extrañar. La canción, cargada de emocionalidad nos sumerge en lo más profundo de una historia marcada por la melancolía y el anhelo. «Back to Me» transmite con precisión la tristeza, la confusión y la desesperación de un amor que aún duele, convirtiéndose en una pieza perfecta para acompañar nuestras tardes más grises o esos días en que la nostalgia pesa más que de costumbre.",
+      url_img: "https://www.highlandernews.org/wp-content/uploads/The-Marias-Back-to-Me-Distr.-Nice-Life-Recording-Co-2025.jpg"
+    },
+    {
+      id: 16,
+      nombre: "Sincerely,",
+      artista: "Kali Uchis",
+      id_artista: 14,
+      descripcion: "Sincerely (estilizado como Sincerely,) es el quinto álbum de estudio de la cantante estadounidense Kali Uchis.Fue publicado el 9 de mayo de 2025 a través del sello discográfico Capitol. Originalmente conceptualizado como una colección de cartas para ella misma, amigos y cercanos,el proyecto obtuvo una mayor importancia para la cantante con su embarazo previo al desarrollo inicial de composición, y posteriormente luego de completarlo, lidiando con el fallecimiento de su madre por un cáncer pulmonar.",
+      url_img: "https://t2.genius.com/unsafe/300x300/https://images.genius.com/8642dc3f58c90b87c6d0a908cebaa723.1000x1000x1.png"
+    },
   ]
 };
 //console.log(baseDatosJSON.canciones[0].nombre);
 let busqueda=document.getElementById("buscador_input"); /*input buscador*/
 let pi=document.getElementById("contenedor_resultados"); /*Div que va a contener la busqueda */
 let buscador_form= document.getElementById("buscador_form");
+let play=document.getElementById("play");
+let random=document.getElementById("btn-random");
 let formato_resultado;
+let player;
+let link;
+//Funcion para mostrar el video
+function hacer(link)
+{
+    if(player)
+      player.destroy();
+    player = new YT.Player("player", 
+    {
+      videoId: link,
+      playerVars: {
+          controls: 0,
+          modestbranding: 1,
+          rel: 0
+      },
+      events:{
+        onReady: onPlayerReady,
+        }
+    });
+    function onPlayerReady()
+    {
+      player.playVideo();
+    }
+    play.addEventListener("click",()=>{
+        let state = player.getPlayerState();
+        if(state == YT.PlayerState.PLAYING){
+            player.pauseVideo();
+        }
+        else
+        {
+            player.playVideo();
+        }
+    });
+}
 buscador_form.addEventListener("submit", function(e)
 { //se le hace prevent para evitar que se recargue la pagina 
   e.preventDefault();
@@ -316,10 +478,17 @@ busqueda.addEventListener("input",function(event){
     let butones = pi.querySelectorAll("button.estilo_por_resultado");
     butones.forEach(boton => {
         boton.addEventListener("click", ()=>{
-           console.log("Hola");
+            for(let e=0;e<baseDatosJSON.canciones.length;e++)
+            {
+                if(boton.textContent===baseDatosJSON.canciones[e].nombre)
+                  link=baseDatosJSON.canciones[e].link;
+            }
+            console.log(link);  
+            hacer(link)
+           
+      
         });
     });
-    
     if (pi.children.length === 0) {
         let sinCoincidencias = document.createElement("p");
         sinCoincidencias.textContent = "Sin coincidencias";
@@ -334,9 +503,14 @@ for(let i=0;i<baseDatosJSON.canciones.length;i++)
   arreCan.push(baseDatosJSON.canciones[i].nombre);
 }
 // Para obtener un número entero 
-let canAle = Math.floor(Math.random() * arreCan.length);
+
 //Muestra la canción aleatoria chavos
-let cancionAleatoria = arreCan[canAle];
-console.log(cancionAleatoria);
+random.addEventListener("click",()=>{
+  let canAle = Math.floor(Math.random() * arreCan.length);
+  link=baseDatosJSON.canciones[canAle].link;
+  hacer(link);
+})
+
+
 
 
