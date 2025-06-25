@@ -359,8 +359,6 @@ busqueda.addEventListener("input",function(event){
             }
             console.log(link);  
             hacer(link)
-           
-      
         });
     });
     if (pi.children.length === 0) {
@@ -369,17 +367,19 @@ busqueda.addEventListener("input",function(event){
         pi.appendChild(sinCoincidencias);
     }
 });
-//Canción aleatoria
+
+//CANCION ALEATORIA
 //Código para generar una canción aleatoria, falta utilizar el API para reproducirla
 let arreCan=[];
 for(let i=0;i<baseDatosJSON.canciones.length;i++)
 {
   arreCan.push(baseDatosJSON.canciones[i].nombre);
 }
-// Para obtener un número entero 
+
 
 //Muestra la canción aleatoria chavos
 random.addEventListener("click",()=>{
+  // Para obtener un número entero 
   let canAle = Math.floor(Math.random() * arreCan.length);
   link=baseDatosJSON.canciones[canAle].link;
   hacer(link);
