@@ -3,47 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="../Statics/Styles/signup.css" rel="stylesheet">
-    <title>Sign-up</title>
+    <title>Menu</title>
 </head>
 
 <body>
-    <!-- Contenedor del formulario de inicio de sesión y registro -->
-    <div id="contenedor_del_contenedor_form_signup">
-        <main id="contenedor_signup" class="blur gris_trans formato_signup">
-            <form id="signup">
-                <header id="encabezado_signup" class="encabezado_login glow">Inicio de sesión</header>
-                <img class="img" src="https://cdn-icons-png.flaticon.com/512/6492/6492359.png"> 
-                <div id="divdatosIngreso" class="horizontal">
-                    <div id="contendor_usuario">
-                        <input type="text" id="usuario" class="input_login" name="usuario" placeholder="example.com or user" required>
-                        <label for="usuario"></label>
-                    </div>
-                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" class="input_login oculto" required>
-                    <input type="submit" id="btn_ingresar" value="Ingresar" class="oculto btn-login">
-                </div>
-            </form>
-            <button id="btn_registarte">Registrase</button>
-        </main>
-        <main id="contenedor_registarse" class="blur oculto gris_trans ">
-            <form id="registrarse_form" class="formato_signup">
-                <header id="encabezado_registrarse" class="encabezado_login glow">Registrarse</header>
-                <img class="img" src="https://cdn-icons-png.flaticon.com/512/6492/6492359.png"> 
-                <div id="divdatosIngreso" class="horizontal">
-                    <div id="contendor_usuario">
-                        <label for="usuario_nuevo"></label>
-                        <input type="text" id="usuario_nuevo" class="input_login" name="usuario" placeholder="example.com or user" required style="margin-bottom:10px ;">
-                    </div>
-                    <input type="password" id="contraseña_del usuario nuevo" name="contraseña" placeholder="Contraseña" class="input_login" required style="margin-bottom:10px">
-                        <input type="submit" id="btn_registar" value="Login" class="btn-login">
-                </div>
-            </form>
-        </main>
-    </div>
+
+
     <!-- Interfaz de usuario -->
-    <section id="interfaz" class="oculto">
+    <section id="interfaz" >
         <aside id="aside-pestañas">
             <form id="aside_form">
-                <div class="icon-select">
+                <div class="compacto barra">
                 <!-- Home -->
                     <input class="animacion_icono" type="radio" name="option" id="menu_input" checked>
                     <label for="menu_input" class="icono_label glow_crezca">
@@ -75,17 +45,22 @@
                     <div class="indicator"></div>
                 </div>
             </form>
+
         </aside>
         <!--Display que tiiene la barra de home, biblio, playlist, search-->
         <section id="div_area_home">
             <!--busqueda-->
             <nav id="buscador_sec" class="oculto blur">
-                <form id="buscador_form">
+                <form id="buscador_form" onsubmit="return false;">
                     <input type="text" id="buscador_input" name="buscador" placeholder="search">
                     <label for="buscador"></label>
                 </form>
-                <div id="contenedor_resultados"></div>
+                <div id="contenedor_resultados">
+                </div>
             </nav>
+<article id="fondo_cancion">
+
+    
             <!--Reproduciendo-->
             <article id="cont_reproduciendo" class="cont_reproduciendo oculto">
                 <div id="reproductor" class="reproductor blur crezca">
@@ -123,34 +98,19 @@
                     </div>
                     
                 </div>
+                <!--Ahora agregaré el botón para compactar o no las herramientas-->
             </article>
-            <!-- Sección de recomendaciones -->
-            <!--Artistas recomendados-->
-            <article id="cont_art_recom" class="recomendado">
-                <p id="art_recom_title" class="recomendado_title">
-                    Artistas recomendados
-                </p>
-                <div id="btn_y_artistas" class="horizontal_recom">
-                    <button id="Shuffle_art" class="shuffle_button">Shuffle</button>
-                    <article id="artistas_recomendados">
-                    </article>
-                </div>
-            </article>
-            <!--Álbumes recomendados-->
-            <article id="cont_album_recom" class="recomendado">
-                <p id="album_recom_title" class="recomendado_title">
-                    Álbumes recomendados
-                </p>
-                <div id="btn_y_albumes" class="horizontal_recom">
-                    <button id="Shuffle_album" class="shuffle_button">Shuffle</button>
-                    <article id="albumes_recomendados">
-                    </article>
-                </div>
-            </article>
-        </section>     
+            <form id="form_de_boton">
+                <input type="button" id="despliega">
+
+                </input>
+            </form>
+</article>    
+        </section>
+        
     </section>
 </body>
-<script src="../Dynamics/js/signup.js"></script>
-<script src="https://youtube.com/iframe_api"></script>
+<script src="../Dynamics/js/menu.js"></script>
 <script src="../Dynamics/js/baseDeDatos.js"></script>
+<script src="../Dynamics/js/Pantalla_completa.js"></script>
 </html>
