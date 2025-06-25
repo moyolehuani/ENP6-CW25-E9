@@ -80,10 +80,10 @@ Op.forEach((oP, index) => {
     });
 });
 playlist_input.addEventListener("input", ()=>{
-    recomendaciones.style.display = "none";
-    contenedor_playlist.style.display="flex";
+    recomendaciones.classList.add('oculto');
+    contenedor_playlist.classList.remove('oculto')
 });
 menu_input.addEventListener("input", ()=>{
-    contenedor_playlist.style.display="none";
-    recomendaciones.style.display="block";
+    recomendaciones.classList.remove('oculto');
+    contenedor_playlist.classList.add('oculto');
 });
