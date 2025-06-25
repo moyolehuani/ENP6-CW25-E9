@@ -7,39 +7,40 @@
 </head>
 
 <body>
+    <!-- Contenedor del formulario de inicio de sesión y registro -->
     <div id="contenedor_del_contenedor_form_signup">
-        <main id="contenedor_signup" class="blur gris_trans .formato_signup">
+        <main id="contenedor_signup" class="blur gris_trans formato_signup">
             <form id="signup">
-                <header id="encabezado_signup">Inicio de sesión</header>
+                <header id="encabezado_signup" class="encabezado_login glow">Inicio de sesión</header>
                 <img class="img" src="https://cdn-icons-png.flaticon.com/512/6492/6492359.png"> 
                 <div id="divdatosIngreso" class="horizontal">
                     <div id="contendor_usuario">
+                        <input type="text" id="usuario" class="input_login" name="usuario" placeholder="example.com or user" required>
                         <label for="usuario"></label>
-                        <input type="text" id="usuario" name="usuario" placeholder="example.com or user" required>
                     </div>
-                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" class="btn oculto" required>
-                        <input type="submit" id="btn_ingresar" value="Ingresar" class="oculto">
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña" class="input_login oculto" required>
+                    <input type="submit" id="btn_ingresar" value="Ingresar" class="oculto btn-login">
                 </div>
             </form>
-            <button id="btn_registarte" class="btn">Registrase</button>
+            <button id="btn_registarte">Registrase</button>
         </main>
         <main id="contenedor_registarse" class="blur oculto gris_trans ">
             <form id="registrarse_form" class="formato_signup">
-                <header id="encabezado_registrarse">Registrarse</header>
+                <header id="encabezado_registrarse" class="encabezado_login glow">Registrarse</header>
                 <img class="img" src="https://cdn-icons-png.flaticon.com/512/6492/6492359.png"> 
                 <div id="divdatosIngreso" class="horizontal">
                     <div id="contendor_usuario">
                         <label for="usuario_nuevo"></label>
-                        <input type="text" id="usuario_nuevo" name="usuario" placeholder="example.com or user" required style="margin-bottom:10px ;">
+                        <input type="text" id="usuario_nuevo" class="input_login" name="usuario" placeholder="example.com or user" required style="margin-bottom:10px ;">
                     </div>
-                    <input type="password" id="contraseña_del usuario nuevo" name="contraseña" placeholder="Contraseña" class="btn" required style="margin-bottom:10px">
-                        <input type="submit" id="btn_registar" value="Login" class="btn">
+                    <input type="password" id="contraseña_del usuario nuevo" name="contraseña" placeholder="Contraseña" class="input_login" required style="margin-bottom:10px">
+                        <input type="submit" id="btn_registar" value="Login" class="btn-login">
                 </div>
             </form>
         </main>
     </div>
     <!-- Interfaz de usuario -->
-    <section id="interfaz" class="oculto" >
+    <section id="interfaz" class="oculto">
         <aside id="aside-pestañas">
             <form id="aside_form">
                 <div class="icon-select">

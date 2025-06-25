@@ -16,8 +16,8 @@ let contenedor_registarse= document.getElementById("contenedor_registarse");
 /*------Crear cuentas
 */
 btn_registrarse.addEventListener("click", e =>{
-    contenedor_signup.style.display="none";
-    contenedor_registarse.style.display="block";
+    contenedor_signup.classList.add('oculto')
+    contenedor_registarse.classList.remove('oculto');
     contenedor_registarse.classList.add("animar-aparicion");
 
 });
@@ -58,11 +58,11 @@ submit_login.addEventListener('click', e => {
     else
     {
         //esconder la interfaz del login
-        display_signup.style.display = "none";
+        display_signup.classList.add('oculto');
         //Para que aparezca ahora el display de home
-        cont_reproduciendo.style.display="flex";
-        buscador_sec.style.display="flex";
-        interfaz.style.display = "flex";
+        cont_reproduciendo.classList.remove('oculto');
+        buscador_sec.classList.remove('oculto');
+        interfaz.classList.remove('oculto');
     }
 });
 const Op = document.querySelectorAll(".animacion_icono");

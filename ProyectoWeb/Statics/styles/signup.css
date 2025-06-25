@@ -4,6 +4,9 @@
     padding: 0;
 }
 /*Estilos*/
+.blur_crezca_transition_in{
+    transition: background 0.3s ease;
+}
 .crezca{
     transition: transform 1s;
     transform: scale(1);
@@ -25,7 +28,7 @@
     filter:drop-shadow(0px 0px 6px #ffffffe3)
 }
 .oculto{
-    display: none;
+    display: none !important;
 }
 .blur{
     backdrop-filter: blur(10px);
@@ -55,25 +58,6 @@ body {
     height:100vh;
     width:100vw;
 }
-#contenedor_signup
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgba(255, 255, 255, 0.286);
-    margin: 5vh 5vw;
-}
-#signup
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 4vh 15vw 4vh 15vw;
-    gap: 16px;
-    color:rgba(255, 255, 255, 0.904);
-}
 .formato_signup{
     display: flex;
     height: fit-content;
@@ -85,14 +69,19 @@ body {
     padding: 4vh 15vw 4vh 15vw;
     color:rgba(255, 255, 255, 0.904);
 }
-#encabezado_signup{
+#signup
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    color:rgba(255, 255, 255, 0.904);
+}
+.encabezado_login{
     font-size: 22px;
     cursor:none;
-    transition-duration: 0.3s;
-    margin-bottom: 0%;
-}
-#encabezado_signup:hover{
-    text-shadow: 0px 0px 16px rgba(255, 255, 255, 0.618);
 }
 .img{
     width: 100px;
@@ -112,7 +101,7 @@ body {
 #usuario{
     width: 100%;
 }
-input{
+.input_login{
     background-color: #5a5a5ab6;
     color:white;
     border:1px solid #cacacab6;
@@ -120,13 +109,27 @@ input{
     cursor: pointer;
     transition-duration: 0.3s;
 }
-input::placeholder{
+.input_login::placeholder{
     color: rgba(255, 255, 255, 0.67);
     text-align: center;
 }
-input:hover, input:focus{
+.input_login:hover, 
+.input_login:focus{
     background-color: #202020;
     color: rgb(235,235,235)
+}
+#btn_registarte
+{
+    background-color: transparent;
+    border: none;
+    color: #c5c5c5;
+    font-size: 10px;
+    transition: all;
+    transition-duration:0.8s;
+}
+#btn_registarte:hover{
+    border-bottom: 1px solid #c5c5c5;
+    font-size: 12px;
 }
 @keyframes desvanecido { /*Es la animacion de cuando la contraseña aparece*/
     from {
@@ -144,21 +147,25 @@ input:hover, input:focus{
 .animar-aparicion{
     animation: desvanecido 0.5s ease;
 }
-.btn
+.btn-login
 {
-    width: fit-content;
-    border-radius: 5px;
-    background-color: transparent;
-    color:rgb(255, 255, 255);
-    border:1px solid #c5c5c5;
-    box-shadow: 0 0 1px 0px #ffffff;
-    text-shadow: 0 0 4px 8px #ffffff
-}
-input[type='submit']:hover, input[type='submit']:active, input[type='submit']:focus{
+    padding: 0.1rem 0.2rem;
+    border: 1px solid #141414;
+    border-radius: 4px;
+    font-size: 12px;
     background-color: #202020;
-    font-size: 15px;
-    border: none;
-    box-shadow: 0 0 4px #20202042;
+    color: #c5c5c5;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+.btn-login:hover
+{
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    padding: 0.1rem 0.7rem;
+    font-size: 12px;
+    background-color: #202020;
+    color: #c5c5c5;
 }
 /*Fin de display de login*/
 
@@ -283,13 +290,11 @@ input[type='submit']:hover, input[type='submit']:active, input[type='submit']:fo
 }
 .cont_reproduciendo{
     position: fixed;
-    left: 0;
-    bottom: 0;
     flex-direction: row;
+    justify-content: space-evenly;
     width: 100%;
     height: 10vh;
-    align-items: center;
-    justify-content: space-evenly;
+    bottom: 0;
 }
 .reproductor{
     display: flex;
