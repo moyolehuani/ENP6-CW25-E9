@@ -427,14 +427,16 @@ function hacer(link)
     player = new YT.Player("player", 
     {
       videoId: link,
-      playerVars: {
+      playerVars: 
+      {
           controls: 0,
           modestbranding: 1,
           rel: 0
       },
-      events:{
-        onReady: onPlayerReady,
-        }
+      events:
+      {
+          onReady: onPlayerReady,
+      }
     });
     function onPlayerReady()
     {
