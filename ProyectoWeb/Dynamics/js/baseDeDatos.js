@@ -288,10 +288,43 @@ const baseDatosJSON = {
 let busqueda=document.getElementById("buscador_input"); /*input buscador*/
 let pi=document.getElementById("contenedor_resultados"); /*Div que va a contener la busqueda */
 let buscador_form= document.getElementById("buscador_form");
-let play=document.getElementById("play")
+let play=document.getElementById("play");
+let random=document.getElementById("btn-random");
 let formato_resultado;
 let player;
 let link;
+//Funcion para mostrar el video
+function hacer(link)
+{
+    if(player)
+      player.destroy();
+    player = new YT.Player("player", 
+    {
+      videoId: link,
+      playerVars: {
+          controls: 0,
+          modestbranding: 1,
+          rel: 0
+      },
+      events:{
+        onReady: onPlayerReady,
+        }
+    });
+    function onPlayerReady()
+    {
+      player.playVideo();
+    }
+    play.addEventListener("click",()=>{
+        let state = player.getPlayerState();
+        if(state == YT.PlayerState.PLAYING){
+            player.pauseVideo();
+        }
+        else
+        {
+            player.playVideo();
+        }
+    });
+}
 buscador_form.addEventListener("submit", function(e)
 { //se le hace prevent para evitar que se recargue la pagina 
   e.preventDefault();
@@ -325,34 +358,8 @@ busqueda.addEventListener("input",function(event){
                   link=baseDatosJSON.canciones[e].link;
             }
             console.log(link);  
-            if(player)
-              player.destroy();
-            player = new YT.Player("player", 
-            {
-              videoId: link,
-              playerVars: {
-                  controls: 0,
-                  modestbranding: 1,
-                  rel: 0
-              },
-               events:{
-                onReady: onPlayerReady,
-                }
-            });
-            function onPlayerReady()
-            {
-              player.playVideo();
-            }
-            play.addEventListener("click",()=>{
-                let state = player.getPlayerState();
-                if(state == YT.PlayerState.PLAYING){
-                    player.pauseVideo();
-                }
-                else
-                {
-                    player.playVideo();
-                }
-             });
+            hacer(link)
+           
       
         });
     });
@@ -370,9 +377,14 @@ for(let i=0;i<baseDatosJSON.canciones.length;i++)
   arreCan.push(baseDatosJSON.canciones[i].nombre);
 }
 // Para obtener un número entero 
-let canAle = Math.floor(Math.random() * arreCan.length);
+
 //Muestra la canción aleatoria chavos
-let cancionAleatoria = arreCan[canAle];
-console.log(cancionAleatoria);
+random.addEventListener("click",()=>{
+  let canAle = Math.floor(Math.random() * arreCan.length);
+  link=baseDatosJSON.canciones[canAle].link;
+  hacer(link);
+})
+
+
 
 
