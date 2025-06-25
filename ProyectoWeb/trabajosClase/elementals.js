@@ -131,6 +131,7 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 /* Esta funvion tiene que ser exactamente con este nombr */
 
 function onYouTubeIframeAPIReady(){
+
     player = new YT.Player("player", 
         {
         videoId: "T8TtE-enslA", //exactamente igual es el id del yt desvues del v:

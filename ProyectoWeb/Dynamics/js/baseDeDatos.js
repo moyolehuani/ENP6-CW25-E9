@@ -288,7 +288,10 @@ const baseDatosJSON = {
 let busqueda=document.getElementById("buscador_input"); /*input buscador*/
 let pi=document.getElementById("contenedor_resultados"); /*Div que va a contener la busqueda */
 let buscador_form= document.getElementById("buscador_form");
+let play=document.getElementById("play")
 let formato_resultado;
+let player;
+let link;
 buscador_form.addEventListener("submit", function(e)
 { //se le hace prevent para evitar que se recargue la pagina 
   e.preventDefault();
@@ -316,10 +319,43 @@ busqueda.addEventListener("input",function(event){
     let butones = pi.querySelectorAll("button.estilo_por_resultado");
     butones.forEach(boton => {
         boton.addEventListener("click", ()=>{
-           console.log("Hola");
+            for(let e=0;e<baseDatosJSON.canciones.length;e++)
+            {
+                if(boton.textContent===baseDatosJSON.canciones[e].nombre)
+                  link=baseDatosJSON.canciones[e].link;
+            }
+            console.log(link);  
+            if(player)
+              player.destroy();
+            player = new YT.Player("player", 
+            {
+              videoId: link,
+              playerVars: {
+                  controls: 0,
+                  modestbranding: 1,
+                  rel: 0
+              },
+               events:{
+                onReady: onPlayerReady,
+                }
+            });
+            function onPlayerReady()
+            {
+              player.playVideo();
+            }
+            play.addEventListener("click",()=>{
+                let state = player.getPlayerState();
+                if(state == YT.PlayerState.PLAYING){
+                    player.pauseVideo();
+                }
+                else
+                {
+                    player.playVideo();
+                }
+             });
+      
         });
     });
-    
     if (pi.children.length === 0) {
         let sinCoincidencias = document.createElement("p");
         sinCoincidencias.textContent = "Sin coincidencias";
