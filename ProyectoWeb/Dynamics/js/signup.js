@@ -111,3 +111,25 @@ menu_input.addEventListener("input", ()=>{
     recomendaciones.classList.remove('oculto');
     contenedor_playlist.classList.add('oculto');
 });
+///////////////////Logica settings y cierre de sesion/////////////////////////////
+contenedor_op_confi= document.getElementById("contenedor_op_confi");
+Configuracion_btn= document.getElementById("Configuracion_btn");
+Configuracion_btn.addEventListener("click", e =>
+{
+    if(contenedor_op_confi.classList.contains("oculto"))
+    {
+        contenedor_op_confi.classList.remove("oculto");
+        contenedor_op_confi.classList.add("animar-aparicion");
+        contenedor_op_confi.classList.add("desvanecido_out");
+    }
+    else
+    {
+        contenedor_op_confi.style.opacity = "0";
+        setTimeout(() => 
+        {
+            contenedor_op_confi.classList.add("oculto");
+            contenedor_op_confi.classList.remove("animar-aparicion");
+            contenedor_op_confi.style.opacity = ""
+        }, 1000);
+    }
+});
