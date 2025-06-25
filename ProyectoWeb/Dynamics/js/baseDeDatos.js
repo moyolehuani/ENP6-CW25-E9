@@ -154,6 +154,50 @@ const baseDatosJSON = {
       genero: "Pop",
       id_genero: 2
     },
+    {
+      id: 15,
+      nombre: "Battle Against A True Hero",
+      artista: "Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "aWBtpBwzzdM",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
+    {
+      id: 16,
+      nombre: "MEGALOVANIA",
+      artista:"Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "wDgQdr8ZkTw",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
+    {
+      id: 17,
+      nombre: "Hopes And Dreams",
+      artista: "Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "tz82xbLvK_k",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
+    {
+      id: 18,
+      nombre: "SAVE The World",
+      artista: "Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "mZRP7nQkfrM",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
   ],
   artistas: [
     {
@@ -239,7 +283,13 @@ const baseDatosJSON = {
       nombre: "Kali Uchis",
       descripcion: "Artista colombo-estadounidense con una estética única y una narrativa visual marcada por el arte y la introspección.",
       url_img: "https://www.universalmusic.com.pe/files/2023/10/IMG_7411-min-scaled-e1697833803358.jpeg"
-    }
+    },
+    {
+      id: 15,
+      nombre: "Toby Fox",
+      descripción: "Robert F. Fox conocido profesionalmente como Toby Fox, es un compositor y desarrollador de videojuegos estadounidense, conocido por desarrollar Undertale.",
+      url_img: "https://static.wikia.nocookie.net/undertale/images/8/8e/TobyFox.png/revision/latest?cb=20151222064831&path-prefix=es"
+    },
 
   ],
   genero: [
@@ -277,7 +327,12 @@ const baseDatosJSON = {
       id: 7,
       nombre: "Jazz",
       descripcion: "El jazz es un género musical que se originó a principios del siglo XX, caracterizado por su improvisación, ritmos complejos y una rica tradición instrumental."
-    }
+    },
+    {
+      id: 8,
+      nombre: "musica de videojuego",
+      descripcion: "Su función principal es sumergir al jugador en el mundo del juego, complementando la jugabilidad y la narrativa, y provocando diversas emociones, se empezo a considerar un genero propio el siglo XX"
+    },
   ],
   album: [
     {
@@ -407,6 +462,14 @@ const baseDatosJSON = {
       id_artista: 14,
       descripcion: "Sincerely (estilizado como Sincerely,) es el quinto álbum de estudio de la cantante estadounidense Kali Uchis.Fue publicado el 9 de mayo de 2025 a través del sello discográfico Capitol. Originalmente conceptualizado como una colección de cartas para ella misma, amigos y cercanos,el proyecto obtuvo una mayor importancia para la cantante con su embarazo previo al desarrollo inicial de composición, y posteriormente luego de completarlo, lidiando con el fallecimiento de su madre por un cáncer pulmonar.",
       url_img: "https://t2.genius.com/unsafe/300x300/https://images.genius.com/8642dc3f58c90b87c6d0a908cebaa723.1000x1000x1.png"
+    },
+    {
+      id: 17,
+      nombre: "UNDERTALE Soundtrack",
+      artista: "Toby Fox",
+      id_artista: 15,
+      descripcion: "Soundtrack de el videojuego de Undertale",
+      url_img: "https://i.scdn.co/image/ab67616d0000b27324edb22d068eb245a924b7f2"
     },
   ]
 };
