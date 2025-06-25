@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Generador de cookies</title>
+        <link rel="stylesheet" href="./Statics/styles/index.css">
+    </head>
+    <body>
+        <h3>Ingresa todos los datos para generar una cookie, para mostrar y eliminar puedes ingresar unicamente el nombre.</h3>
+        <form id="formulario" mmethod="post">
+            <article>
+                <label for="nombre">Ingresa el nombre de la cookie</label>
+                <input type="text" id="nombre" name="nombre"  placeholder="nombreCookie" required />
+            </article>
+
+            <article>
+                <label for="valor">Ingresa el valor de la cookie</label>
+                <input type="text" id="valor" name="valor"  placeholder="Valor de la Cookie"/>
+            </article>  
+
+            <article>
+                <label for="dias">Ingresa el número de días que quieres que dure</label>
+                <input type="number" id="dias" min="1" step="1" placeholder="3 días">
+            </article>
+            <span id="aviso"></span>
+            <article>
+                <button id="crear" type="button">Crear cookie</button>
+                <button id="mostrar" type="button">Mostrar cookie</button>
+                <button id="eliminar" type="button">Eliminar cookie</button>
+            </article>
+        </form>
+        <p id="resultado"></p>
+    <script src="./Dynamics/js/index.js"></script>
+    </body>
+</html>

@@ -6,10 +6,21 @@ let contraseña= document.getElementById("contraseña");
 let submit_login= document.getElementById("btn_ingresar");
 let interfaz= document.getElementById("interfaz");
 let display_signup= document.getElementById("contenedor_del_contenedor_form_signup");
+let contenedor_signup= document.getElementById("contenedor_signup");
 let contenedor_playlist=document.getElementById("playlist_contenedor");
 let playlist_input=document.getElementById("Playlist_input");
 let recomendaciones=document.getElementById("recomendados");
 let menu_input=document.getElementById("menu_input");
+let btn_registrarse= document.getElementById("btn_registarte");
+let contenedor_registarse= document.getElementById("contenedor_registarse");
+/*------Crear cuentas
+*/
+btn_registrarse.addEventListener("click", e =>{
+    contenedor_signup.classList.add('oculto')
+    contenedor_registarse.classList.remove('oculto');
+    contenedor_registarse.classList.add("animar-aparicion");
+
+});
 input_usuario.addEventListener('keydown', e => {
     if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
     {
@@ -47,11 +58,11 @@ submit_login.addEventListener('click', e => {
     else
     {
         //esconder la interfaz del login
-        display_signup.style.display = "none";
+        display_signup.classList.add('oculto');
         //Para que aparezca ahora el display de home
-        cont_reproduciendo.style.display="flex";
-        buscador_sec.style.display="flex";
-        interfaz.style.display = "flex";
+        cont_reproduciendo.classList.remove('oculto');
+        buscador_sec.classList.remove('oculto');
+        interfaz.classList.remove('oculto');
     }
 });
 const Op = document.querySelectorAll(".animacion_icono");
