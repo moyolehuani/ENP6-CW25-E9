@@ -1,9 +1,30 @@
+:root {
+  --color-glow: #ffffffe3;
+  --color-texto: #ffffff;
+  --color-texto_nollamativo: #c5c5c5; 
+  --color-fondo: #202020;
+  --color-blur: #c5c5c533;
+  --color-barra: #303030;
+  --color-icono-aside: #ffffff88;
+  --color-indicador: #221f1fbf;
+  --color-borde-indicador: #0303031c;
+  --color-buscador: #5a5a5ab6;
+  --color-resultado-busqueda-hover: #505050;
+  --color-resultado-busqueda: #303030b0;
+  --color-reproductor: #b0afaf27;
+  --color-icon-reproductor: #c5c5c5;
+  --color-reproduciendo-back-next-play-stop: #202020b8;
+}
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
 }
 /*Estilos*/
+.desvanecido_out{
+    opacity: 1;
+    transition: opacity 1s cubic-bezier(.65,.35,.22,.66);
+}
 .crezca{
     transition: transform 1s;
     transform: scale(1);
@@ -15,20 +36,20 @@
     transition: filter 0.6s;
 }
 .glow:hover{
-    filter:drop-shadow(0px 0px 6px #ffffffe3)
+    filter:drop-shadow(0px 0px 6px var(--color-glow))
 }
 .glow_crezca{
     transition: transform 1s, filter 0.6s;
 }
 .glow_crezca:hover{
     transform: scale(1.2);
-    filter:drop-shadow(0px 0px 6px #ffffffe3)
+    filter:drop-shadow(0px 0px 6px var(--color-glow))
 }
 .oculto{
     display: none !important;
 }
 .blur{
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.286);
     box-shadow: 0 8px 32px rgba(0,0,0,0.2);
@@ -37,11 +58,11 @@
 .blur:hover{
     transform: scale(1.02);
 }
-.gris_trans{
-    background-color: #c5c5c533;
+.blur_color{
+    background-color: var(--color-blur);
 }
 body {
-    background-color: #202020; 
+    background-color: var(--color-fondo); 
 }
 /*Display de sign up*/
 #contenedor_del_contenedor_form_signup{
@@ -115,7 +136,7 @@ body {
     background-color: #202020;
     color: rgb(235,235,235)
 }
-#btn_registarte
+.btn_lineado
 {
     background-color: transparent;
     border: none;
@@ -124,7 +145,7 @@ body {
     transition: all;
     transition-duration:0.8s;
 }
-#btn_registarte:hover{
+.btn_lineado:hover{
     border-bottom: 1px solid #c5c5c5;
     font-size: 12px;
 }
@@ -171,15 +192,61 @@ body {
 #interfaz{
     display: flex;
 }
+.cont_reproduciendo{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    bottom: 5vh;
+    z-index: 2;
+}
+.reproductor{
+    display: flex;
+    flex: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 90%;
+    max-width: 480px;
+    max-height: fit-content;
+    background-color: var(--color-reproductor);
+    border-radius: 12px;
+}
+.rep_button{
+    background-color: transparent;
+    border: none;
+}
+.icon_reproductor{
+    stroke:var(--color-icon-reproductor);
+}
+.icon_reproduciendo_fill{
+    fill: var(--color-icon-reproductor);
+}
+#reproduciendo_back_next_play_stop{
+    transform: scale(0.75);
+    display: flex;
+    flex: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.5vh;
+    width: 30%;
+    border: none;
+    padding: 0.2vh 2vh;
+    background-color: var(--color-reproduciendo-back-next-play-stop);
+}
 #aside-pestañas
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: #303030;
+    background-color: var(--color-barra);
     max-width: 140px;
+    max-height: 100vh;
 }
+
 .icon-select
 {
     position: relative;
@@ -203,22 +270,23 @@ body {
     cursor: pointer;
 }
 .icon{
-    fill: #ffffff88;
+    fill: var(--color-icono-aside);
     border: none;
     margin: none;
     padding: none;
 }
 .indicator{
     position: absolute;
-    background-color: #221f1fbf;
+    background-color: var(--color-indicador);
     width: 100%;
     height: 33%;
     top: 0;
     border-radius: 0;
-    border: 1px solid #0303031c;
+    border: 1px solid var(--color-borde-indicador);
     transition: all .3s ease-in-out;
     z-index: -1; /*Para que el indicador este detras del icon*/
 }
+
 #div_area_home
 {
     position: relative;
@@ -226,7 +294,7 @@ body {
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    background-color: #202020;   
+    background-color: var(--color-fondo);   
 }
 #buscador_sec {
     position: fixed;
@@ -235,7 +303,7 @@ body {
     width: 180px;
     max-width: 80vh;
     height: 3.5vh;
-    background: #5a5a5ab6;
+    background: var(--color-buscador);
     border-radius: 20px;
     flex-direction: column;
     align-items: flex-start;
@@ -274,8 +342,8 @@ body {
 }
 .estilo_por_resultado
 {
-    background: #303030b0;
-    color: #fff;
+    background: var(--color-resultado-busqueda);
+    color: #ffffff;
     padding: 8px 12px;
     border: none;
     border-radius: 8px;
@@ -284,52 +352,9 @@ body {
     transition-duration: 0.5s;
 }
 .estilo_por_resultado:hover p:hover {
-    background: #505050;
+    background: var(--color-resultado-busqueda-hover);
 }
-.cont_reproduciendo{
-    position: fixed;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 10vh;
-    bottom: 0;
-}
-.reproductor{
-    display: flex;
-    flex: row wrap;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    width: 80%;
-    height: 90%;
-    max-width: 480px;
-    max-height: fit-content;
-    background-color: #b0afaf27;
-    border-radius: 12px;
-}
-.rep_button{
-    background-color: transparent;
-    border: none;
-}
-.icon_reproductor{
-    stroke:#c5c5c5;
-}
-.icon_reproduciendo_fill{
-    fill: #c5c5c5;
-}
-#reproduciendo_back_next_play_stop{
-    transform: scale(0.75);
-    display: flex;
-    flex: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    height: 5.5vh;
-    width: 30%;
-    border: none;
-    padding: 0.2vh 2vh;
-    background-color: #202020b8;
-}
+
 #cont_art_recom{
     margin-top: 10vh;
 }
@@ -353,6 +378,37 @@ body {
 }
 #titulo_playlist{
     color: aliceblue;
+}
+#tools{
+    position: fixed;
+    bottom: 0.5vh;
+    left: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 15vw;
+    max-width: 100px;
+    
+}
+.opciones{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    bottom: 5vh;
+    transition: all 1s ease-in-out;
+    left: 9vw;
+    height: 20vh; 
+    width: 16vw;
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 10;
+}
+.btn_tool{
+    transform: scale(.89);
+    background-color: transparent;
+    border: none;
 }
 
 
