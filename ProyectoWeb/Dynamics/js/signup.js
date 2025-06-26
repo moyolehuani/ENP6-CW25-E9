@@ -204,13 +204,13 @@ submit_login.addEventListener('click', e => //*******VALIDAR*******/
     }
 }); */
 
-////////////////////////////////////////Logica de la animacion del aside, barra de interfaces////////////////////////////////////////
+////////////////////////////////////////Lógica de la animación del aside, barra de interfaces////////////////////////////////////////
 
 const Op = document.querySelectorAll(".animacion_icono");
 const indicador = document.querySelector(".indicator");
 const labels = document.querySelectorAll(".icono_label");
 
-function moverIndicator(index) // Calcular la posicion del que esta escojido [el current interface es un input tipo radio]
+function moverIndicator(index) // Calcular la posición del que esta escogido [el current interface es un input tipo radio]
 {
     const label = labels[index];
     indicador.style.top = (label.offsetTop + label.offsetHeight / 2 - indicador.offsetHeight / 2) + "px";
@@ -241,7 +241,7 @@ Biblioteca_input.addEventListener("input",()=>{
     contenedor_Biblioteca.classList.remove('oculto');
 })
 
-///////////////////Logica settings y cierre de sesion/////////////////////////////
+///////////////////Lógica settings y cierre de sesión/////////////////////////////
 contenedor_op_confi= document.getElementById("contenedor_op_confi");
 Configuracion_btn= document.getElementById("Configuracion_btn");
 Configuracion_btn= document.getElementById("Configuracion_btn");
