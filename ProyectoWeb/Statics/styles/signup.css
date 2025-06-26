@@ -328,6 +328,7 @@ body {
     border: none;
     width: 65vw;
     height: 60vh;
+    overflow: auto;
 }
 #buscador_input {
     width: 95%;
@@ -341,6 +342,7 @@ body {
     margin: none;
     padding: none;
     border: none;
+    overflow: auto;
 }
 #contenedor_resultados {
     display: flex;
@@ -348,6 +350,7 @@ body {
     gap: 8px; /* Espacio entre resultados */
     margin-top: 16px;
     width: 100%;
+    overflow: auto;
 }
 .estilo_por_resultado
 {
