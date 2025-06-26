@@ -7,6 +7,9 @@ let contraseña= document.getElementById("contraseña");
 let submit_login= document.getElementById("btn_ingresar");
 let display_signup= document.getElementById("contenedor_del_contenedor_form_signup");
 let contenedor_signup= document.getElementById("contenedor_signup");
+let añadir_playlistBtn=document.getElementById("añadir_playlistBtn");
+let quitar_crear_playlistBtn=document.getElementById("quitar_crear_playlistBtn");
+let crear_playlist=document.getElementById("crear_playlist");
 
 let interfaz= document.getElementById("interfaz"); //interfaz con lo del home y el aside y el reproductor
 let contenedor_playlist=document.getElementById("playlist_contenedor");
@@ -133,3 +136,10 @@ Configuracion_btn.addEventListener("click", e =>
         }, 1000);
     }
 });
+//Crear y quitar playlist
+añadir_playlistBtn.addEventListener("click", ()=>{
+    crear_playlist.classList.remove("oculto");
+});
+quitar_crear_playlistBtn.addEventListener("click", ()=>{
+    crear_playlist.classList.add("oculto");
+})
