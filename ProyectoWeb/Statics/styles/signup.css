@@ -260,8 +260,18 @@ body {
 #btn_ampliar_fullscreen
 {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -1vh;
+    right: -1vw;
+}
+#fullscreen_normal:fullscreen
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #aside-pestañas
 {
