@@ -240,7 +240,18 @@ body {
     padding: 0.2vh 2vh;
     background-color: var(--color-reproduciendo-back-next-play-stop);
 }
-
+#player
+{
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    transition: all 1s;
+}
+#player:hover
+{
+    transform: scale(1.01);
+    box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.3)
+}
 #aside-pestañas
 {
     display: flex;
@@ -396,10 +407,10 @@ body {
     justify-content: start;
     flex-direction: row;
     gap: 10px;
-    background-color: #202020;
+    background-color: #20202043;
 }
 #boton{
-    background-color: #202020;
+    background-color: transparent;
     border: none;
     color: aliceblue;
     cursor: pointer;
