@@ -65,7 +65,10 @@ input_usuario.addEventListener('keydown', e => //evento que cuando se presiona e
 //AQUI COOKIES DE REGISTRO
 ///
 
+/*
+
 submit_login.addEventListener('click', e => //*******VALIDAR*******/
+/*
 {
     e.preventDefault();
     if(input_usuario.value === "" || contraseña.value === "")
@@ -86,7 +89,7 @@ submit_login.addEventListener('click', e => //*******VALIDAR*******/
         buscador_sec.classList.remove('oculto');
         interfaz.classList.remove('oculto');
     }
-});
+}); */
 
 ////////////////////////////////////////Logica de la animacion del aside, barra de interfaces////////////////////////////////////////
 
@@ -128,6 +131,10 @@ Biblioteca_input.addEventListener("input",()=>{
 ///////////////////Logica settings y cierre de sesion/////////////////////////////
 contenedor_op_confi= document.getElementById("contenedor_op_confi");
 Configuracion_btn= document.getElementById("Configuracion_btn");
+//console.log("ABAJO es");
+//console.log(Configuracion_btn);
+//console.log("ARRIBA es");
+/*
 Configuracion_btn.addEventListener("click", e =>
 {
     if(contenedor_op_confi.classList.contains("oculto"))
@@ -146,6 +153,13 @@ Configuracion_btn.addEventListener("click", e =>
             contenedor_op_confi.style.opacity = ""
         }, 1000);
     }
+});
+*/
+
+console.log(formulario_signup.innerHTML);
+formulario_signup.addEventListener("submit", function(event){
+    console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+
 });
 //Crear y quitar playlist
 añadir_playlistBtn.addEventListener("click", ()=>{
