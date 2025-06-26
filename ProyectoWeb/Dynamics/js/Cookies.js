@@ -126,6 +126,7 @@ envia_sesion.addEventListener("click", function(event){
                 
     }
     }
+/*
 let numero2=arreglo_usuarios.length;
 let cookie_sesion=arreglo_usuarios[numero2-1]; //selecciona el último elemento de la lista de 
 //todas las cookies, el cual es la cookie que tiene _I
@@ -140,3 +141,4 @@ cerrar_sesion_btn.addEventListener("click", ()=>{
     document.cookie=`${cookie_sesion}; max-age=0; path=/`;
     window.location.reload();
 }); 
+*/

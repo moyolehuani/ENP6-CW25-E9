@@ -376,16 +376,112 @@ body {
 .estilo_por_resultado:hover p:hover {
     background: var(--color-resultado-busqueda-hover);
 }
+#Izquierda
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
+#Derecha
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
+#Izquierda2
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
+#Derecha2
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
 
-#cont_art_recom{
+
+#cont_art_recom
+{
     margin-top: 10vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth 
+    
+}
+#cont_album_recom
+{
+    margin-top: 10vh;
+    display: flex;
+    overflow-x: auto;   
+    scroll-behavior: smooth
+}
+.elemento
+{
+    padding: 10px; 
+    margin: 10px;
+    margin-top: 3vh;
+    width: 80px; 
+    height: 80px;
+    border-radius: 50%;
+}
+.elemento:hover
+{
+    width: 107px;
+    height: 107px;
+}
+
+#contiene_artistas
+{
+    width: 40vw;
+    height: 27vh;
+    overflow-x: auto;
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: row;
+}
+#contiene_album
+{
+    width: 40vw;
+    height: 27vh;
+    overflow-x: auto;
+    overflow-x: hidden;  
+    display: flex;
+    flex-direction: row;
 }
 .recomendado
 {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     margin-left: 3vw;
-    height: 25vh;
+    height: 37vh;
+    width: 50vw;
+    background-color: green;
+}
+.recomendado2
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 3vw;
+    height: 32vh;
+    width: 50vw;
+    background-color: blue;
 }
 .recomendado_title
 {
