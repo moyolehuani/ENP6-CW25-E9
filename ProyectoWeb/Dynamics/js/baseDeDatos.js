@@ -356,7 +356,7 @@ const baseDatosJSON = {
       id:19,
       nombre: "Natori",
       descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
-      url_img:"", //Imagen de Natori
+      url_img:"https://cdn-images.dzcdn.net/images/artist/cb8f8f574e8179d663be932de2677a29/1900x1900-000000-80-0-0.jpg",
     }
 
   ],
@@ -553,24 +553,24 @@ const baseDatosJSON = {
       nombre: "Native",
       artista: "One Republic",
       id_artista: 17,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Native es el tercer álbum de estudio banda estadounidense de pop rock OneRepublic",
+      url_img: "https://i.scdn.co/image/ab67616d0000b2739e2f95ae77cf436017ada9cb"
     },
     {
       id: 20,
       nombre: "Fairytales",
       artista: "Alexander Rybak",
       id_artista: 18,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Es el álbum debut del cantante y compositor noruego Alexander Rybak",
+      url_img: "https://i.scdn.co/image/ab67616d0000b2732e1c6382b5cb1571270aad83"
     },
     {
       id: 21,
       nombre: "Theater",
       artista: "Natori",
       id_artista: 19,
-      descripcion: "",
-      url_img: ""
+      descripcion: "El 20 de diciembre de 2023, Natori lanzó su primer álbum original, Theater",
+      url_img: "https://cdn-images.dzcdn.net/images/cover/03647239a59255da92ea94774cebefd9/0x1900-000000-80-0-0.jpg"
     },
   ]
 };

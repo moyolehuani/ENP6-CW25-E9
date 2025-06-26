@@ -46,8 +46,9 @@ console.log("manzana");
 console.log("Pera");
 
 let envia_sesion=document.getElementById("btn_ingresar");
-
 envia_sesion.addEventListener("click", function(event){
+    event.preventDefault();
+    alert("Todo bien");
     //guardo los valores que el usuario ponga para iniciar sesión
     usuario_puesto=document.getElementById("usuario").value.trim();
     contrasena_puesta=document.getElementById("contraseña").value.trim();
