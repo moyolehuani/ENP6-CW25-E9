@@ -249,7 +249,6 @@ body {
     background-color: var(--color-barra);
     max-width: 140px;
     max-height: 100vh;
-    z-index: 3;
 }
 #aside_form{
     width: 100%;

@@ -72,12 +72,10 @@ envia_sesion.addEventListener("click", function(event){
             buscador_sec.classList.remove('oculto');
             interfaz.classList.remove('oculto'); 
             //y no sobreescriba la de la cuenta que se creó
-            document.cookie=`_I${usuario_puesto}=${contrasena_puesta}; max-age=40; path=/`;
-            console.log("Cookie de inición de sesión automático creada")
+            document.cookie=`_I${usuario_puesto}=${contrasena_puesta}; max-age=100; path=/`;
+            console.log("Cookie de inición de sesión automático creada");
             break; //detiene la ejecución del for cuando ya se inicia sesión
             //esto evita el resto de las alertas por los demás elementos 
-                
-
         }
         else
         {
@@ -124,5 +122,10 @@ envia_sesion.addEventListener("click", function(event){
         }
                 
     }
-
+cerrar_sesion_btn= document.getElementById('cerrar_sesion_btn');
+cerrar_sesion_btn.addEventListener("click", ()=>
+{
+    arreglo_cuenta.length
+    arreglo_cuenta.pop();
+});
 
