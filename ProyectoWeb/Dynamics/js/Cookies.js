@@ -122,14 +122,12 @@ envia_sesion.addEventListener("click", function(event){
         }
                 
     }
-/*
+
 cerrar_sesion_btn= document.getElementById('cerrar_sesion_btn');
 cerrar_sesion_btn.addEventListener("click", ()=>
 {
     let hola_mundo=arreglocuenta[arreglo_cuenta.length-1];
-    document.cookie=`${hola_mundo}  `
-    arreglo_cuenta.pop();
+    document.cookie=`${hola_mundo} ; max-age=-1000 path=/`;
 });
 
-*/
 
