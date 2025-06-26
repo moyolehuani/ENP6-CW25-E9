@@ -420,7 +420,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    scroll-behavior: smooth 
+    scroll-behavior: smooth; 
     
 }
 #cont_album_recom
@@ -428,27 +428,27 @@ body {
     margin-top: 10vh;
     display: flex;
     overflow-x: auto;   
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
 }
 .elemento
 {
     padding: 10px; 
     margin: 10px;
     margin-top: 3vh;
-    width: 80px; 
-    height: 80px;
-    border-radius: 50%;
+    width: 17vw; 
+    height: 17vh;
+    border-radius: 100%;
 }
 .elemento:hover
 {
-    width: 107px;
-    height: 107px;
+    width: 22vw;
+    height: 22vh;
 }
 
 #contiene_artistas
 {
-    width: 40vw;
-    height: 27vh;
+    width: 70vw;
+    height: 30vh;
     overflow-x: auto;
     overflow-x: hidden; 
     display: flex;
@@ -456,8 +456,8 @@ body {
 }
 #contiene_album
 {
-    width: 40vw;
-    height: 27vh;
+    width: 70vw;
+    height: 30vh;
     overflow-x: auto;
     overflow-x: hidden;  
     display: flex;
@@ -470,8 +470,8 @@ body {
     flex-wrap: nowrap;
     margin-left: 3vw;
     height: 37vh;
-    width: 50vw;
-    background-color: green;
+    width: 80vw;
+    background-color: rgba(66, 221, 66, 0.155);
 }
 .recomendado2
 {
@@ -479,9 +479,9 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     margin-left: 3vw;
-    height: 32vh;
-    width: 50vw;
-    background-color: blue;
+    height: 37vh;
+    width: 80vw;
+    background-color: rgba(57, 57, 205, 0.103);
 }
 .recomendado_title
 {

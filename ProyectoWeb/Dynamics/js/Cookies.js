@@ -194,9 +194,4 @@ cerrar_sesion_btn.addEventListener("click", ()=>{
     console.log("TATGSGSGSGSHSJSJSJSJSK");
     document.cookie=`${cookie_sesion}; max-age=0; path=/`;
     window.location.reload();
-<<<<<<< HEAD
-}); 
-*/
-=======
 });*/
->>>>>>> a6be28ffdb901e32a8a3d71353a6fefcb061b80b
