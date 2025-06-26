@@ -122,7 +122,6 @@ envia_sesion.addEventListener("click", function(event){
         }
                 
     }
-
 console.log("MANZANANANANANANA");
 let numero2=arreglo_cuenta.length;
 let cookie_sesion=arreglo_cuenta[numero2-1];
@@ -140,5 +139,3 @@ cerrar_sesion_btn.addEventListener("click", ()=>
     console.log(cookie_sesion);
     console.log("Hola Mundo");
 });
-
-
