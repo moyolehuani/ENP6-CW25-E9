@@ -8,16 +8,16 @@ Gael:
     '--color-blur': '#c5c5c533',
     '--color-barra': '#303030',
     '--color-icono-aside': '#ffffff88',
-    '--color-indicador': '#221f1fbf',
-    '--color-borde-indicador': '#0303031c',
-    '--color-buscador': '#5a5a5ab6',
-    '--color-resultado-busqueda-hover': '#505050',
-    '--color-resultado-busqueda': '#303030b0',
-    '--color-resultado-busqueda-placehover':'#727272',
-    '--color-reproductor': '#b0afaf27',
-    '--color-icon-reproductor': '#c5c5c5',
-    '--color-reproduciendo-back-next-play-stop': '#202020b8'
-  },
+    '--color-indicador': '#221f1fbf',
+    '--color-borde-indicador': '#0303031c',
+    '--color-buscador': '#5a5a5ab6',
+    '--color-resultado-busqueda-hover': '#505050',
+    '--color-resultado-busqueda': '#303030b0',
+    '--color-resultado-busqueda-placehover':'#727272',
+    '--color-reproductor': '#b0afaf27',
+    '--color-icon-reproductor': '#c5c5c5',
+    '--color-reproduciendo-back-next-play-stop': '#202020b8'
+ },
   Ari: 
   {
     '--color-glow': '#d2b4e2e3',
