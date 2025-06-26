@@ -1,19 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////
-//variables
-let form_inicio_sesion=document.getElementById("signup"); //es el formulario de inicio de sesión
-let envia_sesion=document.getElementById("btn_ingresar");
-let usuario_puesto;
-let contrasena_puesta;
-let cookie_formada;
-let verifica_coincidencia;
 let formulario_registro=document.getElementById("registrarse_form");
 let usuario_creado;
 let contrasena_creada;
 let arreglo_usuarios;
-let usuarios_creados;
-let input_usuario_creado=document.getElementById("usuario_nuevo");
-let input_contrasena_creada=document.getElementById("contrasena_del_usuario_nuevo");
-/*contenedores*/
+let usuarios_creados
 //////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////Declaracion de funciones
 /*configurar cookie*/
@@ -52,48 +42,34 @@ function obtenerCookiesComoArreglo()
     }
     return arreglo;
 }
-////////////////////////////
-//FUNCIONES DE ANIMACION
-function aparecer_contendor(contenedor)
-{
-    contenedor.classList.remove("oculto");
-    contenedor.classList.add("animar-aparicion");
-    contenedor.classList.add("desvanecido_out");
-} 
-function desaparecer_contenedor(contenedor)
-{
-    contenedor.style.opacity = "0";
-    setTimeout(() => 
-    {
-       contenedor.classList.add("oculto");
-       contenedor.classList.remove("animar-aparicion");
-       contenedor.style.opacity = ""
-    }, 1000);
-}
-////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////REGISTRAR USUARIO//////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
 formulario_registro.addEventListener("submit", function(e) //Evento que registra a un nuevo usuario
 {
     e.preventDefault();
-    usuario_creado=input_usuario_creado.value; //guarda el valor del usuario 
-    contrasena_creada=input_contrasena_creada.value; //y la contraseña que ingresó para la creación de la cuenta
-    input_usuario_creado.value="";
-    input_contrasena_creada.value="";
+    usuario_creado=document.getElementById("usuario_nuevo").value; //guarda el valor del usuario 
+    contrasena_creada=document.getElementById("contrasena_del_usuario_nuevo").value; //y la contraseña que ingresó para la creación de la cuenta
+    
     console.log(usuario_creado +"= usuario creado");
     console.log(contrasena_creada + "= contra creada");
     //se crea la cookie de la cuenta
     
-    setCookie(usuario_creado, contrasena_creada, 1000); // cookie perpetua
-    desaparecer_contenedor(contenedor_registarse);
-    aparecer_contendor(contenedor_signup);
-    console.log(document.cookie + "estas son las cookies");//lo anterior es una pequeña comprobación de que todo salió bien
+    setCookie(usuario_creado, contrasena_creada, 1000) // cookie perpetua
     
+    console.log(document.cookie + "estas son las cookies");//lo anterior es una pequeña comprobación de que todo salió bien
+    window.location.reload();
 });
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////Comprobación de información al iniciar sesión///////////////////
 //////////////////////////////////////////////////////////////////////////////////
+//variables
+let form_inicio_sesion=document.getElementById("signup"); //es el formulario de inicio de sesión
+let envia_sesion=document.getElementById("btn_ingresar");
+let usuario_puesto;
+let contrasena_puesta;
+let cookie_formada;
+let verifica_coincidencia;
 ////////////////////////////////// Eventos
 //-//
 envia_sesion.addEventListener("click", function(event) // Evento detecta cuando se le da click al btn submit del inicio de sesion
@@ -136,11 +112,7 @@ envia_sesion.addEventListener("click", function(event) // Evento detecta cuando 
         alert("EL usuario o la contraseña es incorrecta")
     }
 });
-////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////////
-////////////////////////////INICIO DE SESION AUTOMATICO///////////////////////////
-/////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
+//-/////////////////////////////////////////////////////////////////////////////////
 /*let verificacion2;
 let arreglo_cuenta=document.cookie.split(";"); //guarda las cookies en arreglos
 //pude haber usado directamente el valor de arreglo_usuarios, pero así mantengo un orden
@@ -179,9 +151,9 @@ for(let d=0; d<arreglo_cuenta.length; d++) //itero para comparar la última cook
             }
         }
     }
-    }
-let numero2=arreglo_usuarios.length;
-let cookie_sesion=arreglo_usuarios[numero2-1]; //selecciona el último elemento de la lista de 
+console.log("MANZANANANANANANA");
+let numero2=arreglo_cuenta.length;
+let cookie_sesion=arreglo_cuenta[numero2-1]; //selecciona el último elemento de la lista de 
 //todas las cookies, el cual es la cookie que tiene _I
 console.log(cookie_sesion);
 console.log("TAKAKAKAKAK");
