@@ -241,6 +241,61 @@ const baseDatosJSON = {
       link: "_nOSVOumAiA",
       genero: "Pop",
       id_genero: 2
+    },
+    {
+      id:23,
+      nombre: "Ivy",
+      artista: "Frank ocean",
+      id_artista: 20,
+      album: "Blonde",
+      id_album: 22,
+      link: "CKylNfWWeRk",
+      genero: "R&B",
+      id_genero: 5
+    },
+    {
+      id:24,
+      nombre:"Maria Maria",
+      artista: "Santana",
+      id_artista: 21,
+      album: "Supernatural",
+      id_album: 23,
+      link: "GrF6_OpTXS8",
+      genero: "Rock",
+      id_genero: 3
+    },
+    {
+      id:25,
+      nombre:"One Life",
+      artista: "Justin Bieber",
+      id_artista: 22,
+      album: "Journals",
+      id_album: 24,
+      link: "kQdrIk6pz2o",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id:26,
+      nombre:"Just like starting over",
+      artista: "John Lennon",
+      id_artista: 23,
+      album: "Double Fantasy",
+      id_album: 25,
+      link: "ijyvbBARHyc",
+      genero: "Rock",
+      id_genero: 3
+    },
+    {
+      id:26,
+      nombre:"Devil's Advocate",
+      artista: "The neighbourhood",
+      id_artista: 24,
+      album: "Chip Chrome & The Mono-Tones",
+      id_album: 26,
+      link: "ousy_RRnnIQ",
+      genero: "R&B",
+      id_genero: 5
     }
   ],
   artistas: [
@@ -352,12 +407,48 @@ const baseDatosJSON = {
       descripcion: "Alexander Igoryevich Rybak es un violinista, cantante, compositor, actor y escritor noruego de origen bielorruso. Ganó el Festival de Eurovisión de 2009 celebrado en Moscú en representación de Noruega, ​ edición en la que consiguió el mayor número de votos de toda la historia de Eurovisión. ",
       url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVOeGVcWJqMLa2Y91XLdiBQPqbsOoiAu-Ung&s",
     },
+    //Aqui Ivan 
     {
       id:19,
       nombre: "Natori",
       descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
-      url_img:"",
+<<<<<<< HEAD
+      url_img:""
+    },
+    {
+      id:20,
+      nombre: "Frank Ocean",
+      descripcion:"Christopher Frank Ocean, conocido como Frank Ocean, es un cantautor, actor, director, diseñador y empresario estadounidense. Es considerado por amplios medios artísticos como uno de los mejores artistas de la década de 2010 por sus estilos musicales vanguardistas y sus letras introspectivas y elípticas",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-P47hOQXxUZbxaM44lGQvS1cQ0qM_YWTfw&s"
+    },
+    {
+      id:21,
+      nombre:"Santana",
+      descripcion:"Carlos Humberto Santana Barragán​, conocido como Carlos Santana o simplemente Santana, es un guitarrista mexicano.​ En 1966 fundó la banda Santana, pionera en fusionar la música latina con el rock. Santana ha vendido más de 100 millones de álbumes en todo el mundo.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQWYjW-Ehm18KbwPnW4oQMKMH9wILtPK4p3g&s"
+    },
+    {
+      id:22,
+      nombre:"Justin Bieber",
+      descripcion:"Justin Drew Bieber (London, Ontario, 1 de marzo de 1994) es un cantante y compositor canadiense. En 2008, el exejecutivo de la industria musical Scooter Braun descubrió casualmente el talento de Justin Bieber cuando se encontraba viendo algunos vídeos en YouTube, donde Bieber se dedicaba a subir algunas versiones de sus cantantes favoritos que él interpretaba junto a su guitarra.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt8f0qaGtE4SRamtHxX815oC-_UXtprCv0ug&s"
+    },
+    {
+      id:23,
+      nombre:"John Lennon",
+      descripcion:"John Winston Ono Lennon fue un artista, músico, cantautor, poeta, actor, activista, compositor, productor, escritor y pacifista británico, conocido por ser fundador, vocalista, compositor y guitarrista rítmico de la banda de rock The Beatles y considerado uno de los artistas más influyentes del siglo XX.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQskx-3p943fWXYwLfWm8iw65SoAs_ApvzqMA&s"
+    },
+    {
+      id:24,
+      nombre:"The neighbourhood",
+      descripcion:"The Neighbourhood es una banda de rock alternativo estadounidense creada en agosto de 2011. El grupo está formado por el vocalista Jesse Rutherford, los guitarristas Jeremy Freedman, Zach Abels y el bajista Mikey Margott. La banda publicó su primer álbum de estudio el 23 de abril de 2013 a través de Columbia Records",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPdgUZbyPmJucLYE3BquDlCbjaOvJpxRBTg&s"
+    },
+=======
+      url_img:"https://cdn-images.dzcdn.net/images/artist/cb8f8f574e8179d663be932de2677a29/1900x1900-000000-80-0-0.jpg",
     }
+>>>>>>> e32a192116efdcf8c68fa13786c24c8ac2819177
 
   ],
   genero: [
@@ -545,32 +636,72 @@ const baseDatosJSON = {
       nombre: "Uta's Songs: One Piece Film Red",
       artista: "ADO",
       id_artista: 16,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Uta's Songs: One Piece Film Red fue creado para la película de One Piece del mismo nombre",
+      url_img: "https://cdn-images.dzcdn.net/images/cover/3b0d1441656b8185b8e2dbbf5dc07812/500x500-000000-80-0-0.jpg"
     },
     {
       id: 19,
       nombre: "Native",
       artista: "One Republic",
       id_artista: 17,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Native es el tercer álbum de estudio banda estadounidense de pop rock OneRepublic",
+      url_img: "https://i.scdn.co/image/ab67616d0000b2739e2f95ae77cf436017ada9cb"
     },
     {
       id: 20,
       nombre: "Fairytales",
       artista: "Alexander Rybak",
       id_artista: 18,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Es el álbum debut del cantante y compositor noruego Alexander Rybak",
+      url_img: "https://i.scdn.co/image/ab67616d0000b2732e1c6382b5cb1571270aad83"
     },
     {
       id: 21,
       nombre: "Theater",
       artista: "Natori",
       id_artista: 19,
-      descripcion: "",
-      url_img: ""
+      descripcion: "El 20 de diciembre de 2023, Natori lanzó su primer álbum original, Theater",
+      url_img: "https://cdn-images.dzcdn.net/images/cover/03647239a59255da92ea94774cebefd9/0x1900-000000-80-0-0.jpg"
+    },
+    {
+      id:22,
+      nombre:"Blonde",
+      artista:"Frank Ocean",
+      id_artista:20,
+      descripcion:"Blonde es el segundo Álbum de Frank Ocean con un sonido minimalista, en donde mezcla géneros como R&B y pop psicodélico, caracterizado por ser una obra introspectiva y experimental. ",
+      url_img:"https://indierocks.sfo3.digitaloceanspaces.com/wp-content/uploads/2021/08/Frank-Ocean_Blonde_portada.jpg"
+    },
+    {
+      id:23,
+      nombre:"Supernatural",
+      artista:"Santana",
+      id_artista:21,
+      descripcion:"Supernatural es el álbum más exitoso de Santana, lanzado en 1999. Combina el rock latino característico de Santana con elementos de pop, rock, y ritmos latinos.",
+      url_img:"https://indierocks.sfo3.digitaloceanspaces.com/wp-content/uploads/2021/08/Frank-Ocean_Blonde_portada.jpg"
+    },
+    {
+      id:24,
+      nombre:"Journals",
+      artista:"Justin Bieber",
+      id_artista:22,
+      descripcion:"Journals es el segundo álbum recopilatorio de Justin Bieber, que se lanzó digitalmente en el año 2013, dando un giro al estilo musical de Justin agregando ritmos de R&B, explorando temas de desamor introspección y crecimiento personal.",
+      url_img:"https://www.lacasadeldisco.es/3893-large_default/justin-bieber-2vinilo-journalslp.jpg"
+    },
+    {
+      id:25,
+      nombre:"Double Fantasy",
+      artista:"John Lennon",
+      id_artista:23,
+      descripcion:"Double Fantasy es el quinto y último álbum de estudio colaborativo de John Lennon y Yoko Ono, lanzado en noviembre de 1980. Este álbum marca el regreso de Lennon a la música después de cinco años. La obra se centra en temas de amor, familia y el renacimiento artístico de Lennon. ",
+      url_img:"https://m.media-amazon.com/images/I/51tDE3VgjaL._UF1000,1000_QL80_.jpg"
+    },
+    {
+      id:26,
+      nombre:"Chip Chrome & The Mono-Tones",
+      artista:"The neighbourhood",
+      id_artista:24,
+      descripcion:"Chip Chrome & The Mono-Tones es el cuarto álbum de estudio de la banda estadounidense de música alternativa The Neighbourhood. Se lanzó el 25 de septiembre de 2020,  es un álbum conceptual construido sobre las propias luchas de Rutherford con el uso excesivo de las redes sociales y la identidad de la banda.",
+      url_img:"https://images-na.ssl-images-amazon.com/images/I/717h8oJwcKL._AC_UL210_SR210,210_.jpg"
     },
   ]
 };
@@ -587,7 +718,7 @@ let player;
 let link;
 let cancion_cambio;
 let maximo=baseDatosJSON.canciones.length;
-//Funcion para mostrar el video
+//Función para mostrar el video
 function hacer(link)
 {
     if(player)
@@ -686,14 +817,14 @@ siguiente.addEventListener("click",()=>{
   if(link != undefined) 
   {
     
-    for(let b = 0; b < baseDatosJSON.canciones.length; b++) 
+    for(let b=0; b<baseDatosJSON.canciones.length; b++) 
     {
       if(baseDatosJSON.canciones[b].link == link) 
       {
-        if (b + 1 < baseDatosJSON.canciones.length) 
+        if (b+1<baseDatosJSON.canciones.length) 
         {
-          hacer(baseDatosJSON.canciones[b + 1].link);
-          link = baseDatosJSON.canciones[b + 1].link;
+          hacer(baseDatosJSON.canciones[b+1].link);
+          link = baseDatosJSON.canciones[b+1].link;
         } 
         else
         {
@@ -704,25 +835,23 @@ siguiente.addEventListener("click",()=>{
       }
     }
   }
-  
 });
-
 regresar.addEventListener("click",()=>{
-  if(link != undefined) 
+  if(link!=undefined) 
   {
-    for(let b = 0; b<baseDatosJSON.canciones.length; b++) 
+    for(let b=0; b<baseDatosJSON.canciones.length; b++) 
     {
       if(baseDatosJSON.canciones[b].link == link) 
       {
         if (b-1>= 0) 
         {
-          hacer(baseDatosJSON.canciones[b - 1].link);
-          link = baseDatosJSON.canciones[b - 1].link;
+          hacer(baseDatosJSON.canciones[b-1].link);
+          link = baseDatosJSON.canciones[b-1].link;
         } 
         else
         {
-          hacer(baseDatosJSON.canciones[baseDatosJSON.canciones.length - 1].link);
-          link = baseDatosJSON.canciones[baseDatosJSON.canciones.length - 1].link;
+          hacer(baseDatosJSON.canciones[baseDatosJSON.canciones.length-1].link);
+          link = baseDatosJSON.canciones[baseDatosJSON.canciones.length-1].link;
         }
         return;
       }
