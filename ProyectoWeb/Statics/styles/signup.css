@@ -240,38 +240,36 @@ body {
     padding: 0.2vh 2vh;
     background-color: var(--color-reproduciendo-back-next-play-stop);
 }
-#player
+#fullscreen_normal
 {
     position: relative;
-    display: flex;
-    background-color: var(--color-fondo);
     width: 10vw;
     height: 5vh;
+}
+
+#fullscreen_normal:fullscreen
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player_normal
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-fondo);
     border-radius: 10px;
     transition: all 1s;
-    flex-basis: 100px;
-    flex-shrink: 0;
-}
-#player:hover
-{
-    transform: scale(1.01);
-    box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.3)
 }
 #btn_ampliar_fullscreen
 {
     position: absolute;
     top: -1vh;
     right: -1vw;
-}
-#fullscreen_normal:fullscreen
-{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 #aside-pestañas
 {
