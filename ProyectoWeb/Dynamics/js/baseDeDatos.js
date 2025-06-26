@@ -412,8 +412,43 @@ const baseDatosJSON = {
       id:19,
       nombre: "Natori",
       descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
+<<<<<<< HEAD
       url_img:"https://cdn-images.dzcdn.net/images/artist/cb8f8f574e8179d663be932de2677a29/1900x1900-000000-80-0-0.jpg",
     }
+=======
+      url_img:"https://cdn-images.dzcdn.net/images/artist/cb8f8f574e8179d663be932de2677a29/1900x1900-000000-80-0-0.jpg"
+    },
+    {
+      id:20,
+      nombre: "Frank Ocean",
+      descripcion:"Christopher Frank Ocean, conocido como Frank Ocean, es un cantautor, actor, director, diseñador y empresario estadounidense. Es considerado por amplios medios artísticos como uno de los mejores artistas de la década de 2010 por sus estilos musicales vanguardistas y sus letras introspectivas y elípticas",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-P47hOQXxUZbxaM44lGQvS1cQ0qM_YWTfw&s"
+    },
+    {
+      id:21,
+      nombre:"Santana",
+      descripcion:"Carlos Humberto Santana Barragán​, conocido como Carlos Santana o simplemente Santana, es un guitarrista mexicano.​ En 1966 fundó la banda Santana, pionera en fusionar la música latina con el rock. Santana ha vendido más de 100 millones de álbumes en todo el mundo.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQWYjW-Ehm18KbwPnW4oQMKMH9wILtPK4p3g&s"
+    },
+    {
+      id:22,
+      nombre:"Justin Bieber",
+      descripcion:"Justin Drew Bieber (London, Ontario, 1 de marzo de 1994) es un cantante y compositor canadiense. En 2008, el exejecutivo de la industria musical Scooter Braun descubrió casualmente el talento de Justin Bieber cuando se encontraba viendo algunos vídeos en YouTube, donde Bieber se dedicaba a subir algunas versiones de sus cantantes favoritos que él interpretaba junto a su guitarra.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRt8f0qaGtE4SRamtHxX815oC-_UXtprCv0ug&s"
+    },
+    {
+      id:23,
+      nombre:"John Lennon",
+      descripcion:"John Winston Ono Lennon fue un artista, músico, cantautor, poeta, actor, activista, compositor, productor, escritor y pacifista británico, conocido por ser fundador, vocalista, compositor y guitarrista rítmico de la banda de rock The Beatles y considerado uno de los artistas más influyentes del siglo XX.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQskx-3p943fWXYwLfWm8iw65SoAs_ApvzqMA&s"
+    },
+    {
+      id:24,
+      nombre:"The neighbourhood",
+      descripcion:"The Neighbourhood es una banda de rock alternativo estadounidense creada en agosto de 2011. El grupo está formado por el vocalista Jesse Rutherford, los guitarristas Jeremy Freedman, Zach Abels y el bajista Mikey Margott. La banda publicó su primer álbum de estudio el 23 de abril de 2013 a través de Columbia Records",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPdgUZbyPmJucLYE3BquDlCbjaOvJpxRBTg&s"
+    },
+>>>>>>> a6be28ffdb901e32a8a3d71353a6fefcb061b80b
 
   ],
   genero: [

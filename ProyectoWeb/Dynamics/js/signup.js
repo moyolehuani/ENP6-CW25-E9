@@ -137,7 +137,8 @@ let btn_registrarse= document.getElementById("btn_registarte");
 let contenedor_registarse= document.getElementById("contenedor_registarse");
 let buscador_sec= document.getElementById("buscador_sec"); //estas como no se pueden ocultar ya que (position:fixed),se tienen que ocultar una por una
 let cont_reproduciendo= document.getElementById("cont_reproduciendo");
-
+let btn_registar= document.getElementById('btn_registar');
+let registrarse_form= document.getElementById('registrarse_form')
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /*//////////////////////////////////////////////LOGICA DEL LOGIN/////////////////////////////////////////////////////////////////////// */
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////:)// */
@@ -147,6 +148,7 @@ btn_registrarse.addEventListener("click", e =>  // al picar el boton de registra
     contenedor_registarse.classList.remove('oculto');
     contenedor_registarse.classList.add("animar-aparicion");
 });
+
 input_usuario.addEventListener('keydown', e => //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
 {
     if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) // si el evento key detecta la tecla enter
@@ -316,7 +318,20 @@ seleccion_tema.addEventListener("change", function () {
 //Crear y quitar playlist
 añadir_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.remove("oculto");
+    for(let i=0;i<baseDatosJSON.canciones.length;i++)
+    {
+        if(baseDatosJSON.canciones[i].nombre.includes(texto))
+        {
+            formato_resultado=document.createElement("button");
+            formato_resultado.classList.add("estilo_por_resultado");
+            formato_resultado.id = "cancion_" + baseDatosJSON.canciones[i].nombre;
+            formato_resultado.textContent=baseDatosJSON.canciones[i].nombre;
+            pi.appendChild(formato_resultado); 
+        }
+    }
 });
 quitar_crear_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.add("oculto");
-})
+});
+
+
