@@ -7,10 +7,15 @@ let contraseña= document.getElementById("contraseña");
 let submit_login= document.getElementById("btn_ingresar");
 let display_signup= document.getElementById("contenedor_del_contenedor_form_signup");
 let contenedor_signup= document.getElementById("contenedor_signup");
+let añadir_playlistBtn=document.getElementById("añadir_playlistBtn");
+let quitar_crear_playlistBtn=document.getElementById("quitar_crear_playlistBtn");
+let crear_playlist=document.getElementById("crear_playlist");
 
 let interfaz= document.getElementById("interfaz"); //interfaz con lo del home y el aside y el reproductor
 let contenedor_playlist=document.getElementById("playlist_contenedor");
 let playlist_input=document.getElementById("Playlist_input");
+let contenedor_Biblioteca=document.getElementById("Biblioteca_contenedor");
+let Biblioteca_input=document.getElementById("Biblioteca_input");
 let recomendaciones=document.getElementById("recomendados");
 let menu_input=document.getElementById("menu_input");
 let btn_registrarse= document.getElementById("btn_registarte");
@@ -109,11 +114,20 @@ Op.forEach((oP, index) =>
 playlist_input.addEventListener("input", ()=>{
     recomendaciones.classList.add('oculto');
     contenedor_playlist.classList.remove('oculto')
+    contenedor_Biblioteca.classList.add('oculto');
 });
 menu_input.addEventListener("input", ()=>{
     recomendaciones.classList.remove('oculto');
     contenedor_playlist.classList.add('oculto');
+    contenedor_Biblioteca.classList.add('oculto');
 });
+/*Cambia de recomedaciones a biblioteca y viceversa*/
+Biblioteca_input.addEventListener("input",()=>{
+    recomendaciones.classList.add('oculto');
+    contenedor_playlist.classList.add('oculto')
+    contenedor_Biblioteca.classList.remove('oculto');
+})
+
 ///////////////////Logica settings y cierre de sesion/////////////////////////////
 contenedor_op_confi= document.getElementById("contenedor_op_confi");
 Configuracion_btn= document.getElementById("Configuracion_btn");
@@ -140,6 +154,7 @@ Configuracion_btn.addEventListener("click", e =>
         }, 1000);
     }
 });
+<<<<<<< HEAD
 */
 
 console.log(formulario_signup.innerHTML);
@@ -147,3 +162,12 @@ formulario_signup.addEventListener("submit", function(event){
     console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
 });
+=======
+//Crear y quitar playlist
+añadir_playlistBtn.addEventListener("click", ()=>{
+    crear_playlist.classList.remove("oculto");
+});
+quitar_crear_playlistBtn.addEventListener("click", ()=>{
+    crear_playlist.classList.add("oculto");
+})
+>>>>>>> 9bdf3b5e53505dfd1536e4cdb387832532f1a68a

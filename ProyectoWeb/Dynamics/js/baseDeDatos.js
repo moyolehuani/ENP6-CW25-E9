@@ -154,6 +154,94 @@ const baseDatosJSON = {
       genero: "Pop",
       id_genero: 2
     },
+    {
+      id: 15,
+      nombre: "Battle Against A True Hero",
+      artista: "Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "aWBtpBwzzdM",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
+    {
+      id: 16,
+      nombre: "MEGALOVANIA",
+      artista:"Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "wDgQdr8ZkTw",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
+    {
+      id: 17,
+      nombre: "Hopes And Dreams",
+      artista: "Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "tz82xbLvK_k",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
+    {
+      id: 18,
+      nombre: "SAVE The World",
+      artista: "Toby Fox",
+      id_artista: 15,
+      album: "UNDERTALE Soundtrack",
+      id_album: 17,
+      link: "mZRP7nQkfrM",
+      genero: "musica de videojuego",
+      id_genero: 8
+    },
+    {
+      id: 19,
+      nombre: "Backlight",
+      artista: "ADO",
+      id_artista: 16,
+      album: "Uta's Songs: One Piece Film Red",
+      id_album: 18,
+      link: "I39DbfFmL_g",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id: 20,
+      nombre: "Counting Stars",
+      artista: "One Republic",
+      id_artista: 17,
+      album: "Native",
+      id_album: 19,
+      link: "mgT0N3tMP74",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id: 21,
+      nombre: "Fairy Tale",
+      artista: "Alexander Rybak",
+      id_artista: 18,
+      album:"Fairytales",
+      id_album: 20,
+      link: "1rVY08gRGmA",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id: 22,
+      nombre: "Overdose",
+      artista: "Natori",
+      id_artista: 19,
+      album: "Theater",
+      id_album: 21,
+      link: "_nOSVOumAiA",
+      genero: "Pop",
+      id_genero: 2
+    }
   ],
   artistas: [
     {
@@ -239,6 +327,36 @@ const baseDatosJSON = {
       nombre: "Kali Uchis",
       descripcion: "Artista colombo-estadounidense con una estética única y una narrativa visual marcada por el arte y la introspección.",
       url_img: "https://www.universalmusic.com.pe/files/2023/10/IMG_7411-min-scaled-e1697833803358.jpeg"
+    },
+    {
+      id: 15,
+      nombre: "Toby Fox",
+      descripcion: "Robert F. Fox conocido profesionalmente como Toby Fox, es un compositor y desarrollador de videojuegos estadounidense, conocido por desarrollar Undertale.",
+      url_img: "https://static.wikia.nocookie.net/undertale/images/8/8e/TobyFox.png/revision/latest?cb=20151222064831&path-prefix=es"
+    },
+    {
+      id: 16,
+      nombre: "ADO",
+      descripcion: "Ado (Tokio; 24 de octubre de 2002) es el seudónimo de una cantante japonesa.En 2020, con tan solo 17 años, Ado debutó tempranamente con el sencillo digital titulado Usseewa. La canción pronto alcanzó el puesto número 1 en el Billboard Japan Hot 100, DO Oricon Digital Singles Chart y Oricon Streaming Chart.",
+      url_img: "https://www.billboard.com/wp-content/uploads/2023/02/Ado-press-2023-billboard-1548-1.jpg"
+    },
+    {
+      id:17,
+      nombre: "One Republic",
+      descripcion: "OneRepublic es una banda estadounidense de pop rock​ formada en 2002, en Colorado Springs, Colorado, ​ por el cantante Ryan Tedder y el guitarrista Zach Filkins.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzoNMEi-CuhCU1PiFktUrTGjRJhVx_B1SX7Q&s",
+    },
+    {
+      id:18,
+      nombre: "Alexander Rybak",
+      descripcion: "Alexander Igoryevich Rybak es un violinista, cantante, compositor, actor y escritor noruego de origen bielorruso. Ganó el Festival de Eurovisión de 2009 celebrado en Moscú en representación de Noruega, ​ edición en la que consiguió el mayor número de votos de toda la historia de Eurovisión. ",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVOeGVcWJqMLa2Y91XLdiBQPqbsOoiAu-Ung&s",
+    },
+    {
+      id:19,
+      nombre: "Natori",
+      descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
+      url_img:"",
     }
 
   ],
@@ -277,7 +395,12 @@ const baseDatosJSON = {
       id: 7,
       nombre: "Jazz",
       descripcion: "El jazz es un género musical que se originó a principios del siglo XX, caracterizado por su improvisación, ritmos complejos y una rica tradición instrumental."
-    }
+    },
+    {
+      id: 8,
+      nombre: "musica de videojuego",
+      descripcion: "Su función principal es sumergir al jugador en el mundo del juego, complementando la jugabilidad y la narrativa, y provocando diversas emociones, se empezo a considerar un genero propio el siglo XX"
+    },
   ],
   album: [
     {
@@ -408,6 +531,47 @@ const baseDatosJSON = {
       descripcion: "Sincerely (estilizado como Sincerely,) es el quinto álbum de estudio de la cantante estadounidense Kali Uchis.Fue publicado el 9 de mayo de 2025 a través del sello discográfico Capitol. Originalmente conceptualizado como una colección de cartas para ella misma, amigos y cercanos,el proyecto obtuvo una mayor importancia para la cantante con su embarazo previo al desarrollo inicial de composición, y posteriormente luego de completarlo, lidiando con el fallecimiento de su madre por un cáncer pulmonar.",
       url_img: "https://t2.genius.com/unsafe/300x300/https://images.genius.com/8642dc3f58c90b87c6d0a908cebaa723.1000x1000x1.png"
     },
+    {
+      id: 17,
+      nombre: "UNDERTALE Soundtrack",
+      artista: "Toby Fox",
+      id_artista: 15,
+      descripcion: "Soundtrack de el videojuego de Undertale",
+      url_img: "https://i.scdn.co/image/ab67616d0000b27324edb22d068eb245a924b7f2"
+    },
+    //Hasta aquí
+    {
+      id: 18,
+      nombre: "Uta's Songs: One Piece Film Red",
+      artista: "ADO",
+      id_artista: 16,
+      descripcion: "",
+      url_img: ""
+    },
+    {
+      id: 19,
+      nombre: "Native",
+      artista: "One Republic",
+      id_artista: 17,
+      descripcion: "",
+      url_img: ""
+    },
+    {
+      id: 20,
+      nombre: "Fairytales",
+      artista: "Alexander Rybak",
+      id_artista: 18,
+      descripcion: "",
+      url_img: ""
+    },
+    {
+      id: 21,
+      nombre: "Theater",
+      artista: "Natori",
+      id_artista: 19,
+      descripcion: "",
+      url_img: ""
+    },
   ]
 };
 //console.log(baseDatosJSON.canciones[0].nombre);
@@ -416,9 +580,13 @@ let pi=document.getElementById("contenedor_resultados"); /*Div que va a contener
 let buscador_form= document.getElementById("buscador_form");
 let play=document.getElementById("play");
 let random=document.getElementById("btn-random");
+let siguiente=document.getElementById("btn_reproduciendo_siguiente");
+let regresar=document.getElementById("btn_reproduciendo_regresar");
 let formato_resultado;
 let player;
 let link;
+let cancion_cambio;
+let maximo=baseDatosJSON.canciones.length;
 //Funcion para mostrar el video
 function hacer(link)
 {
@@ -513,6 +681,52 @@ random.addEventListener("click",()=>{
   hacer(link);
 })
 
+//BOTONES PARA SIGUIENTE Y ANTERIOR CANCION
+siguiente.addEventListener("click",()=>{
+  if(link != undefined) 
+  {
+    
+    for(let b = 0; b < baseDatosJSON.canciones.length; b++) 
+    {
+      if(baseDatosJSON.canciones[b].link == link) 
+      {
+        if (b + 1 < baseDatosJSON.canciones.length) 
+        {
+          hacer(baseDatosJSON.canciones[b + 1].link);
+          link = baseDatosJSON.canciones[b + 1].link;
+        } 
+        else
+        {
+          hacer(baseDatosJSON.canciones[0].link);
+          link = baseDatosJSON.canciones[0].link;
+        }
+        return;
+      }
+    }
+  }
+  
+});
 
-
+regresar.addEventListener("click",()=>{
+  if(link != undefined) 
+  {
+    for(let b = 0; b<baseDatosJSON.canciones.length; b++) 
+    {
+      if(baseDatosJSON.canciones[b].link == link) 
+      {
+        if (b-1>= 0) 
+        {
+          hacer(baseDatosJSON.canciones[b - 1].link);
+          link = baseDatosJSON.canciones[b - 1].link;
+        } 
+        else
+        {
+          hacer(baseDatosJSON.canciones[baseDatosJSON.canciones.length - 1].link);
+          link = baseDatosJSON.canciones[baseDatosJSON.canciones.length - 1].link;
+        }
+        return;
+      }
+    }
+  }
+});
 
