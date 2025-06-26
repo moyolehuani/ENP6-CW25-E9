@@ -19,6 +19,8 @@ formulario_registro.addEventListener("submit", function(){
       console.log(todos_usuarios[i]);
       console.log("Hola Mundo");
     }
+    window.location.reload();
+
 });
 //como no se puede sacar el arreglo del evento, hacemos un arreglo por fuera
 //la variable se convierte en arreglo al agregar el split y delimitar cada elemento a
@@ -47,8 +49,6 @@ console.log("Pera");
 
 let envia_sesion=document.getElementById("btn_ingresar");
 envia_sesion.addEventListener("click", function(event){
-    event.preventDefault();
-    alert("Todo bien");
     //guardo los valores que el usuario ponga para iniciar sesión
     usuario_puesto=document.getElementById("usuario").value.trim();
     contrasena_puesta=document.getElementById("contraseña").value.trim();
@@ -88,27 +88,23 @@ envia_sesion.addEventListener("click", function(event){
     }
 });
     let verificacion2;
-
-
-    let arreglo_cuenta=document.cookie.split(";"); //guarda las cookies en arreglos
     //pude haber usado directamente el valor de arreglo_usuarios, pero así mantengo un orden
-    let numero=arreglo_cuenta.length;  
-    let inicio_automatico=arreglo_cuenta[numero-1]; //obtengo la cookie más reciente del arreglo
-    //que es el iniciode sesión
-    console.log("ESPEREMOS");
-    console.log(inicio_automatico)
-
-    for(let d=0; d<arreglo_cuenta.length; d++) //itero para comparar la última cookie
+    let numero=arreglo_usuarios.length;  
+    let inicio_automatico=arreglo_usuarios[numero-1]; //obtengo la cookie más reciente del arreglo
+    //que es el inicio de sesión
+    let texto_de_cookie;
+    if(arreglo_usuarios.includes("_I"))
+    {
+            for(let d=0; d<arreglo_usuarios.length; d++) //itero para comparar la última cookie
     //con las demás que contiene las cuentas
     {
-        let texto_de_cookie=inicio_automatico.slice(2); //para que no tome el _I y compare
+        texto_de_cookie=inicio_automatico.slice(2); //para que no tome el _I y compare
         //de manera la cookie del inicio de sesión (_I) con la de la cuenta
         console.log(texto_de_cookie);
-        console.log("Ya se hizo");
         //devuelve verdadero o falso
-        verificacion2=arreglo_cuenta[d].includes(texto_de_cookie);
+        verificacion2=arreglo_usuarios[d].includes(texto_de_cookie);
         console.log(verificacion2);
-        if(arreglo_cuenta.length>1)
+        if(arreglo_usuarios.length>1)
         {
                 if(verificacion2) 
                 {
@@ -129,9 +125,9 @@ envia_sesion.addEventListener("click", function(event){
         }
                 
     }
-console.log("MANZANANANANANANA");
-let numero2=arreglo_cuenta.length;
-let cookie_sesion=arreglo_cuenta[numero2-1]; //selecciona el último elemento de la lista de 
+    }
+let numero2=arreglo_usuarios.length;
+let cookie_sesion=arreglo_usuarios[numero2-1]; //selecciona el último elemento de la lista de 
 //todas las cookies, el cual es la cookie que tiene _I
 console.log(cookie_sesion);
 console.log("TAKAKAKAKAK");
