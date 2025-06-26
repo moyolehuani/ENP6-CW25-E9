@@ -356,7 +356,7 @@ const baseDatosJSON = {
       id:19,
       nombre: "Natori",
       descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
-      url_img:"",
+      url_img:"", //Imagen de Natori
     }
 
   ],
@@ -545,8 +545,8 @@ const baseDatosJSON = {
       nombre: "Uta's Songs: One Piece Film Red",
       artista: "ADO",
       id_artista: 16,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Uta's Songs: One Piece Film Red fue creado para la película de One Piece del mismo nombre",
+      url_img: "https://cdn-images.dzcdn.net/images/cover/3b0d1441656b8185b8e2dbbf5dc07812/500x500-000000-80-0-0.jpg"
     },
     {
       id: 19,
