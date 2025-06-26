@@ -331,7 +331,7 @@ const baseDatosJSON = {
     {
       id: 15,
       nombre: "Toby Fox",
-      descripción: "Robert F. Fox conocido profesionalmente como Toby Fox, es un compositor y desarrollador de videojuegos estadounidense, conocido por desarrollar Undertale.",
+      descripcion: "Robert F. Fox conocido profesionalmente como Toby Fox, es un compositor y desarrollador de videojuegos estadounidense, conocido por desarrollar Undertale.",
       url_img: "https://static.wikia.nocookie.net/undertale/images/8/8e/TobyFox.png/revision/latest?cb=20151222064831&path-prefix=es"
     },
     {
@@ -580,9 +580,13 @@ let pi=document.getElementById("contenedor_resultados"); /*Div que va a contener
 let buscador_form= document.getElementById("buscador_form");
 let play=document.getElementById("play");
 let random=document.getElementById("btn-random");
+let siguiente=document.getElementById("btn_reproduciendo_siguiente");
+let regresar=document.getElementById("btn_reproduciendo_regresar");
 let formato_resultado;
 let player;
 let link;
+let cancion_cambio;
+let maximo=baseDatosJSON.canciones.length;
 //Funcion para mostrar el video
 function hacer(link)
 {
@@ -676,7 +680,53 @@ random.addEventListener("click",()=>{
   link=baseDatosJSON.canciones[canAle].link;
   hacer(link);
 })
- 
 
+//BOTONES PARA SIGUIENTE Y ANTERIOR CANCION
+siguiente.addEventListener("click",()=>{
+  if(link != undefined) 
+  {
+    
+    for(let b = 0; b < baseDatosJSON.canciones.length; b++) 
+    {
+      if(baseDatosJSON.canciones[b].link == link) 
+      {
+        if (b + 1 < baseDatosJSON.canciones.length) 
+        {
+          hacer(baseDatosJSON.canciones[b + 1].link);
+          link = baseDatosJSON.canciones[b + 1].link;
+        } 
+        else
+        {
+          hacer(baseDatosJSON.canciones[0].link);
+          link = baseDatosJSON.canciones[0].link;
+        }
+        return;
+      }
+    }
+  }
+  
+});
 
+regresar.addEventListener("click",()=>{
+  if(link != undefined) 
+  {
+    for(let b = 0; b<baseDatosJSON.canciones.length; b++) 
+    {
+      if(baseDatosJSON.canciones[b].link == link) 
+      {
+        if (b-1>= 0) 
+        {
+          hacer(baseDatosJSON.canciones[b - 1].link);
+          link = baseDatosJSON.canciones[b - 1].link;
+        } 
+        else
+        {
+          hacer(baseDatosJSON.canciones[baseDatosJSON.canciones.length - 1].link);
+          link = baseDatosJSON.canciones[baseDatosJSON.canciones.length - 1].link;
+        }
+        return;
+      }
+    }
+  }
+});
 
