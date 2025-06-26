@@ -122,12 +122,24 @@ envia_sesion.addEventListener("click", function(event){
         }
                 
     }
-
+function setCookie(nombre, valor, dias)
+{
+    let date = new Date();
+    date.setTime(date.getTime() + (dias*24*60*60*1000));
+    expiracion =date.toGMTString();
+    document.cookie = `${nombre}=${valor}; expires=${expiracion}`;
+}
+function deleteCookie(nombre){
+    //Aquí va su código.
+    setCookie(nombre, "", -1);
+}
 cerrar_sesion_btn= document.getElementById('cerrar_sesion_btn');
 cerrar_sesion_btn.addEventListener("click", ()=>
 {
-    let hola_mundo=arreglocuenta[arreglo_cuenta.length-1];
-    document.cookie=`${hola_mundo} ; max-age=-1000 path=/`;
+    let last_cookie=arreglo_cuenta[arreglo_cuenta.length-1];
+    deleteCookie(last_cookie);
+    console.log(document.cookie);
+    console.log("ultima cookie"+ last_cookie);
 });
 
 
