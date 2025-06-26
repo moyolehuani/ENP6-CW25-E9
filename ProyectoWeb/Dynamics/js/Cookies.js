@@ -13,6 +13,7 @@ let arreglo_usuarios;
 let usuarios_creados;
 let input_usuario_creado=document.getElementById("usuario_nuevo");
 let input_contrasena_creada=document.getElementById("contrasena_del_usuario_nuevo");
+let usuarios={};
 /*contenedores*/
 //////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////Declaracion de funciones
@@ -86,6 +87,8 @@ formulario_registro.addEventListener("submit", function(e) //Evento que registra
     //se crea la cookie de la cuenta
     
     setCookie(usuario_creado, contrasena_creada, 1000); // cookie perpetua
+    usuarios[usuario_creado]=[];
+    console.log(usuarios)
     desaparecer_contenedor(contenedor_registarse);
     aparecer_contendor(contenedor_signup);
     console.log(document.cookie + "estas son las cookies");//lo anterior es una pequeña comprobación de que todo salió bien
