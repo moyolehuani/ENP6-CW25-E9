@@ -1,5 +1,6 @@
 const temas = {
-  Gael: {
+  Gael: 
+  {
     '--color-glow': '#ffffffe3',
     '--color-texto': '#ffffff',
     '--color-texto_nollamativo': '#c5c5c5',
@@ -12,13 +13,13 @@ const temas = {
     '--color-buscador': '#5a5a5ab6',
     '--color-resultado-busqueda-hover': '#505050',
     '--color-resultado-busqueda': '#303030b0',
-    '--color-resultado-busqueda-placehover': '#ffffff85',
+    '--color-resultado-busqueda-placehover':'#727272',
     '--color-reproductor': '#b0afaf27',
     '--color-icon-reproductor': '#c5c5c5',
     '--color-reproduciendo-back-next-play-stop': '#202020b8'
   },
-
-  Ari: {
+  Ari: 
+  {
     '--color-glow': '#d2b4e2e3',
     '--color-texto': '#efc9ce',
     '--color-texto_nollamativo': '#ffffffaa',
@@ -36,7 +37,8 @@ const temas = {
     '--color-icon-reproductor': '#d1a8a8d2',
     '--color-reproduciendo-back-next-play-stop': '#805365b8'
   },
-  Mich: {
+  Mich:
+  {
     '--color-glow': '#f2f2f2e3',
     '--color-texto': '#242424',
     '--color-texto_nollamativo': '#ffffffaa',
@@ -54,6 +56,25 @@ const temas = {
     '--color-icon-reproductor': '#ffffffd5',
     '--color-reproduciendo-back-next-play-stop': '#424250b6'
   },
+  Brau: 
+  {
+  '--color-glow': '#6f7650e3',
+  '--color-texto': '#101010',
+  '--color-texto_nollamativo': '#ffffffaa',
+  '--color-fondo': '#23422c71',
+  '--color-blur': '#00000052',
+  '--color-barra': '#b3ada4fb',
+  '--color-icono-aside': '#3c3f2dbf',
+  '--color-indicador': '#cfd28be0',
+  '--color-borde-indicador': '#0000002c',
+  '--color-buscador': '#8a8b78b6',
+  '--color-resultado-busqueda-hover': '#ffffff',
+  '--color-resultado-busqueda': '#adbaa5b0',
+  '--color-resultado-busqueda-placehover': '#ffffffb0',
+  '--color-reproductor': '#ffffff27',
+  '--color-icon-reproductor': '#000000d5',
+  '--color-reproduciendo-back-next-play-stop': '#504a42b6'
+  },  
   Ivan: {
     '--color-glow': '#ffffffe3',
     '--color-texto': '#ffffffca',
@@ -72,42 +93,24 @@ const temas = {
     '--color-icon-reproductor': '#ffffff87',
     '--color-reproduciendo-back-next-play-stop': '#14342cb6'
   },
-  Dante: {
-    '--color-glow': '#f2f2f2e3',
-    '--color-texto': '#242424',
-    '--color-texto_nollamativo': '#ffffffaa',
-    '--color-fondo': '#dadada',
-    '--color-blur': '#440d2c7b',
-    '--color-barra': '#1a1a2ffb',
-    '--color-icono-aside': '#ffffffbe',
-    '--color-indicador': '#b82165b6',
-    '--color-borde-indicador': '#ffffff8c',
-    '--color-buscador': '#424250b6',
-    '--color-resultado-busqueda-hover': '#ffffff',
-    '--color-resultado-busqueda': '#988484b0',
-    '--color-resultado-busqueda-placehover': '#ffffff85',
-    '--color-reproductor': '#00000027',
-    '--color-icon-reproductor': '#ffffffd5',
-    '--color-reproduciendo-back-next-play-stop': '#424250b6'
-  },
-  Brau:
+  Dante:
   {
-    '--color-glow': '#6f7650e3',
-    '--color-texto': '#101010',
-    '--color-texto_nollamativo': '#ffffffaa',
-    '--color-fondo': '#23422c71',
-    '--color-blur': '#00000052',
-    '--color-barra': '#b3ada4fb',
-    '--color-icono-aside': '#3c3f2dbf',
-    '--color-indicador': '#cfd28be0',
-    '--color-borde-indicador': '#0000002c',
-    '--color-buscador': '#8a8b78b6',
-    '--color-resultado-busqueda-hover': '#ffffff',
-    '--color-resultado-busqueda': '#adbaa5b0',
-    '--color-resultado-busqueda-placehover': '#ffffffb0',
-    '--color-reproductor': '#ffffff27',
-    '--color-icon-reproductor': '#000000d5',
-    '--color-reproduciendo-back-next-play-stop': '#504a42b6'
+  '--color-glow': '#5900ff',
+  '--color-texto': '#006eff',
+  '--color-texto_nollamativo': '#00fbffaa',
+  '--color-fondo': '#000000',
+  '--color-blur': '#7b00ff94',
+  '--color-barra': '#ff0000fb',
+  '--color-icono-aside': '#8c00ff',
+  '--color-indicador': '#e5df36',
+  '--color-borde-indicador': '#0000002c',
+  '--color-buscador': '#f34e4eb5',
+  '--color-resultado-busqueda-hover': '#ffffff',
+  '--color-resultado-busqueda': '#ffeb12df',
+  '--color-resultado-busqueda-placehover': '#00aaff',
+  '--color-reproductor': '#fff70071',
+  '--color-icon-reproductor': '#8c00ff',
+  '--color-reproduciendo-back-next-play-stop': '#504a42b6'
   }
 };
 /*//////Variables para proceso del login/////// */
@@ -225,23 +228,72 @@ menu_input.addEventListener("input", ()=>{
 });
 ///////////////////Logica settings y cierre de sesion/////////////////////////////
 contenedor_op_confi= document.getElementById("contenedor_op_confi");
+contenedor_op_account= document.getElementById('contenedor_op_account')
 Configuracion_btn= document.getElementById("Configuracion_btn");
-Configuracion_btn.addEventListener("click", e =>
+Cuenta_btn= document.getElementById('Cuenta');
+function aparecer_contendor(contenedor)
 {
-    if(contenedor_op_confi.classList.contains("oculto"))
+    contenedor.classList.remove("oculto");
+    contenedor.classList.add("animar-aparicion");
+    contenedor.classList.add("desvanecido_out");
+}
+function desaparecer_contenedor(contenedor)
+{
+    contenedor.style.opacity = "0";
+    setTimeout(() => 
     {
-        contenedor_op_confi.classList.remove("oculto");
-        contenedor_op_confi.classList.add("animar-aparicion");
-        contenedor_op_confi.classList.add("desvanecido_out");
+       contenedor.classList.add("oculto");
+       contenedor.classList.remove("animar-aparicion");
+       contenedor.style.opacity = ""
+    }, 1000);
+}
+function esta_el_otro_pregunta(contenedorevento, otrocontenedor)
+{
+    if(!otrocontenedor.classList.contains("oculto"))
+    {
+        desaparecer_contenedor(otrocontenedor);
+        aparecer_contendor(contenedorevento);
     }
     else
     {
-        contenedor_op_confi.style.opacity = "0";
-        setTimeout(() => 
-        {
-            contenedor_op_confi.classList.add("oculto");
-            contenedor_op_confi.classList.remove("animar-aparicion");
-            contenedor_op_confi.style.opacity = ""
-        }, 1000);
+        desaparecer_contenedor(contenedorevento);
     }
+}
+Configuracion_btn.addEventListener("click", e =>
+{
+    if(contenedor_op_confi.classList.contains("oculto") && contenedor_op_account.classList.contains('oculto'))
+    {
+        aparecer_contendor(contenedor_op_confi);
+    }
+    else
+    {
+        esta_el_otro_pregunta(contenedor_op_confi, contenedor_op_account);
+    }
+});
+Cuenta_btn.addEventListener("click", e =>
+{
+    if(contenedor_op_confi.classList.contains("oculto") && contenedor_op_account.classList.contains('oculto'))
+    {
+        aparecer_contendor(contenedor_op_account);
+    }
+    else
+    {
+        esta_el_otro_pregunta(contenedor_op_account,contenedor_op_confi);
+    }
+});
+///////////////////////Evento cambiar de temas///////////////////////
+const seleccion_tema = document.getElementById('seleccion_tema');
+
+function elegirTema(TemaElegido) {
+  let tema = temas[TemaElegido];
+  if (!tema) return;
+  for (const variable in tema) {
+    document.documentElement.style.setProperty(variable, tema[variable]);
+  }
+}
+
+seleccion_tema.addEventListener("change", function () {
+  let temaElegido = this.value;
+  elegirTema(temaElegido);
+  console.log(this.value);
 });
