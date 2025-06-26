@@ -412,6 +412,7 @@ const baseDatosJSON = {
       id:19,
       nombre: "Natori",
       descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
+<<<<<<< HEAD
       url_img:""
     },
     {
@@ -444,6 +445,10 @@ const baseDatosJSON = {
       descripcion:"The Neighbourhood es una banda de rock alternativo estadounidense creada en agosto de 2011. El grupo está formado por el vocalista Jesse Rutherford, los guitarristas Jeremy Freedman, Zach Abels y el bajista Mikey Margott. La banda publicó su primer álbum de estudio el 23 de abril de 2013 a través de Columbia Records",
       url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPdgUZbyPmJucLYE3BquDlCbjaOvJpxRBTg&s"
     },
+=======
+      url_img:"https://cdn-images.dzcdn.net/images/artist/cb8f8f574e8179d663be932de2677a29/1900x1900-000000-80-0-0.jpg",
+    }
+>>>>>>> e32a192116efdcf8c68fa13786c24c8ac2819177
 
   ],
   genero: [
@@ -631,32 +636,32 @@ const baseDatosJSON = {
       nombre: "Uta's Songs: One Piece Film Red",
       artista: "ADO",
       id_artista: 16,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Uta's Songs: One Piece Film Red fue creado para la película de One Piece del mismo nombre",
+      url_img: "https://cdn-images.dzcdn.net/images/cover/3b0d1441656b8185b8e2dbbf5dc07812/500x500-000000-80-0-0.jpg"
     },
     {
       id: 19,
       nombre: "Native",
       artista: "One Republic",
       id_artista: 17,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Native es el tercer álbum de estudio banda estadounidense de pop rock OneRepublic",
+      url_img: "https://i.scdn.co/image/ab67616d0000b2739e2f95ae77cf436017ada9cb"
     },
     {
       id: 20,
       nombre: "Fairytales",
       artista: "Alexander Rybak",
       id_artista: 18,
-      descripcion: "",
-      url_img: ""
+      descripcion: "Es el álbum debut del cantante y compositor noruego Alexander Rybak",
+      url_img: "https://i.scdn.co/image/ab67616d0000b2732e1c6382b5cb1571270aad83"
     },
     {
       id: 21,
       nombre: "Theater",
       artista: "Natori",
       id_artista: 19,
-      descripcion: "",
-      url_img: ""
+      descripcion: "El 20 de diciembre de 2023, Natori lanzó su primer álbum original, Theater",
+      url_img: "https://cdn-images.dzcdn.net/images/cover/03647239a59255da92ea94774cebefd9/0x1900-000000-80-0-0.jpg"
     },
     {
       id:22,

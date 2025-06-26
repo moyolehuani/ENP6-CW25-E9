@@ -146,8 +146,32 @@ btn_registrarse.addEventListener("click", e =>  // al picar el boton de registra
     contenedor_signup.classList.add('oculto')
     contenedor_registarse.classList.remove('oculto');
     contenedor_registarse.classList.add("animar-aparicion");
-
 });
+input_usuario.addEventListener('keydown', e => //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
+{
+    if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) // si el evento key detecta la tecla enter
+    {
+        e.preventDefault();
+        contraseña.classList.remove("oculto"); // aparece la contraseña
+        contraseña.style.display = "block";
+        submit_login.classList.remove("oculto"); // y el input igual
+        submit_login.style.display = "block";
+        contraseña.style.marginTop = "10px";
+        submit_login.style.marginTop = "10px";
+        contraseña.classList.add("animar-aparicion"); // se le agregan a ambos animaciones de entrada
+        submit_login.classList.add("animar-aparicion");
+        contraseña.focus(); // metodo que automaticamente pone para de que ya escribir en el input contraseña
+    }
+    else
+    {
+        if(e.key === 'Enter') // si ya contraseña y el boton de submit tienen apariencia, enfoca a contraseña en el caso de que se quiera cambiar el usuario y hacerle enter
+        {
+            e.preventDefault(); 
+            contraseña.focus();
+        }
+    }
+});
+
 //------------------Proceso de login----------------//
 
 //
