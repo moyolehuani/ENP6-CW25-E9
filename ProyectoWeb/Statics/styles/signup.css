@@ -250,7 +250,6 @@ body {
     background-color: var(--color-barra);
     max-width: 140px;
     max-height: 100vh;
-    z-index: 3;
 }
 #aside_form{
     width: 100%;
@@ -267,7 +266,6 @@ body {
     justify-content: space-evenly;
     padding: none;
     margin: none;
-    z-index: 0;
 }
 .animacion_icono{
     display: none;
@@ -277,7 +275,6 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 1000;
 }
 .icon{
     fill: var(--color-icono-aside);
@@ -336,7 +333,7 @@ body {
     height: 28px;
     background: transparent;
     border: none;
-    color: white;
+    color: var(--color-texto);
     outline: none;
     font-size: 1em;
     margin-bottom: 0;
@@ -356,7 +353,7 @@ body {
 .estilo_por_resultado
 {
     background: var(--color-resultado-busqueda);
-    color: #ffffff;
+    color: var(--color-texto);
     padding: 8px 12px;
     border: none;
     border-radius: 8px;
@@ -380,21 +377,21 @@ body {
 }
 .recomendado_title
 {
-    color: white;
+    color: var(--color-texto);
 }
 .horizontal_recom{
     display: flex;
     flex: row wrap;
 }
 #artistas_recomendados{
-    color: aliceblue;
+    color: var(--color-texto);
 }
 #titulo_playlist{
-    color: aliceblue;
+    color: var(--color-texto);
 }
 #tools{
     position: fixed;
-    bottom: 0.5vh;
+    top: 0;
     left: 1vw;
     display: flex;
     flex-direction: row;
