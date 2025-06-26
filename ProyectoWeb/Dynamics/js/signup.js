@@ -164,7 +164,20 @@ formulario_signup.addEventListener("submit", function(event){
 //Crear y quitar playlist
 añadir_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.remove("oculto");
+    for(let i=0;i<baseDatosJSON.canciones.length;i++)
+    {
+        if(baseDatosJSON.canciones[i].nombre.includes(texto))
+        {
+            formato_resultado=document.createElement("button");
+            formato_resultado.classList.add("estilo_por_resultado");
+            formato_resultado.id = "cancion_" + baseDatosJSON.canciones[i].nombre;
+            formato_resultado.textContent=baseDatosJSON.canciones[i].nombre;
+            pi.appendChild(formato_resultado); 
+        }
+    }
 });
 quitar_crear_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.add("oculto");
-})
+});
+
+

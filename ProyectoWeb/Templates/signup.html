@@ -132,7 +132,14 @@
                         <button id="añadir_playlistBtn">Añadir un playlist</button>
                         <!--Seccion para crear una playlist-->
                         <div id="crear_playlist" class="oculto">
-                            <button id="quitar_crear_playlistBtn">x</button>
+                            <div id="encabezado_crear_playlist">
+                                <p>Crea tu nueva playlist</p>
+                                <button id="quitar_crear_playlistBtn">x</button>
+                            </div>
+                            <form>
+                                <input type="text" id="nombre_playlist" name="nombre_playlist" placeholder="Nombre de tu nueva Playlist" required>
+                                <input type="submit" name="btn_terminar_playlist" value="Crea tu nueva playlist">
+                            </form>
                         </div>
                     </div>
             </div>
