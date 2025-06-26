@@ -72,11 +72,10 @@ envia_sesion.addEventListener("click", function(event){
             buscador_sec.classList.remove('oculto');
             interfaz.classList.remove('oculto'); 
             //y no sobreescriba la de la cuenta que se creó
-     /*       document.cookie=`${usuario_puesto}=${contrasena_puesta}; max-age=1000; path=/`;
+            document.cookie=`_I${usuario_puesto}=${contrasena_puesta}; max-age=40; path=/`;
             console.log("Cookie de inición de sesión automático creada")
             break; //detiene la ejecución del for cuando ya se inicia sesión
             //esto evita el resto de las alertas por los demás elementos 
-            //  */
                 
 
         }
@@ -89,17 +88,17 @@ envia_sesion.addEventListener("click", function(event){
     }
 });
 
-/*
+
     let arreglo_cuenta=document.cookie.split(";"); //guarda las cookies en arreglos
-    //pude haber usado directamente el valor de arreglo_usuarios, pero así mantengo un ordegn
+    //pude haber usado directamente el valor de arreglo_usuarios, pero así mantengo un orden
     let numero=arreglo_cuenta.length;  
-    let inicio_automatico=arreglo_cuenta[numero-1]; //obtengo la cookie más reciente
+    let inicio_automatico=arreglo_cuenta[numero-1]; //obtengo la cookie más reciente del arreglo
     //que es el iniciode sesión
 
     for(let d=0; d<arreglo_usuarios.length; d++) //itero para comparar la última cookie
     //con las demás que contiene las cuentas
     {
-        let texto_de_cookie=inicio_automatico.slice(0,-2); //para que no tome el _C y compare
+        let texto_de_cookie=inicio_automatico.slice(2); //para que no tome el _C y compare
         //de manera la cookie del inicio de sesión (_C) con la de la cuenta
         console.log(texto_de_cookie);
         let verificacion=arreglo_usuarios[d].includes(texto_de_cookie);
@@ -126,6 +125,4 @@ envia_sesion.addEventListener("click", function(event){
                 
     }
 
-    //falta crear la cookie con lo puesto
 
-*/
