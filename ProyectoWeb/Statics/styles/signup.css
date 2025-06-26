@@ -433,8 +433,8 @@ body {
 .elemento
 {
     padding: 10px; 
-    margin: 10px;
-    margin-top: 3vh;
+    margin: 2vh;
+    margin-top: 1vh;
     width: 17vw; 
     height: 17vh;
     border-radius: 100%;
@@ -471,7 +471,8 @@ body {
     margin-left: 3vw;
     height: 37vh;
     width: 80vw;
-    background-color: rgba(66, 221, 66, 0.155);
+    background-color: rgba(66, 221, 66, 0.082);
+    border-radius: 10%;
 }
 .recomendado2
 {
@@ -481,11 +482,15 @@ body {
     margin-left: 3vw;
     height: 37vh;
     width: 80vw;
-    background-color: rgba(57, 57, 205, 0.103);
+    background-color: rgba(57, 57, 205, 0.058);
+    border-radius: 10%;
 }
 .recomendado_title
 {
     color: white;
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 3vh;
 }
 .horizontal_recom{
     display: flex;
