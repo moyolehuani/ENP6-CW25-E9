@@ -198,6 +198,50 @@ const baseDatosJSON = {
       genero: "musica de videojuego",
       id_genero: 8
     },
+    {
+      id: 19,
+      nombre: "Backlight",
+      artista: "ADO",
+      id_artista: 16,
+      album: "Uta's Songs: One Piece Film Red",
+      id_album: 18,
+      link: "I39DbfFmL_g",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id: 20,
+      nombre: "Counting Stars",
+      artista: "One Republic",
+      id_artista: 17,
+      album: "Native",
+      id_album: 19,
+      link: "mgT0N3tMP74",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id: 21,
+      nombre: "Fairy Tale",
+      artista: "Alexander Rybak",
+      id_artista: 18,
+      album:"Fairytales",
+      id_album: 20,
+      link: "1rVY08gRGmA",
+      genero: "Pop",
+      id_genero: 2
+    },
+    {
+      id: 22,
+      nombre: "Overdose",
+      artista: "Natori",
+      id_artista: 19,
+      album: "Theater",
+      id_album: 21,
+      link: "_nOSVOumAiA",
+      genero: "Pop",
+      id_genero: 2
+    }
   ],
   artistas: [
     {
@@ -290,6 +334,30 @@ const baseDatosJSON = {
       descripción: "Robert F. Fox conocido profesionalmente como Toby Fox, es un compositor y desarrollador de videojuegos estadounidense, conocido por desarrollar Undertale.",
       url_img: "https://static.wikia.nocookie.net/undertale/images/8/8e/TobyFox.png/revision/latest?cb=20151222064831&path-prefix=es"
     },
+    {
+      id: 16,
+      nombre: "ADO",
+      descripcion: "Ado (Tokio; 24 de octubre de 2002) es el seudónimo de una cantante japonesa.En 2020, con tan solo 17 años, Ado debutó tempranamente con el sencillo digital titulado Usseewa. La canción pronto alcanzó el puesto número 1 en el Billboard Japan Hot 100, DO Oricon Digital Singles Chart y Oricon Streaming Chart.",
+      url_img: "https://www.billboard.com/wp-content/uploads/2023/02/Ado-press-2023-billboard-1548-1.jpg"
+    },
+    {
+      id:17,
+      nombre: "One Republic",
+      descripcion: "OneRepublic es una banda estadounidense de pop rock​ formada en 2002, en Colorado Springs, Colorado, ​ por el cantante Ryan Tedder y el guitarrista Zach Filkins.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzoNMEi-CuhCU1PiFktUrTGjRJhVx_B1SX7Q&s",
+    },
+    {
+      id:18,
+      nombre: "Alexander Rybak",
+      descripcion: "Alexander Igoryevich Rybak es un violinista, cantante, compositor, actor y escritor noruego de origen bielorruso. Ganó el Festival de Eurovisión de 2009 celebrado en Moscú en representación de Noruega, ​ edición en la que consiguió el mayor número de votos de toda la historia de Eurovisión. ",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVOeGVcWJqMLa2Y91XLdiBQPqbsOoiAu-Ung&s",
+    },
+    {
+      id:19,
+      nombre: "Natori",
+      descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
+      url_img:"",
+    }
 
   ],
   genero: [
@@ -471,6 +539,39 @@ const baseDatosJSON = {
       descripcion: "Soundtrack de el videojuego de Undertale",
       url_img: "https://i.scdn.co/image/ab67616d0000b27324edb22d068eb245a924b7f2"
     },
+    //Hasta aquí
+    {
+      id: 18,
+      nombre: "Uta's Songs: One Piece Film Red",
+      artista: "ADO",
+      id_artista: 16,
+      descripcion: "",
+      url_img: ""
+    },
+    {
+      id: 19,
+      nombre: "Native",
+      artista: "One Republic",
+      id_artista: 17,
+      descripcion: "",
+      url_img: ""
+    },
+    {
+      id: 20,
+      nombre: "Fairytales",
+      artista: "Alexander Rybak",
+      id_artista: 18,
+      descripcion: "",
+      url_img: ""
+    },
+    {
+      id: 21,
+      nombre: "Theater",
+      artista: "Natori",
+      id_artista: 19,
+      descripcion: "",
+      url_img: ""
+    },
   ]
 };
 //console.log(baseDatosJSON.canciones[0].nombre);
@@ -575,7 +676,7 @@ random.addEventListener("click",()=>{
   link=baseDatosJSON.canciones[canAle].link;
   hacer(link);
 })
-
+ 
 
 
 
