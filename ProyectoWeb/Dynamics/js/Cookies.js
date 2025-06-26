@@ -36,32 +36,96 @@ arreglo_usuarios=document.cookie.split(";");
     }
 
 //Comprobación de información al iniciar sesión
-let boton_inicio_sesion=document.getElementById("signup"); //es el formulario de inicio de sesión
+let form_inicio_sesion=document.getElementById("signup"); //es el formulario de inicio de sesión
 let usuario_puesto;
 let contrasena_puesta;
 let cookie_formada;
 let verifica_coincidencia;
+console.log(form_inicio_sesion);
+console.log("manzana");
+console.log("Pera");
 
-boton_inicio_sesion.addEventListener("submit", function(event){
+let envia_sesion=document.getElementById("btn_ingresar");
+
+envia_sesion.addEventListener("click", function(event){
     //guardo los valores que el usuario ponga para iniciar sesión
     usuario_puesto=document.getElementById("usuario").value.trim();
     contrasena_puesta=document.getElementById("contraseña").value.trim();
-    cookie_formada=`${usuario_puesto}=${contrasena_puesta}`;
+    input_formado=`${usuario_puesto}=${contrasena_puesta}`;
     console.log(usuario_puesto);
     console.log(contrasena_puesta);
-    console.log("NAranja");
+    console.log("DSJHSDUHGSDSGSDSSSSDDSHJSDHDUEWUW");
    for(let a=0; a<arreglo_usuarios.length; a++)
     {
-        verifica_coincidencia=arreglo_usuarios[a].include(cookie_formada); //esto devuelve verdadero o falso
+        verifica_coincidencia=arreglo_usuarios[a].includes(input_formado); //esto devuelve verdadero o falso
         //si no hay coincidenci en el elemento actual, será falso
+        console.log("No la politzia");
+        console.log(verifica_coincidencia);
+    
         if(verifica_coincidencia)
         {
             console.log("Todo Bien :)");
+            //esconder la interfaz del login
+            display_signup.classList.add('oculto');
+            //Para que aparezca ahora el display de home con el reproductor, el aside
+            cont_reproduciendo.classList.remove('oculto');
+            buscador_sec.classList.remove('oculto');
+            interfaz.classList.remove('oculto'); 
+            //y no sobreescriba la de la cuenta que se creó
+     /*       document.cookie=`${usuario_puesto}=${contrasena_puesta}; max-age=1000; path=/`;
+            console.log("Cookie de inición de sesión automático creada")
+            break; //detiene la ejecución del for cuando ya se inicia sesión
+            //esto evita el resto de las alertas por los demás elementos 
+            //  */
+                
+
         }
         else
         {
+            console.log("entristeciste a dedede");
             event.preventDefault();
             alert("EL usuario o la contraseña es incorrecta");
         }
     }
 });
+
+/*
+    let arreglo_cuenta=document.cookie.split(";"); //guarda las cookies en arreglos
+    //pude haber usado directamente el valor de arreglo_usuarios, pero así mantengo un ordegn
+    let numero=arreglo_cuenta.length;  
+    let inicio_automatico=arreglo_cuenta[numero-1]; //obtengo la cookie más reciente
+    //que es el iniciode sesión
+
+    for(let d=0; d<arreglo_usuarios.length; d++) //itero para comparar la última cookie
+    //con las demás que contiene las cuentas
+    {
+        let texto_de_cookie=inicio_automatico.slice(0,-2); //para que no tome el _C y compare
+        //de manera la cookie del inicio de sesión (_C) con la de la cuenta
+        console.log(texto_de_cookie);
+        let verificacion=arreglo_usuarios[d].includes(texto_de_cookie);
+        console.log(verificacion);
+        if(arreglo_usuarios.length>1)
+        {
+                if(verificacion) 
+                {
+                    console.log("Se inició automáticamente");
+                    //esconder la interfaz del login
+                    display_signup.classList.add('oculto');
+                    //Para que aparezca ahora el display de home con el reproductor, el aside
+                    cont_reproduciendo.classList.remove('oculto');
+                    buscador_sec.classList.remove('oculto');
+                    interfaz.classList.remove('oculto');
+                    break; //se pone para evitar el resto de iteraciones
+                }
+                else
+                {
+                    console.log("No se pudo iniciar sesión de manera automática");
+
+                }
+        }
+                
+    }
+
+    //falta crear la cookie con lo puesto
+
+*/
