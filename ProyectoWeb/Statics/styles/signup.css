@@ -498,11 +498,24 @@ body {
 }
 #playlist_contenedor{
     display: flex;
+    flex-direction: column;
     margin-top: 5px;
+    padding: 1vh;
+    gap: 30px;
 }
 #crear_playlist{
-    display: flex;
-    flex-direction: column;
+    width: 95%;
+    height: 28px;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin: none;
+    padding: none;
+    border: none;
+    overflow: auto;
 }
 
 
