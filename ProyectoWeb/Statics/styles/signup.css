@@ -150,7 +150,7 @@ body {
     border-bottom: 1px solid #c5c5c5;
     font-size: 12px;
 }
-@keyframes desvanecido { /*Es la animacion de cuando la contraseña aparece*/
+@keyframes desvanecido { /*Es la animacion de cuando la contraseÃ±a aparece*/
     from {
         opacity:0;
         transform: translateY(20px);
@@ -160,7 +160,7 @@ body {
         transform: translateY(0);
     }
 }
-#contraseña{
+#contraseÃ±a{
     width: 100%;
 }
 .animar-aparicion{
@@ -242,7 +242,7 @@ body {
     background-color: var(--color-reproduciendo-back-next-play-stop);
 }
 
-#aside-pestañas
+#aside-pestaÃ±as
 {
     display: flex;
     flex-direction: column;
@@ -477,7 +477,3 @@ body {
     width: 100%;
     height: 100%;
 }
-
-
-
-
