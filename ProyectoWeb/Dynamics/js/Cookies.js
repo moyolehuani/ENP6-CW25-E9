@@ -123,11 +123,22 @@ envia_sesion.addEventListener("click", function(event){
                 
     }
 
+console.log("MANZANANANANANANA");
+let numero2=arreglo_cuenta.length;
+let cookie_sesion=arreglo_cuenta[numero2-1];
+console.log(cookie_sesion);
+console.log("TAKAKAKAKAK");
 cerrar_sesion_btn= document.getElementById('cerrar_sesion_btn');
 cerrar_sesion_btn.addEventListener("click", ()=>
 {
-    let hola_mundo=arreglocuenta[arreglo_cuenta.length-1];
-    document.cookie=`${hola_mundo} ; max-age=-1000 path=/`;
+    let solo_nombre=cookie_sesion.split("=");
+    let nombre_correcto=solo_nombre[0];
+    let valor_correcto=solo_nombre[1];
+    console.log("TATGSGSGSGSHSJSJSJSJSK");
+    console.log(`${nombre_correcto}=${valor_correcto}`);
+    document.cookie=`${nombre_correcto}=${valor_correcto}; max-age=2; path=/`;
+    console.log(cookie_sesion);
+    console.log("Hola Mundo");
 });
 
 
