@@ -183,6 +183,7 @@ for(let d=0; d<arreglo_cuenta.length; d++) //itero para comparar la última cook
         }
     }
     }
+/*
 let numero2=arreglo_usuarios.length;
 let cookie_sesion=arreglo_usuarios[numero2-1]; //selecciona el último elemento de la lista de 
 //todas las cookies, el cual es la cookie que tiene _I
@@ -196,4 +197,9 @@ cerrar_sesion_btn.addEventListener("click", ()=>{
     console.log("TATGSGSGSGSHSJSJSJSJSK");
     document.cookie=`${cookie_sesion}; max-age=0; path=/`;
     window.location.reload();
+<<<<<<< HEAD
+}); 
+*/
+=======
 });*/
+>>>>>>> a6be28ffdb901e32a8a3d71353a6fefcb061b80b

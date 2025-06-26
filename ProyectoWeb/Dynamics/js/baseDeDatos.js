@@ -412,6 +412,10 @@ const baseDatosJSON = {
       id:19,
       nombre: "Natori",
       descripcion: "Natori es un cantautor japonés, conocido por su sencillo debut Overdose. Su estilo se ha descrito como ecléctico, con influencias de diversos géneros como Vocaloid, pop urbano, R&B y música pop occidental.",
+<<<<<<< HEAD
+      url_img:"https://cdn-images.dzcdn.net/images/artist/cb8f8f574e8179d663be932de2677a29/1900x1900-000000-80-0-0.jpg",
+    }
+=======
       url_img:"https://cdn-images.dzcdn.net/images/artist/cb8f8f574e8179d663be932de2677a29/1900x1900-000000-80-0-0.jpg"
     },
     {
@@ -444,6 +448,7 @@ const baseDatosJSON = {
       descripcion:"The Neighbourhood es una banda de rock alternativo estadounidense creada en agosto de 2011. El grupo está formado por el vocalista Jesse Rutherford, los guitarristas Jeremy Freedman, Zach Abels y el bajista Mikey Margott. La banda publicó su primer álbum de estudio el 23 de abril de 2013 a través de Columbia Records",
       url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPdgUZbyPmJucLYE3BquDlCbjaOvJpxRBTg&s"
     },
+>>>>>>> a6be28ffdb901e32a8a3d71353a6fefcb061b80b
 
   ],
   genero: [
