@@ -154,7 +154,6 @@ Configuracion_btn.addEventListener("click", e =>
         }, 1000);
     }
 });
-<<<<<<< HEAD
 */
 
 console.log(formulario_signup.innerHTML);
@@ -162,7 +161,6 @@ formulario_signup.addEventListener("submit", function(event){
     console.log("HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
 });
-=======
 //Crear y quitar playlist
 añadir_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.remove("oculto");
@@ -170,4 +168,3 @@ añadir_playlistBtn.addEventListener("click", ()=>{
 quitar_crear_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.add("oculto");
 })
->>>>>>> 9bdf3b5e53505dfd1536e4cdb387832532f1a68a
