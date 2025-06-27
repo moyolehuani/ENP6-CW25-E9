@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    <link href="../Statics/Styles/signup.css" rel="stylesheet">
-    <title>Sign-up</title>
+    <title>FORBEAR</title>
     <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
@@ -197,9 +197,12 @@
             <!--seccion de Biblioteca-->
             <div id="Biblioteca_contenedor" class="oculto">
                 <div id="botonesBiblio">
-                  <button class="selectArtis" id="boton">Artistas</button>
-                  <button class="selectAlbumes" id="boton">Albumes</button>
-                  <button class="selectCanciones"  id="boton">Canciones</button>
+                  <button id="selectArtis" class="btn_lineado">Artistas</button>
+                  <button id="selectAlbumes" class="btn_lineado">Albumes</button>
+                  <button id="selectCanciones"  class="btn_lineado">Canciones</button>
+                </div>
+                <div id="contenedor_dinamico_biblioteca">
+                        
                 </div>
             </div>
             <!-- Sección de recomendaciones -->
@@ -257,18 +260,16 @@
                         <option name="Ivan" id="Ivan" class="styleportema" style="background-color: #243d49;" value="Ivan"></option>
                     </select>
                 </form>
-                <input type="image" id="subir_fondo" name="subir_fondo value=background">
                 <button id="creditos" class="btn_lineado">Creditos</button>
             </div>
             <div id="contenedor_op_account" class="blur blur_color opciones oculto">
                 <button id="cerrar_sesion_btn" class="btn_lineado">Cerrar Sesion</button>
             </div>     
     </section>
-    
-
 </body>
 <script src="../Dynamics/js/signup.js"></script>
 <script src="../Dynamics/js/baseDeDatos.js"></script>
 <script src="../Dynamics/js/Cookies.js"></script>
 <script src="../Dynamics/js/Artista_recomendado.js"></script>
+<script src="../Dynamics/js/biblioteca.js"></script>
 </html>

@@ -407,7 +407,7 @@ const baseDatosJSON = {
       id: 12,
       nombre: "Radiohead",
       descripcion: "Banda británica reconocida por su enfoque innovador y su exploración constante de nuevos sonidos.",
-      url_img: "https://static.stereogum.com/uploads/2024/04/The-Marias-1712432101.jpg"
+      url_img: "https://townsquare.media/site/443/files/2016/03/Radiohead-1994.jpg?w=980&q=75"
     },
     {
       id: 13,
@@ -636,8 +636,8 @@ const baseDatosJSON = {
       nombre: "Ruby",
       artista: "Jennie",
       id_artista: 10,
-      descripcion: "El álbum 'True' de Avicii es una mezcla innovadora de música electrónica y folk, con éxitos como 'Wake Me Up' y 'Hey Brother'.",
-      url_img: "https://i.scdn.co/image/ab67616d0000b273e14f11f796cef9f9a82691a7"
+      descripcion: "Ruby es el álbum de estudio debut de la cantante y rapera surcoreana Jennie. Fue lanzado el 7 de marzo de 2025, a través de su sello Odd Atelier y Columbia Records. El álbum marca su primer lanzamiento en solitario desde que dejó YG Entertainment e Interscope Records en 2023.'.",
+      url_img: "https://th.bing.com/th/id/OIP.aOZ_doG3bqhcW4dzusZuHwHaJK?rs=1&pid=ImgDetMain"
     },
     {
       id: 13,
@@ -880,38 +880,40 @@ busqueda.addEventListener("input",function(event){
                 if(boton.textContent===baseDatosJSON.canciones[e].nombre)
                 {
                     link=baseDatosJSON.canciones[e].link;
-                    id_canciones.push(baseDatosJSON.canciones[e].id_genero);
+                    id_canciones.push(baseDatosJSON.canciones[e].id_genero)
                     // Calcular la moda de id_canciones de forma aún más fácil, sin filter ni sort
                     if (id_canciones.length>0) 
                     {
-                      let conteo={};
-                      moda=id_canciones[0];
-                      let maxiiii=1;
-                      //Este genera la moda 
-                      for (let i=0; i<id_canciones.length; i++)
-                      {
-                          let numa=id_canciones[i];
-                          conteo[numa]=(conteo[numa] || 0) + 1;
-                          if (conteo[numa]>maxiiii) 
-                          {
-                            maxiiii=conteo[numa];
-                            moda=numa;
-                          }//USA MODA
-                      }
+                        let conteo={};
+                        moda=id_canciones[0];
+                        let maxiiii=1;
+                        //Este genera la moda 
+                        for (let i=0; i<id_canciones.length; i++)
+                        {
+                            let numa=id_canciones[i];
+                            conteo[numa]=(conteo[numa] || 0) + 1;
+                            if (conteo[numa]>maxiiii) 
+                            {
+                              maxiiii=conteo[numa];
+                              moda=numa;
+                            }//USA MODA
+                        }
                     }
+
                     // Obtener el arreglo de usuario desde la cookie de forma sencilla, sin parse, try ni catch
                     console.log(Usuario_actual);
                     let donCookie=document.cookie.split("; ");
                     for (let i=0; i<donCookie.length; i++) 
                     {
                       let [key, valor]=donCookie[i].split("=");
-                        if (key === Usuario_actual+"_are")
+                        if (key ===Usuario_actual+"_are")
                         {
                             console.log(id_canciones);
                             setCookie(Usuario_actual+"_are",moda,1000)
                             break;
                         }
                     }
+                   
                 }
             }
             console.log(link);  
