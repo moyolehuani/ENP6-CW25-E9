@@ -710,42 +710,73 @@ let siguiente=document.getElementById("btn_reproduciendo_siguiente");
 let regresar=document.getElementById("btn_reproduciendo_regresar");
 let formato_resultado;
 let player;
+let duration=0;
+let lastVolume;
+let previousVolume=0;
+let volume;
+let updateInterval;
 let link;
 let cancion_cambio;
 let maximo=baseDatosJSON.canciones.length;
+const seekBar = document.getElementById('seekBar');
+const volumeSlider = document.getElementById('volumeSlider');
+const playPauseBtn = document.getElementById('playPauseBtn');
 //Función para mostrar el video
 function hacer(link)
 {
-    if(player)
-      player.destroy();
-    player = new YT.Player("player", 
+  if(player)
+  player.destroy();
+  player = new YT.Player("player", 
+  {
+    videoId: link,
+    playerVars: 
     {
-      videoId: link,
-      playerVars: 
-      {
-          controls: 0,
-          modestbranding: 1,
-          rel: 0
-      },
-      events:
-      {
-          onReady: onPlayerReady,
-      }
-    });
-    function onPlayerReady()
+        controls: 0,
+        modestbranding: 1,
+        rel: 0
+    },
+    events:
     {
-      player.playVideo();
+        onReady: onPlayerReady,
     }
-    play.addEventListener("click",()=>{
-        let state = player.getPlayerState();
-        if(state == YT.PlayerState.PLAYING){
-            player.pauseVideo();
-        }
-        else
-        {
-            player.playVideo();
-        }
-    });
+  });  
+}
+play.addEventListener("click",()=>
+{
+  let state = player.getPlayerState();
+  if(state == YT.PlayerState.PLAYING){
+    player.pauseVideo();
+    play.innerHTML = "X";
+  }
+  else
+  {
+    player.playVideo();
+  }
+});
+seekBar.addEventListener("input", ()=>
+{
+  let seekTo = seekBar.value;
+  player.seekTo(seekTo, true);
+});
+function onPlayerReady(event)
+{
+  duration = player.getDuration();
+  player.playVideo();
+
+  seekBar.max =duration;
+  volumeSlider.value = player.getVolume();
+  updateInterval = setInterval(()=>
+  {
+    if(player && player.getPlayerState() === YT.PlayerState.PLAYING)
+    {
+      seekBar.value = player.getCurrentTime();
+    }
+    CurrentVolume=player.getVolume();
+    if(CurrentVolume !== previousVolume)
+    {
+      volumeSlider.value = CurrentVolume;
+    }
+  }, 100);
 }
 buscador_form.addEventListener("submit", function(e)
 { //se le hace prevent para evitar que se recargue la pagina 
@@ -853,4 +884,10 @@ regresar.addEventListener("click",()=>{
     }
   }
 });
-
+volumeSlider.addEventListener("input", () => //evento que actualiza el volumen
+{
+  if (player) 
+  {
+    player.setVolume(parseInt(volumeSlider.value));
+  }
+});
