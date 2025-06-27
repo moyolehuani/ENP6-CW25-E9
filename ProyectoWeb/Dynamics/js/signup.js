@@ -140,10 +140,13 @@ let contenedor_Biblioteca=document.getElementById("Biblioteca_contenedor");
 let Biblioteca_input=document.getElementById("Biblioteca_input");
 let recomendaciones=document.getElementById("recomendados");
 let menu_input=document.getElementById("menu_input");
-let btn_registrarse= document.getElementById("btn_registarte");
-let contenedor_registarse= document.getElementById("contenedor_registarse");
-let buscador_sec= document.getElementById("buscador_sec"); //estas como no se pueden ocultar ya que (position:fixed),se tienen que ocultar una por una
-let cont_reproduciendo= document.getElementById("cont_reproduciendo");
+let btn_registrarse=document.getElementById("btn_registarte");
+let contenedor_registarse=document.getElementById("contenedor_registarse");
+let buscador_sec=document.getElementById("buscador_sec"); //estas como no se pueden ocultar ya que (position:fixed),se tienen que ocultar una por una
+let cont_reproduciendo=document.getElementById("cont_reproduciendo");
+let contenido_playlists=document.getElementById("contenido_playlists");
+let quitar_contenido_playlists=document.getElementById("quitar_contenido_playlists");
+let canciones_de_playlists=document.getElementById("canciones_de_playlists");
 
 //JSON de playlist
 let JSON_Playlist={
@@ -380,7 +383,6 @@ poner_nom_playlist.addEventListener("submit", function(e){
                         JSON_Playlist[playlist_nom].push(linki);
                 }
             };
-            return;
             
         });
     });
@@ -397,8 +399,41 @@ terminar_playlist.addEventListener("submit", function(e){
     cancionesPlay_cont.classList.add("oculto");
     crear_playlist.classList.add("oculto");
     nueva_playlist.addEventListener("click", ()=>{
+        canciones_de_playlists.innerHTML="";
+        contenido_playlists.classList.remove("oculto");
         let nomPlay = nueva_playlist.textContent
-        console.log(JSON_Playlist[nomPlay]);
+        console.log(JSON_Playlist[nomPlay][1]);
+        for(let i=0;i<JSON_Playlist[nomPlay].length;i++){
+            for(let n=0; n<baseDatosJSON.canciones.length; n++){
+                if(JSON_Playlist[nomPlay][i]===baseDatosJSON.canciones[n].link){
+                    formato_resultado=document.createElement("button");
+                    formato_resultado.classList.add("estilo_por_resultado");
+                    formato_resultado.id = "cancion_" + baseDatosJSON.canciones[n].nombre;
+                    formato_resultado.textContent=baseDatosJSON.canciones[n].nombre;
+                    canciones_de_playlists.appendChild(formato_resultado);
+                    console.log(baseDatosJSON.canciones.length);
+                };
+            };   
+        };
+        console.log("Hola");
+        let butones = canciones_de_playlists.querySelectorAll("button.estilo_por_resultado");
+        butones.forEach(boton => {
+            boton.addEventListener("click", ()=>{
+                console.log("Hola");
+                let linkp
+                for(let e=0;e<baseDatosJSON.canciones.length;e++)
+                {
+                    if(boton.textContent===baseDatosJSON.canciones[e].nombre){
+                        linkp=baseDatosJSON.canciones[e].link;
+                    };
+                };
+                console.log(linkp);  
+                hacer(linkp);
+            });
+        });
+    });
+    quitar_contenido_playlists.addEventListener("click", ()=>{
+        contenido_playlists.classList.add("oculto");
     });
 });
 
