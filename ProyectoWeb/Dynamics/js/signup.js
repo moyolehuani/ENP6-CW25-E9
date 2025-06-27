@@ -150,6 +150,8 @@ let JSON_Playlist={
     
 }
 
+let btn_registar= document.getElementById('btn_registar');
+let registrarse_form= document.getElementById('registrarse_form')
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /*//////////////////////////////////////////////LOGICA DEL LOGIN/////////////////////////////////////////////////////////////////////// */
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////:)// */
@@ -159,6 +161,7 @@ btn_registrarse.addEventListener("click", e =>  // al picar el boton de registra
     contenedor_registarse.classList.remove('oculto');
     contenedor_registarse.classList.add("animar-aparicion");
 });
+
 input_usuario.addEventListener('keydown', e => //evento que cuando se presiona enter en el input usuario, aparece el input contraseña y el boton submit
 {
     if( (e.key === 'Enter') && contraseña.classList.contains('oculto') ) // si el evento key detecta la tecla enter
@@ -314,7 +317,8 @@ const seleccion_tema = document.getElementById('seleccion_tema');
 function elegirTema(TemaElegido) {
   let tema = temas[TemaElegido];
   if (!tema) return;
-  for (const variable in tema) {
+  for (const variable in tema) 
+  {
     document.documentElement.style.setProperty(variable, tema[variable]);
   }
 }
@@ -324,7 +328,19 @@ seleccion_tema.addEventListener("change", function () {
   elegirTema(temaElegido);
   console.log(this.value);
 });
-
+///////////// LOGICA DEL FULLSCREEN////////////
+btn_ampliar_fullscreen= document.getElementById("btn_ampliar_fullscreen");
+fullscreen_normal= document.getElementById('fullscreen_normal');
+btn_ampliar_fullscreen.addEventListener("click", () =>
+{
+    fullscreen_normal.requestFullscreen()
+    btn_ampliar_fullscreen.classList.add('oculto');
+});
+document.addEventListener("fullscreenchange", () =>
+{
+    !document.fullscreenElement ? btn_ampliar_fullscreen.classList.remove('oculto'): null;
+});
+////////////////////////////////////////////////
 //Crear y quitar playlist
 añadir_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.remove("oculto");

@@ -116,8 +116,8 @@ seekBar.addEventListener("input", () => {
     let seekTo = seekBar.value;
     console.log("AA")
     player.seekTo(seekTo, true);
-});*/
-
+});
+/*
 let player;
 let duration=0;
 let lastVolume;
