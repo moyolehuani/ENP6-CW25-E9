@@ -444,6 +444,7 @@ const baseDatosJSON = {
       descripcion:"The Neighbourhood es una banda de rock alternativo estadounidense creada en agosto de 2011. El grupo está formado por el vocalista Jesse Rutherford, los guitarristas Jeremy Freedman, Zach Abels y el bajista Mikey Margott. La banda publicó su primer álbum de estudio el 23 de abril de 2013 a través de Columbia Records",
       url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPdgUZbyPmJucLYE3BquDlCbjaOvJpxRBTg&s"
     },
+
   ],
   genero: [
     {
