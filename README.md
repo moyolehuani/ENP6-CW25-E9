@@ -1,4 +1,4 @@
-# <img src="https://i.imgur.com/iKfPJDl.png" alt="Forbeat.png" width="200" height="200">
+# <img src="https://i.imgur.com/iKfPJDl.png" alt="Forbeat.png" width="700" height="500">
 
 ## **Nuestro proyecto** 🎵
 ForBeat es un reproductor de música con una selección de artistas y canciones muy variadas en donde mezclamos géneros como el rock, pop, R&B, música electrónica, hip hop, incluso música de videojuegos. Este nos permite la reproducción del material en tiempo real, posibilitando el control del mismo mediante los botones de volumen, play y pausa, reproducción aleatoria e incluso un mini reproductor en la barra de reproducción, que posteriormente nos da la posibilidad de mostrar una pantalla completa. 
