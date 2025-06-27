@@ -146,4 +146,4 @@ Dentro de nuestro reproductor contamos con nuestro menú principal
 
 "" fue hecho con mucho esfuerzo y dedicación, así como el cariño de cada uno de nosotros. Esperamos les guste. 
 
-Agradecemos a nuestra asesora Ariadna etc etc
+Agradecemos a nuestra asesora Ariadna
