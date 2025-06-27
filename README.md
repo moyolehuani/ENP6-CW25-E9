@@ -98,6 +98,8 @@ Barra de reproducción: Con los botones de play y pausa, aleatorio, volúmen y d
 
 </p>
 
+---
+
 ## Integrantes del equipo y aportación al proyecto
 <ul>
 	<li>Michelle Yaneth Soto Moreno</li>
