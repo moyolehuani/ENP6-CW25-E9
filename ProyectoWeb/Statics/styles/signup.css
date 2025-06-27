@@ -64,6 +64,10 @@
 body {
     background-color: var(--color-fondo); 
 }
+input:checked
+{
+    border: none;
+}
 /*Display de sign up*/
 #contenedor_del_contenedor_form_signup{
     background-image: url('https://cdn.pixabay.com/photo/2019/10/22/16/02/black-and-white-4569096_1280.jpg');
@@ -195,28 +199,40 @@ body {
 #interfaz{
     display: flex;
 }
-.cont_reproduciendo{
+#cont_reproduciendo{
     position: fixed;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: max-content;
+    height: 15vh;
     bottom: 5vh;
     z-index: 2;
 }
-.reproductor{
+#cont_reproduccion_controles{
     display: flex;
-    flex: row wrap;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 80%;
     height: 90%;
     max-width: 480px;
-    max-height: fit-content;
     background-color: var(--color-reproductor);
     border-radius: 12px;
+}
+#cont_reproductor_sin_barra_tiempo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 100%;
+}
+#reproductor
+{
+    display: flex;
+    flex-direction: row;
 }
 .rep_button{
     background-color: transparent;
@@ -235,22 +251,62 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 5.5vh;
-    width: 30%;
+    width: fit-content;
     border: none;
     padding: 0.2vh 2vh;
     background-color: var(--color-reproduciendo-back-next-play-stop);
 }
-#player
+#fullscreen_normal
 {
+    position: relative;
     width: 10vw;
     height: 5vh;
+}
+
+#fullscreen_normal:fullscreen
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player_normal
+{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-fondo);
     border-radius: 10px;
     transition: all 1s;
 }
-#player:hover
+#btn_ampliar_fullscreen
 {
-    transform: scale(1.01);
-    box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.3)
+    position: absolute;
+    top: -1vh;
+    right: -1vw;
+}
+#cont_seekbar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: 90%;
+}
+.barra 
+{
+  appearance: none;
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  margin: 1vw;
+}
+#volumeSlider
+{
+    width: 20% !important
 }
 #aside-pestañas
 {

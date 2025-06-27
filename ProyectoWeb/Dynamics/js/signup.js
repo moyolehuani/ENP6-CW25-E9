@@ -314,7 +314,19 @@ seleccion_tema.addEventListener("change", function () {
   elegirTema(temaElegido);
   console.log(this.value);
 });
-
+///////////// LOGICA DEL FULLSCREEN////////////
+btn_ampliar_fullscreen= document.getElementById("btn_ampliar_fullscreen");
+fullscreen_normal= document.getElementById('fullscreen_normal');
+btn_ampliar_fullscreen.addEventListener("click", () =>
+{
+    fullscreen_normal.requestFullscreen()
+    btn_ampliar_fullscreen.classList.add('oculto');
+});
+document.addEventListener("fullscreenchange", () =>
+{
+    !document.fullscreenElement ? btn_ampliar_fullscreen.classList.remove('oculto'): null;
+});
+////////////////////////////////////////////////
 //Crear y quitar playlist
 añadir_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.remove("oculto");
