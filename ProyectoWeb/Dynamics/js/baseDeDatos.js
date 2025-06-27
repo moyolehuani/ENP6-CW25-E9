@@ -299,7 +299,41 @@ const baseDatosJSON = {
       link: "ousy_RRnnIQ",
       genero: "R&B",
       id_genero: 5
-    }
+    },
+    {
+      id:27,
+      nombre:"La Ixhuateca ",
+      artista: "Óscar Chávez",
+      id_artista: 24, //Cosa por cambiar
+      album: "Chip Chrome & The Mono-Tones", //cosa por cambiar
+      id_album: 26, //cosa por cambiar
+      link: "ousy_RRnnIQ", //Cosa por cambiar
+      genero: "R&B", //Cosa por cambiar
+      id_genero: 5 //Cosa por cambiar, y así con todos los demás
+    },
+    {
+      id:28,
+      nombre:"El cascabel",
+      artista: "Óscar Chávez",
+      id_artista: 24, //25 creo
+      album: "Chip Chrome & The Mono-Tones",
+      id_album: 26,//Cosa por cambiar
+      link: "ousy_RRnnIQ",
+      genero: "R&B",
+      id_genero: 5
+    },
+    {
+      id:29,
+      nombre:"Macondo",
+      artista: "Óscar Chávez",
+      id_artista: 24, ///Según yo, es el 25 el último que haya
+      album: "¡Enjaulado! Óscar Chávez Canta América Latina",
+      id_album: 26,  //Por verse
+      link: "ousy_RRnnIQ",
+      genero: "R&B",
+      id_genero: 5
+    },
+
   ],
   artistas: [
     {
@@ -820,6 +854,7 @@ busqueda.addEventListener("input",function(event){
                       let conteo={};
                       moda=id_canciones[0];
                       let maxiiii=1;
+                      //Este genera la moda 
                       for (let i=0; i<id_canciones.length; i++)
                       {
                           let numa=id_canciones[i];
