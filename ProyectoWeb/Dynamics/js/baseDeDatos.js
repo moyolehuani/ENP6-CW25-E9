@@ -310,7 +310,8 @@ const baseDatosJSON = {
       link: "ousy_RRnnIQ", //Cosa por cambiar
       genero: "R&B", //Cosa por cambiar
       id_genero: 5 //Cosa por cambiar, y así con todos los demás
-    },
+    }, 
+    TakaTaka
     {
       id:28,
       nombre:"El cascabel",
