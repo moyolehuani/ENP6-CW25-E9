@@ -425,7 +425,7 @@ const baseDatosJSON = {
       id: 15,
       nombre: "Toby Fox",
       descripcion: "Robert F. Fox conocido profesionalmente como Toby Fox, es un compositor y desarrollador de videojuegos estadounidense, conocido por desarrollar Undertale.",
-      url_img: "https://static.wikia.nocookie.net/undertale/images/8/8e/TobyFox.png/revision/latest?cb=20151222064831&path-prefix=es"
+      url_img: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/cO7PFJzCD16R0dPC4NSbwO1TJ3P.jpg"
     },
     {
       id: 16,
@@ -997,7 +997,7 @@ volumeSlider.addEventListener("input", () => //evento que actualiza el volumen
   }
 });
 //CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
-let numeros_artistas = []; //creo el arreglo con la cantidad de elementos igual
+let numeros_artistas=[]; //creo el arreglo con la cantidad de elementos igual
 //al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
 for(let a=0; a<baseDatosJSON.artistas.length; a++)
 {
@@ -1024,27 +1024,33 @@ for(let e=0; e<artistasN_aleatorio.length-1; e++)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 //AHORA SIGUEN LOS ALBUMS RECOMENDADOS
 
-let numeros_albumes= []; //creo el arreglo con la cantidad de elementos igual
+/////////////////////////////////
+console.log("IVAVAVAVAVAVAVAVVA");
+
+//CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
+let numeros_album=[]; //creo el arreglo con la cantidad de elementos igual
 //al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
-for(let h=0; h<baseDatosJSON.album.length; h++)
+for(let a=0; a<baseDatosJSON.artistas.length; a++)
 {
-  numeros_albumes.push(h);
+  numeros_album.push(a);
 }
+
 //ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
 //el número de albumes
-let albumesN_aleatorio=numeros_albumes; //creo el arreglo de 24 elementos
-for (let m=numeros_artistas.length - 1; m > 0; m--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
-    let n= Math.floor(Math.random()*(m + 1)); //la primera parte baja al entero más cercano los decimales
+let albumN_aleatorio=numeros_album; //creo el arreglo de 24 elementos
+for (let b=numeros_album.length - 1; b > 0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
+    let c= Math.floor(Math.random()*(b + 1)); //la primera parte baja al entero más cercano los decimales
     //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
-    [artistasN_aleatorio[m], artistasN_aleatorio[n]]=[artistasN_aleatorio[n], artistasN_aleatorio[m]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
+    [albumN_aleatorio[b], albumN_aleatorio[c]]=[albumN_aleatorio[c], albumN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
 }
-console.log("El arreglo aleatorio es: "+albumesN_aleatorio);
-//posteriormente voy a poner imágenes aleatorias en Albumes recomendados
-let albumes_contenedor=document.getElementById("contiene_album");
+console.log("El arreglo aleatorio es: "+albumN_aleatorio);
+//posteriormente voy a poner imágenes aleatorias en Artistas recomendados
+let album_contenedor=document.getElementById("contiene_album");
 let numero_album;
-for(let p=0; p<artistasN_aleatorio.length; p++)
+for(let e=0; e<albumN_aleatorio.length-1; e++)
 {
-  numero_album=albumesN_aleatorio[p];
-  console.log("Deja de funcionar el elemento"+p+"Y 1 después");
-  albumes_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.album[numero_album].url_img}" alt="Hola Mundo">`;
+  numero_album=albumN_aleatorio[e];
+  album_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.album[numero_album].url_img}" alt="Hola Mundo">`;
 }
+
+
