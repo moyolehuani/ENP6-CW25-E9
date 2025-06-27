@@ -300,38 +300,39 @@ const baseDatosJSON = {
       genero: "R&B",
       id_genero: 5
     },
+    ///CORREGIR DESDE AQUÍ
     {
       id:27,
       nombre:"La Ixhuateca ",
-      artista: "Óscar Chávez",
-      id_artista: 24, //Cosa por cambiar
-      album: "Chip Chrome & The Mono-Tones", //cosa por cambiar
-      id_album: 26, //cosa por cambiar
-      link: "ousy_RRnnIQ", //Cosa por cambiar
-      genero: "R&B", //Cosa por cambiar
-      id_genero: 5 //Cosa por cambiar, y así con todos los demás
+      artista: "Oscar Chávez",
+      id_artista: 25, //Cosa por cambiar
+      album: "Al son de mi corazon", //cosa por cambiar
+      id_album: 27, //cosa por cambiar
+      link: "VHRDLv5Y9Lg", //Cosa por cambiar
+      genero: "Regional", //Cosa por cambiar
+      id_genero: 9 //Cosa por cambiar, y así con todos los demás
     },
     {
       id:28,
       nombre:"El cascabel",
-      artista: "Óscar Chávez",
-      id_artista: 24, //25 creo
-      album: "Chip Chrome & The Mono-Tones",
-      id_album: 26,//Cosa por cambiar
-      link: "ousy_RRnnIQ",
-      genero: "R&B",
-      id_genero: 5
+      artista: "Oscar Chávez",
+      id_artista: 25, //25 creo
+      album: "Al son de mi corazon",
+      id_album: 27,//Cosa por cambiar
+      link: "RD66txd6DBXhg",
+      genero: "Regional",
+      id_genero: 9
     },
     {
       id:29,
       nombre:"Macondo",
-      artista: "Óscar Chávez",
-      id_artista: 24, ///Según yo, es el 25 el último que haya
+      artista: "Oscar Chávez",
+      id_artista: 25, ///Según yo, es el 25 el último que haya
       album: "¡Enjaulado! Óscar Chávez Canta América Latina",
-      id_album: 26,  //Por verse
-      link: "ousy_RRnnIQ",
-      genero: "R&B",
-      id_genero: 5
+      id_album: 28,  //Por verse
+      link: "mBfP4_c2rw8",
+      genero: "Cumbia",
+      id_genero: 10
     },
 
   ],
@@ -412,7 +413,7 @@ const baseDatosJSON = {
       id: 13,
       nombre: "The Marias",
       descripcion: "Grupo con una identidad visual y sonora muy cuidada, liderado por una voz suave y enigmática.",
-      url_img: "https://i0.wp.com/digger.mx/wp-content/uploads/2024/06/The-Marias.jpeg?resize=527%2C297&ssl=1"
+      url_img: "https://static.stereogum.com/uploads/2024/04/The-Marias-1712432101.jpg"
     },
     {
       id: 14,
@@ -424,7 +425,7 @@ const baseDatosJSON = {
       id: 15,
       nombre: "Toby Fox",
       descripcion: "Robert F. Fox conocido profesionalmente como Toby Fox, es un compositor y desarrollador de videojuegos estadounidense, conocido por desarrollar Undertale.",
-      url_img: "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/cO7PFJzCD16R0dPC4NSbwO1TJ3P.jpg"
+      url_img: "https://static.wikia.nocookie.net/undertale/images/8/8e/TobyFox.png/revision/latest?cb=20151222064831&path-prefix=es"
     },
     {
       id: 16,
@@ -481,6 +482,12 @@ const baseDatosJSON = {
       descripcion:"The Neighbourhood es una banda de rock alternativo estadounidense creada en agosto de 2011. El grupo está formado por el vocalista Jesse Rutherford, los guitarristas Jeremy Freedman, Zach Abels y el bajista Mikey Margott. La banda publicó su primer álbum de estudio el 23 de abril de 2013 a través de Columbia Records",
       url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThPdgUZbyPmJucLYE3BquDlCbjaOvJpxRBTg&s"
     },
+    {
+      id:25,
+      nombre:"Oscar Chavez",
+      descripcion:"Óscar Chávez Fernández, conocido como Óscar Chávez ​ fue un cantante, actor, compositor, investigador de música, director de teatro y poeta​ mexicano, considerado uno de los máximos exponentes del canto nuevo en su país.​",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQutNM_AZixCXONtRB4kI0T1MgBW1OGXgJ2nA&s",
+    }
 
   ],
   genero: [
@@ -524,6 +531,16 @@ const baseDatosJSON = {
       nombre: "musica de videojuego",
       descripcion: "Su función principal es sumergir al jugador en el mundo del juego, complementando la jugabilidad y la narrativa, y provocando diversas emociones, se empezo a considerar un genero propio el siglo XX"
     },
+    {
+      id:9,
+      nombre: "Regional",
+      descripcion: "El género regional mexicano es un término amplio que engloba diversos estilos musicales tradicionales de México. Incluye subgéneros como mariachi, banda, norteño, corridos, y otros, cada uno con sus propias características instrumentales y vocales. Estos estilos suelen representar diferentes regiones de México y han ganado popularidad a nivel nacional e internacional. "
+    },
+    {
+      id:10,
+      nombre:"Cumbia",
+      descripcion:"La cumbia es un género musical y baile originario de Colombia, pero que se ha expandido y evolucionado por toda América Latina, convirtiéndose en un símbolo de identidad cultural en la región. Su origen se encuentra en la Costa Caribe colombiana, donde se fusionaron elementos de las culturas africana, indígena y española. "
+    }
   ],
   album: [
     {
@@ -735,6 +752,22 @@ const baseDatosJSON = {
       descripcion:"Chip Chrome & The Mono-Tones es el cuarto álbum de estudio de la banda estadounidense de música alternativa The Neighbourhood. Se lanzó el 25 de septiembre de 2020,  es un álbum conceptual construido sobre las propias luchas de Rutherford con el uso excesivo de las redes sociales y la identidad de la banda.",
       url_img:"https://images-na.ssl-images-amazon.com/images/I/717h8oJwcKL._AC_UL210_SR210,210_.jpg"
     },
+    {
+      id:27,
+      nombre:"Al son de mi corazon",
+      artista:"Oscar Chavez",
+      id_artista:25,
+      descripcion:"Este álbum incluye canciones que exploran temas de amor, desamor y la condición humana. ",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQedngKwrIHbI4ToSBPvrkB_u66BZ3UtAmrLg&s"
+    },
+    {
+      id:28,
+      nombre:"¡Enjaulado! Óscar Chávez Canta América Latina",
+      artista:"Oscar Chavez",
+      id_artista:25,
+      descripcion:"¡Enjaulado! Óscar Chávez Canta América Latina es un álbum de 1972 del cantante mexicano Óscar Chávez, donde interpreta canciones de diversos géneros populares latinoamericanos, con un enfoque en la música folclórica y de protesta.",
+      url_img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzXmu1a8aPuiCUhrtKREcFSZs3yIw9hEZ4Zg&s"
+    }
   ]
 };
 //console.log(baseDatosJSON.canciones[0].nombre);
@@ -863,7 +896,7 @@ busqueda.addEventListener("input",function(event){
                           {
                             maxiiii=conteo[numa];
                             moda=numa;
-                          }
+                          }//USA MODA
                       }
                     }
                     // Obtener el arreglo de usuario desde la cookie de forma sencilla, sin parse, try ni catch
@@ -956,61 +989,6 @@ regresar.addEventListener("click",()=>{
     }
   }
 });
-
-//CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
-let numeros_artistas = []; //creo el arreglo con la cantidad de elementos igual
-//al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
-for(let a=0; a<baseDatosJSON.artistas.length; a++)
-{
-  numeros_artistas.push(a);
-}
-
-//ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
-//el número de artistas
-let artistasN_aleatorio=numeros_artistas; //creo el arreglo de 24 elementos
-for (let b=numeros_artistas.length - 1; b > 0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
-    let c= Math.floor(Math.random()*(b + 1)); //la primera parte baja al entero más cercano los decimales
-    //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
-    [artistasN_aleatorio[b], artistasN_aleatorio[c]]=[artistasN_aleatorio[c], artistasN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
-}
-console.log("El arreglo aleatorio es: "+artistasN_aleatorio);
-//posteriormente voy a poner imágenes aleatorias en Artistas recomendados
-let imagenes_contenedor=document.getElementById("contiene_artistas");
-let numero_imagen;
-for(let e=0; e<artistasN_aleatorio.length-1; e++)
-{
-  numero_imagen=artistasN_aleatorio[e];
-  imagenes_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.artistas[numero_imagen].url_img}" alt="Hola Mundo">`;
-}
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-//AHORA SIGUEN LOS ALBUMS RECOMENDADOS
-
-let numeros_albumes= []; //creo el arreglo con la cantidad de elementos igual
-//al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
-for(let h=0; h<baseDatosJSON.album.length; h++)
-{
-  numeros_albumes.push(h);
-}
-//ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
-//el número de albumes
-let albumesN_aleatorio=numeros_albumes; //creo el arreglo de 24 elementos
-for (let m=numeros_artistas.length - 1; m > 0; m--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
-    let n= Math.floor(Math.random()*(m + 1)); //la primera parte baja al entero más cercano los decimales
-    //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
-    [artistasN_aleatorio[m], artistasN_aleatorio[n]]=[artistasN_aleatorio[n], artistasN_aleatorio[m]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
-}
-console.log("El arreglo aleatorio es: "+albumesN_aleatorio);
-//posteriormente voy a poner imágenes aleatorias en Albumes recomendados
-let albumes_contenedor=document.getElementById("contiene_album");
-let numero_album;
-for(let p=0; p<artistasN_aleatorio.length; p++)
-{
-  numero_album=albumesN_aleatorio[p];
-  console.log("Deja de funcionar el elemento"+p+"Y 1 después");
-  albumes_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.album[numero_album].url_img}" alt="Hola Mundo">`;
-}
-
-
 volumeSlider.addEventListener("input", () => //evento que actualiza el volumen
 {
   if (player) 
