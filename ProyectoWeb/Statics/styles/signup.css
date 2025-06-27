@@ -472,7 +472,6 @@ input:checked
     filter: saturate(0) blur(2px) contrast(.6);
     transition: filter 1s ease, transform 0.6s ease;
     border: 1px solid white;
-    
 
 }
 .elemento:hover
@@ -524,7 +523,6 @@ input:checked
     display: flex;
     flex: row wrap;
     align-items: center;
-    justify-content: center;
 }
 #artistas_recomendados{
     color: aliceblue;
