@@ -469,7 +469,7 @@ input:checked
     height: 17vh;
     clip-path: circle(100%);
     object-fit: cover;
-    filter: saturate(0) blur(2px);
+    filter: saturate(0) blur(2px) contrast(.6);
     transition: filter 1s ease, transform 0.6s ease;
     border: 1px solid white;
     
@@ -477,7 +477,7 @@ input:checked
 }
 .elemento:hover
  {
-    filter: saturate(1) blur(0px) brightness(1.15) drop-shadow(0 0 5px var(--color-glow));
+    filter: saturate(1) blur(0px) contrast(1) brightness(1.1) drop-shadow(0 0 5px var(--color-glow));
     transform: scale(1.09);
 }
 
