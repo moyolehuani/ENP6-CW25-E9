@@ -996,3 +996,55 @@ volumeSlider.addEventListener("input", () => //evento que actualiza el volumen
     player.setVolume(parseInt(volumeSlider.value));
   }
 });
+//CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
+let numeros_artistas = []; //creo el arreglo con la cantidad de elementos igual
+//al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
+for(let a=0; a<baseDatosJSON.artistas.length; a++)
+{
+  numeros_artistas.push(a);
+}
+
+//ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
+//el número de artistas
+let artistasN_aleatorio=numeros_artistas; //creo el arreglo de 24 elementos
+for (let b=numeros_artistas.length - 1; b > 0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
+    let c= Math.floor(Math.random()*(b + 1)); //la primera parte baja al entero más cercano los decimales
+    //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
+    [artistasN_aleatorio[b], artistasN_aleatorio[c]]=[artistasN_aleatorio[c], artistasN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
+}
+console.log("El arreglo aleatorio es: "+artistasN_aleatorio);
+//posteriormente voy a poner imágenes aleatorias en Artistas recomendados
+let imagenes_contenedor=document.getElementById("contiene_artistas");
+let numero_imagen;
+for(let e=0; e<artistasN_aleatorio.length-1; e++)
+{
+  numero_imagen=artistasN_aleatorio[e];
+  imagenes_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.artistas[numero_imagen].url_img}" alt="Hola Mundo">`;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//AHORA SIGUEN LOS ALBUMS RECOMENDADOS
+
+let numeros_albumes= []; //creo el arreglo con la cantidad de elementos igual
+//al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
+for(let h=0; h<baseDatosJSON.album.length; h++)
+{
+  numeros_albumes.push(h);
+}
+//ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
+//el número de albumes
+let albumesN_aleatorio=numeros_albumes; //creo el arreglo de 24 elementos
+for (let m=numeros_artistas.length - 1; m > 0; m--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
+    let n= Math.floor(Math.random()*(m + 1)); //la primera parte baja al entero más cercano los decimales
+    //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
+    [artistasN_aleatorio[m], artistasN_aleatorio[n]]=[artistasN_aleatorio[n], artistasN_aleatorio[m]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
+}
+console.log("El arreglo aleatorio es: "+albumesN_aleatorio);
+//posteriormente voy a poner imágenes aleatorias en Albumes recomendados
+let albumes_contenedor=document.getElementById("contiene_album");
+let numero_album;
+for(let p=0; p<artistasN_aleatorio.length; p++)
+{
+  numero_album=albumesN_aleatorio[p];
+  console.log("Deja de funcionar el elemento"+p+"Y 1 después");
+  albumes_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.album[numero_album].url_img}" alt="Hola Mundo">`;
+}
