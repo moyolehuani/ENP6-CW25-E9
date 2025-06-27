@@ -311,7 +311,6 @@ const baseDatosJSON = {
       genero: "R&B", //Cosa por cambiar
       id_genero: 5 //Cosa por cambiar, y así con todos los demás
     }, 
-    TakaTaka
     {
       id:28,
       nombre:"El cascabel",
