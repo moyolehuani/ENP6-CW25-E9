@@ -52,7 +52,7 @@ Desde la terminal de Bash colocar el siguiente comando: <br>
 
 ---
 
-## Configuración y Ejecución 
+## Configuración y Ejecución ⚙️
 **Para comenzar: <br>**
 **Paso 1** <br>
     Crea tu cuenta : Registrate para poder guardar tu inicio de sesión 
@@ -62,7 +62,7 @@ Desde la terminal de Bash colocar el siguiente comando: <br>
 
 **Para tener una experiencia más personalizada: <br>**
 <ul> 
-Cambio de tema: En el ícono del engranaje ubicado en la esquina superior izquierda, al darle click te encontraras con la opción de temas, la cual te despliega una lista con los mismos y entre esta tu podrás elegir el temas que más sea de tu agrado. De igual forma dentro de esta sección de configuración podrás encontrarte con los créditos del equipo que hizo posible este trabajo <br><br>
+Cambio de tema: En el ícono del engrane ubicado en la esquina superior izquierda, al darle click te encontraras con la opción de temas, la cual te despliega una lista con los mismos y entre esta tu podrás elegir el temas que más sea de tu agrado. De igual forma dentro de esta sección de configuración podrás encontrarte con los créditos del equipo que hizo posible este trabajo <br><br>
 Cerrar sesión: A lado del ícono del engranaje, se cuenta con un ícono de una persona, al darle click ahí te aparecerá la opción para cerrar tu sesión.<br>
 </ul>
 
@@ -74,7 +74,7 @@ Barra de reproducción: Con los botones de play y pausa, aleatorio, volúmen y d
 </ul>
 
 ---
-## Lista de Tecnologías utilizada
+## Lista de Tecnologías utilizada ⭐
 
 <p align="center">
 
@@ -100,7 +100,7 @@ Barra de reproducción: Con los botones de play y pausa, aleatorio, volúmen y d
 
 ---
 
-## Integrantes del equipo y aportación al proyecto
+## Integrantes del equipo y aportación al proyecto 🫂
 <ul>
 	<li>Michelle Yaneth Soto Moreno</li>
 		<ul>
