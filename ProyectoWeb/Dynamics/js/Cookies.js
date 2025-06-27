@@ -82,20 +82,15 @@ formulario_registro.addEventListener("submit", function(e) //Evento que registra
     contrasena_creada=input_contrasena_creada.value; //y la contraseña que ingresó para la creación de la cuenta
     input_usuario_creado.value="";
     input_contrasena_creada.value="";
-    console.log(usuario_creado +"= usuario creado");
-    console.log(contrasena_creada + "= contra creada");
     
     setCookie(usuario_creado, contrasena_creada, 1000); // cookie perpetua
 
     //Crea el arreglo para cada usuarui
     let arregloUsuario = [];
     setCookie(usuario_creado+"_are",JSON.stringify(arregloUsuario), 1000);
-    console.log(document.cookie);
     //Desaparecer contenedor
     desaparecer_contenedor(contenedor_registarse);
     aparecer_contendor(contenedor_signup);
-    console.log(document.cookie + "estas son las cookies");//lo anterior es una pequeña comprobación de que todo salió bien
-    //se crea la cookie de la cuenta
 });
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////Comprobación de información al iniciar sesión///////////////////
@@ -112,20 +107,16 @@ envia_sesion.addEventListener("click", function(event) // Evento detecta cuando 
     /////////////////////////////////////////////////////////////////////
     input_formado=`${usuario_puesto}=${contrasena_puesta}`; //no poner _I, porque sólo compara después
     /////////////////Verificar que los inputs si entren
-    console.log(usuario_puesto);
-    console.log(contrasena_puesta);
     //////////////////////////////////////////////////
     for(let a=0; a<arreglo_usuarios.length; a++)
     {
         verifica_coincidencia=arreglo_usuarios[a].includes(input_formado); //esto devuelve verdadero o falso
         //si no hay coincidenci en el elemento actual, será falso
-        console.log("la coincidencia de lo ingresado y la cookie es =" + verifica_coincidencia);
         ////////////////////// If verificacion de coincidencia///////////////////////////
         if(verifica_coincidencia)
         {
             event.preventDefault();
             coincidencia = true;
-            console.log("correcto");
             //////////////////////////////////////ESCONDER DISPLAY LOGIN Y MOSTRAR INTERFAZ DE LA APP/////////////////////////////////////////////////
             display_signup.classList.add('oculto'); //esconder la interfaz del login
             cont_reproduciendo.classList.remove('oculto'); //Para que aparezca ahora el display de home con el reproductor, el aside
@@ -156,7 +147,6 @@ document.addEventListener("DOMContentLoaded", ()=>
         contra = getCookie(Usuario_actual);
         if(contra)
         {
-            console.log("Inicio automatico con" + Usuario_actual)
             //////////////////////////////////////ESCONDER DISPLAY LOGIN Y MOSTRAR INTERFAZ DE LA APP/////////////////////////////////////////////////
             display_signup.classList.add('oculto'); //esconder la interfaz del login
             cont_reproduciendo.classList.remove('oculto'); //Para que aparezca ahora el display de home con el reproductor, el aside

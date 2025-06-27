@@ -131,7 +131,6 @@ let nom_playlist=document.getElementById("nombre_playlist");
 let cont_botones_playlist=document.getElementById("cont_botones_playlist");
 let cancionesPlay_cont=document.getElementById("cancionesPlay_cont");
 let playlist_nom;
-console.log(nom_playlist.value);
 
 let interfaz= document.getElementById("interfaz"); //interfaz con lo del home y el aside y el reproductor
 let contenedor_playlist=document.getElementById("playlist_contenedor");
@@ -351,6 +350,7 @@ añadir_playlistBtn.addEventListener("click", ()=>{
 quitar_crear_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.add("oculto");
 });
+//Elegir nombre de la Playlist y poner sus canciones 
 poner_nom_playlist.addEventListener("submit", function(e){
     e.preventDefault();
     cancionesPlay_cont.innerHTML="";
@@ -359,8 +359,6 @@ poner_nom_playlist.addEventListener("submit", function(e){
     cancionesPlay_cont.classList.remove("oculto");
     playlist_nom=nom_playlist.value;
     JSON_Playlist[playlist_nom]=[];
-    console.log(JSON_Playlist);
-    console.log(playlist_nom);
 
     for(let i=0;i<baseDatosJSON.canciones.length;i++)
     {
@@ -369,7 +367,6 @@ poner_nom_playlist.addEventListener("submit", function(e){
         formato_resultado.id = "cancion_" + baseDatosJSON.canciones[i].nombre;
         formato_resultado.textContent=baseDatosJSON.canciones[i].nombre;
         cancionesPlay_cont.appendChild(formato_resultado);
-        console.log(baseDatosJSON.canciones.length);
     }
     let butones = crear_playlist.querySelectorAll("button.estilo_por_resultado");
     butones.forEach(boton => {
@@ -387,9 +384,9 @@ poner_nom_playlist.addEventListener("submit", function(e){
         });
     });
 });
+//Terminr de crear las playlist y desplegar su contenido
 terminar_playlist.addEventListener("submit", function(e){
     e.preventDefault();
-    console.log(JSON_Playlist);
     let nueva_playlist=document.createElement("button");
     nueva_playlist.setAttribute("class", "nueva_playlist");
     cont_botones_playlist.appendChild(nueva_playlist);
@@ -401,8 +398,7 @@ terminar_playlist.addEventListener("submit", function(e){
     nueva_playlist.addEventListener("click", ()=>{
         canciones_de_playlists.innerHTML="";
         contenido_playlists.classList.remove("oculto");
-        let nomPlay = nueva_playlist.textContent
-        console.log(JSON_Playlist[nomPlay][1]);
+        let nomPlay = nueva_playlist.textContent;
         for(let i=0;i<JSON_Playlist[nomPlay].length;i++){
             for(let n=0; n<baseDatosJSON.canciones.length; n++){
                 if(JSON_Playlist[nomPlay][i]===baseDatosJSON.canciones[n].link){
@@ -411,11 +407,9 @@ terminar_playlist.addEventListener("submit", function(e){
                     formato_resultado.id = "cancion_" + baseDatosJSON.canciones[n].nombre;
                     formato_resultado.textContent=baseDatosJSON.canciones[n].nombre;
                     canciones_de_playlists.appendChild(formato_resultado);
-                    console.log(baseDatosJSON.canciones.length);
                 };
             };   
         };
-        console.log("Hola");
         let butones = canciones_de_playlists.querySelectorAll("button.estilo_por_resultado");
         butones.forEach(boton => {
             boton.addEventListener("click", ()=>{
@@ -426,8 +420,7 @@ terminar_playlist.addEventListener("submit", function(e){
                     if(boton.textContent===baseDatosJSON.canciones[e].nombre){
                         linkp=baseDatosJSON.canciones[e].link;
                     };
-                };
-                console.log(linkp);  
+                };  
                 hacer(linkp);
             });
         });

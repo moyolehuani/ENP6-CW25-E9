@@ -1014,7 +1014,6 @@ for (let b=numeros_artistas.length - 1; b > 0; b--) {  //Lo hago del fin hacia a
     //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
     [artistasN_aleatorio[b], artistasN_aleatorio[c]]=[artistasN_aleatorio[c], artistasN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
 }
-console.log("El arreglo aleatorio es: "+artistasN_aleatorio);
 //posteriormente voy a poner imágenes aleatorias en Artistas recomendados
 let imagenes_contenedor=document.getElementById("contiene_artistas");
 let numero_imagen;
@@ -1027,7 +1026,6 @@ for(let e=0; e<artistasN_aleatorio.length-1; e++)
 //AHORA SIGUEN LOS ALBUMS RECOMENDADOS
 
 /////////////////////////////////
-console.log("IVAVAVAVAVAVAVAVVA");
 
 //CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
 let numeros_album=[]; //creo el arreglo con la cantidad de elementos igual
@@ -1045,7 +1043,6 @@ for (let b=numeros_album.length - 1; b > 0; b--) {  //Lo hago del fin hacia atr�
     //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
     [albumN_aleatorio[b], albumN_aleatorio[c]]=[albumN_aleatorio[c], albumN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
 }
-console.log("El arreglo aleatorio es: "+albumN_aleatorio);
 //posteriormente voy a poner imágenes aleatorias en Artistas recomendados
 let album_contenedor=document.getElementById("contiene_album");
 let numero_album;
