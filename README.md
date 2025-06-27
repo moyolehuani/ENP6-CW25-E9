@@ -82,6 +82,7 @@ Cambio de tema
   <img src="https://img.shields.io/badge/GitHub-d8e2dc?logo=github&logoColor=white&style=flat-square">
   <img src="https://img.shields.io/badge/VSCode-fdc3d9?logo=visualstudiocode&logoColor=white&style=flat-square">
   <img src="https://img.shields.io/badge/XAMPP-f3d1ff?logo=xampp&logoColor=white&style=flat-square">
+  <img src="https://www.svgrepo.com/logo.svg&logoColor=white&style=flat-square">
 
   <br>
 
