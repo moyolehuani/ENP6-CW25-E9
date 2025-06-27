@@ -14,6 +14,7 @@ let usuarios_creados;
 let input_usuario_creado=document.getElementById("usuario_nuevo");
 let input_contrasena_creada=document.getElementById("contrasena_del_usuario_nuevo");
 let usuarios={};
+let Usuario_actual
 /*contenedores*/
 //////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////Declaracion de funciones
@@ -149,7 +150,7 @@ envia_sesion.addEventListener("click", function(event) // Evento detecta cuando 
 ////////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", ()=>
 {
-    let Usuario_actual = getCookie("ACTUAL");
+    Usuario_actual = getCookie("ACTUAL");
     if(Usuario_actual !== null)
     {
         contra = getCookie(Usuario_actual);
