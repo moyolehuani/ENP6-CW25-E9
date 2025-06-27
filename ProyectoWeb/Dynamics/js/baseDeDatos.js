@@ -1,3 +1,6 @@
+///IMPORTANTE: AGREGAR A OSCAR CHÁVEZ// ARI SONGS, SI NO, FUNA
+
+
 const baseDatosJSON = {
   canciones: [
     {
@@ -854,3 +857,82 @@ regresar.addEventListener("click",()=>{
   }
 });
 
+//CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
+let numeros_artistas = []; //creo el arreglo con la cantidad de elementos igual
+//al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
+for(let a=1; a<=baseDatosJSON.artistas.length; a++)
+{
+  numeros_artistas.push(a);
+}
+
+//ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
+//el número de artistas
+let artistasN_aleatorio=numeros_artistas; //creo el arreglo de 24 elementos
+for (let b=0; b<numeros_artistas.length-1; b++) {
+    let c= Math.floor(Math.random()*(b + 1)); //la primera parte baja al entero más cercano los decimales
+    //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
+    [artistasN_aleatorio[b], artistasN_aleatorio[c]]=[artistasN_aleatorio[c], artistasN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
+}
+console.log("El arreglo aleatorio es: "+artistasN_aleatorio);
+//posteriormente voy a poner imágenes aleatorias en Albums recomendados
+let imagenes_contenedor=document.getElementById("contiene_artistas");
+let numero_imagen;
+//el -1 es para que recorra 24 elementos, porque la posición inicial es de 0 y termina hasta el 23
+//siendo 24 elementos
+for(let e=0; e<artistasN_aleatorio.length; e++)
+{
+  numero_imagen=artistasN_aleatorio[e];
+  console.log("Deja de funcionar el elemento"+e+"Y 1 después");
+  imagenes_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.artistas[numero_imagen].url_img}" alt="Hola Mundo">`;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+var sin_repetir=[];
+valor_random_arreglo=(baseDatosJSON.artistas)=>{
+  if(sin_repetir.length===0)
+  {
+    for(var i=0; i<sin_repetir.length; i++)
+    {
+      sin_repetir.push(i);
+    }
+  }
+  var indice_random=Math.floor(Math.random()*sin_repetir.length);
+  var indice_a_sacar=sin_repetir[indice_random];
+
+
+  sin_repetir.splice(indice_random, 1);
+
+  return artistas[indice_a_sacar];
+};
+
+console.log(indice_a_sacar);
+console.log("lo de arriba");
+*/
+/*
+let numero=baseDatosJSON.artistas.length;
+let url;
+let artistas_recomendados=document.getElementByElement("contiene_artistas");
+for (let a=0; a<numero; a++)
+{
+  
+  url=baseDatosJSON.artistas[a].url_img;
+  artistas_recomendados.innerHTML+=`<img class="elemento" src="${url}" alt="Hola Mundo" width="100" height="100">`
+
+}
+
+
+*/

@@ -432,18 +432,22 @@ body {
 }
 .elemento
 {
+    border-radius: 50%;
     padding: 10px; 
     margin: 2vh;
     margin-top: 1vh;
-    width: 17vw; 
+    width: 17vh; 
     height: 17vh;
-    border-radius: 100%;
+    clip-path: circle(100%);
+    object-fit: cover;
+    
 }
 .elemento:hover
 {
-    width: 22vw;
+    width: 22vh;
     height: 22vh;
 }
+
 
 #contiene_artistas
 {
