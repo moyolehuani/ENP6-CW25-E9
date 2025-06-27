@@ -884,20 +884,20 @@ busqueda.addEventListener("input",function(event){
                     // Calcular la moda de id_canciones de forma aún más fácil, sin filter ni sort
                     if (id_canciones.length>0) 
                     {
-                      let conteo={};
-                      moda=id_canciones[0];
-                      let maxiiii=1;
-                      //Este genera la moda 
-                      for (let i=0; i<id_canciones.length; i++)
-                      {
-                          let numa=id_canciones[i];
-                          conteo[numa]=(conteo[numa] || 0) + 1;
-                          if (conteo[numa]>maxiiii) 
-                          {
-                            maxiiii=conteo[numa];
-                            moda=numa;
-                          }//USA MODA
-                      }
+                        let conteo={};
+                        moda=id_canciones[0];
+                        let maxiiii=1;
+                        //Este genera la moda 
+                        for (let i=0; i<id_canciones.length; i++)
+                        {
+                            let numa=id_canciones[i];
+                            conteo[numa]=(conteo[numa] || 0) + 1;
+                            if (conteo[numa]>maxiiii) 
+                            {
+                              maxiiii=conteo[numa];
+                              moda=numa;
+                            }//USA MODA
+                        }
                     }
 
                     // Obtener el arreglo de usuario desde la cookie de forma sencilla, sin parse, try ni catch
