@@ -20,4 +20,3 @@ interfaz.style.display = "flex";
 cont_reproduciendo.style.display="flex";
 
 
-console.log(contenedor_op_confi);

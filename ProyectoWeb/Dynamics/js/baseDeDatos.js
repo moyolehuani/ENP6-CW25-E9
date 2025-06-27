@@ -1010,7 +1010,7 @@ for(let a=0; a<baseDatosJSON.artistas.length; a++)
 //el número de artistas
 let artistasN_aleatorio=numeros_artistas; //creo el arreglo de 24 elementos
 for (let b=numeros_artistas.length - 1; b > 0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
-    let c= Math.floor(Math.random()*(b + 1)); //la primera parte baja al entero más cercano los decimales
+    let c=Math.floor(Math.random()*(b+1)); //la primera parte baja al entero más cercano los decimales
     //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
     [artistasN_aleatorio[b], artistasN_aleatorio[c]]=[artistasN_aleatorio[c], artistasN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
 }
@@ -1038,8 +1038,8 @@ for(let a=0; a<baseDatosJSON.artistas.length; a++)
 //ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
 //el número de albumes
 let albumN_aleatorio=numeros_album; //creo el arreglo de 24 elementos
-for (let b=numeros_album.length - 1; b > 0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
-    let c= Math.floor(Math.random()*(b + 1)); //la primera parte baja al entero más cercano los decimales
+for (let b=numeros_album.length-1; b>0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
+    let c= Math.floor(Math.random()*(b+1)); //la primera parte baja al entero más cercano los decimales
     //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
     [albumN_aleatorio[b], albumN_aleatorio[c]]=[albumN_aleatorio[c], albumN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
 }

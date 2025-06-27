@@ -21,7 +21,7 @@ let Usuario_actual
 /*configurar cookie*/
 function setCookie(nombre, valor, dias){
     let date = new Date();
-    date.setTime(date.getTime() + (dias*24*60*60*1000));
+    date.setTime(date.getTime()+(dias*24*60*60*1000));
     expiracion =date.toGMTString();
     document.cookie = `${nombre}=${valor}; expires=${expiracion}`;
 }
@@ -47,7 +47,7 @@ function deleteCookie(nombre){
 function obtenerCookiesComoArreglo() 
 {
     let arreglo = document.cookie.split(";");
-    for (let i = 0; i < arreglo.length; i++) 
+    for (let i=0; i<arreglo.length; i++) 
     {
         arreglo[i] = arreglo[i].trim();
     }

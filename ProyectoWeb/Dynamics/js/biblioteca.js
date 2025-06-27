@@ -71,7 +71,6 @@ function mostrarcanciones()
         boton.classList.add('glow_crezca');
         boton.addEventListener("click", ()=>
         {
-            console.log(boton + "se presiono")
             for(let e=0;e<baseDatosJSON.canciones.length;e++)
             {
                 if(boton.id ===baseDatosJSON.canciones[e].nombre)
@@ -79,7 +78,6 @@ function mostrarcanciones()
                     link=baseDatosJSON.canciones[e].link;
                 }
             }
-            console.log(link);  
             hacer(link);
         });
     });
