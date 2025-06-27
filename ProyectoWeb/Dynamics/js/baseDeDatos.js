@@ -820,6 +820,7 @@ busqueda.addEventListener("input",function(event){
                       let conteo={};
                       moda=id_canciones[0];
                       let maxiiii=1;
+                      //Este genera la moda 
                       for (let i=0; i<id_canciones.length; i++)
                       {
                           let numa=id_canciones[i];
