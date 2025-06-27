@@ -1,4 +1,4 @@
-# <h1> Título proyecto (logo) </h1>
+# <img src="./Statics/media/ForBeat.png" alt="Forbeat.png" width="200" height="200">
 
 ## **Nuestro proyecto** 🎵
 ForBeat es un reproductor de música con una selección de artistas y canciones muy variadas en donde mezclamos géneros como el rock, pop, R&B, música electrónica, hip hop, incluso música de videojuegos. Este nos permite la reproducción del material en tiempo real, posibilitando el control del mismo mediante los botones de volumen, play y pausa, reproducción aleatoria e incluso un mini reproductor en la barra de reproducción, que posteriormente nos da la posibilidad de mostrar una pantalla completa. 
@@ -23,18 +23,21 @@ Para poder acceder al reproductor debes instalar varios programas a continuació
 
 **3. Clonar el siguiente repositorio en tu computadora**<br>
     Para poder clonarlo primero debes: <br>
+    <ol type=a> 
 	a) Instalar git: <br>
-		https://git-scm.com/ <br>
-	b) Abrir git bash: <br>
-    Ya instalado:<br>
-       Desde la terminal de Bash colocar el siguiente comando: <br>
-	 (Dar enter entre cada línea)
-		**git clone** https://github.com/moyolehuani/ENP6-CW25-E9.git (enter) <br>
-	   	Cambiar de directorio a: <br>		
-  		**cd ENP6-CW25-E9** <br>
-		y una vez clonado y en el directorio correspondiente: <br>
+		https://git-scm.com/ <br><br>
+	b) Abrir git bash: <br><br>
+    </ol>
+    Ya instalado... <br><br>
+Desde la terminal de Bash colocar el siguiente comando: <br>
+       <ul Type=disk>
+	 (Dar enter entre cada línea) 
+		<li>**git clone** https://github.com/moyolehuani/ENP6-CW25-E9.git (enter) </li> <br>
+	   	<li>Cambiar de directorio a: <br>		
+  		**cd ENP6-CW25-E9**<br>
+		<li>Y una vez clonado y en el directorio correspondiente: <br>
   		**code .**
-	
+	</ul> 
 **5. Una vez abiertas todas las carpetas del repositorio, dirigirse a la carpeta templates y buscar  "signup.html", dar clik derecho y posteriormente dar click en copy path <br>**
 
 
@@ -45,29 +48,33 @@ Para poder acceder al reproductor debes instalar varios programas a continuació
 **7. A partir de "htdocs"  hacia atras borrar la ruta y sustituirla por "localhost"**
    
    
-## Y listo, ya puedes comenzar a usar ForBeat
+### Y listo, ya puedes comenzar a usar ForBeat
 
 ---
 
 ## Configuración y Ejecución 
-Para comenzar: <br>
+**Para comenzar: <br>**
 **Paso 1** <br>
     Crea tu cuenta : Registrate para poder guardar tu inicio de sesión 
 
 **Paso 2**<br>
-    Inicia sesión : ingresa los datos que colocaste anteriormente para poder acceder a tu cuenta 
+    Inicia sesión : ingresa los datos que colocaste anteriormente para poder acceder a tu cuenta <br>
 
-Cambio de tema 
+**Para tener una experiencia más personalizada: <br>**
+<ul> 
+Cambio de tema: En el ícono del engranaje ubicado en la esquina superior izquierda, al darle click te encontraras con la opción de temas, la cual te despliega una lista con los mismos y entre esta tu podrás elegir el temas que más sea de tu agrado. De igual forma dentro de esta sección de configuración podrás encontrarte con los créditos del equipo que hizo posible este trabajo <br><br>
+Cerrar sesión: A lado del ícono del engranaje, se cuenta con un ícono de una persona, al darle click ahí te aparecerá la opción para cerrar tu sesión.<br>
+</ul>
 
+**Elementos del reproductor:** 
+<ul type="disk"> 
+Barra lateral (aside bar): Dentro de esta podemos ubicar 3 importantes íconos, el primero hace referencia a nuestro Menú Principal en donde podemos encontrar nuestra sección de recomendados, el segundo hace referencia a la Biblioteca, en donde encontramos a nuestron contenido dividido por Artistas, Álbumes y Canciones; y finalmente, el tecero hace referencia a la sección de Playlist.<br><br>
+Barra de busqueda: Ubicada en la parte superior derecha, con un scroll para una busqueda más profunda.<br><br>
+Barra de reproducción: Con los botones de play y pausa, aleatorio, volúmen y duración de la canción. Dentro de está el mini reproductor, que se puede expandir para obtener la vista de Pantalla completa.
+</ul>
 
-<img engranaje > En este icono podras acceder a la configuracion en donde encontrarás la opcion "temas", ahí podras elegir entre el tema que más sea de tu agrado, para así tener tu reproductor más personalizado de igual forma podrás ver los creditos del equipo que hizo posible este trabajo 
-
-
-
-
-
-
-## Lista de Tecnologías utilizadas 
+---
+## Lista de Tecnologías utilizada
 
 <p align="center">
 
@@ -140,10 +147,5 @@ Cambio de tema
 	<li>Mentora: Ariadna Margarita Vargas Bautista </li>
 </ul>
 
-Dentro de nuestro reproductor contamos con nuestro menú principal
 
-
-
-"" fue hecho con mucho esfuerzo y dedicación, así como el cariño de cada uno de nosotros. Esperamos les guste. 
-
-Agradecemos a nuestra asesora Ariadna
+Finalmente ForBeat fue hecho con mucho esfuerzo y dedicación, así como el cariño de cada uno de nosotros. Esperamos les guste 🙌🏼
