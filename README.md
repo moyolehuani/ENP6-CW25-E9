@@ -82,12 +82,53 @@ Cambio de tema
 </p>
 
 ## Integrantes del equipo y aportación al proyecto
-
-
-
-
-
-
+<ul>
+	<li>Michelle Yaneth Soto Moreno</li>
+		<ul>
+			<li>Cambio de biblioteca</li>
+			<li>README</li>
+			<li>Documentación</li>
+			<li>Diseño por medio de CSS</li>
+		</ul>
+	<br>
+	<li>Gael Vazquez Moreno</li>	
+		<ul>
+			<li>Login</li>
+			<li>CSS</li>
+			<li>Maquetado</li>
+			<li>Diseño de biblioteca</li>
+			<li>Temas de la página</li>
+			<li>Pantalla completa</li>
+			<li>Diseño reproductor</li>
+		</ul>
+	<br>
+	<li>Braulio Gómez Cartagena</li>
+		<ul>
+			<li>Búsqueda de canciones</li>	
+			<li>API de Youtube</li>
+			<li>Algoritmo de recomendados</li>
+			<li>Algoritmo de playlist</li>
+		</ul>
+	<br>
+	<li>Dante Misael Vázquez Soto</li>
+		<ul>
+			<li>Maquetado de HTML</li>
+			<li>Diseño con CSS de menú</li>
+   			<li>Contenido de playlist</li>
+      			<li>Base de datos de canciones</li>
+	 		<li>Diseño de búsqueda y temas</li>
+    			<li>Animaciones para cambio de páginas</li>
+		</ul>
+	<br>
+	<li>Iván López Aviles</li>
+ 		<ul>
+   			<li>Inicio de sesión con cookies</li>
+      			<li>Carruseles de canciones</li>
+	 		<li>Algoritmo de recomendados</li>
+   		</ul>
+	<br>
+	<li>Mentora: Ariadna Margarita Vargas Bautista </li>
+</ul>
 
 Dentro de nuestro reproductor contamos con nuestro menú principal
 
