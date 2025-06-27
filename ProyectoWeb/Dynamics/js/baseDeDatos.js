@@ -880,7 +880,7 @@ busqueda.addEventListener("input",function(event){
                 if(boton.textContent===baseDatosJSON.canciones[e].nombre)
                 {
                     link=baseDatosJSON.canciones[e].link;
-                    id_canciones.push(baseDatosJSON.canciones[e].id_genero);
+                    id_canciones.push(baseDatosJSON.canciones[e].id_genero)
                     // Calcular la moda de id_canciones de forma aún más fácil, sin filter ni sort
                     if (id_canciones.length>0) 
                     {
@@ -899,19 +899,21 @@ busqueda.addEventListener("input",function(event){
                           }//USA MODA
                       }
                     }
+
                     // Obtener el arreglo de usuario desde la cookie de forma sencilla, sin parse, try ni catch
                     console.log(Usuario_actual);
                     let donCookie=document.cookie.split("; ");
                     for (let i=0; i<donCookie.length; i++) 
                     {
                       let [key, valor]=donCookie[i].split("=");
-                        if (key === Usuario_actual+"_are")
+                        if (key ===Usuario_actual+"_are")
                         {
                             console.log(id_canciones);
                             setCookie(Usuario_actual+"_are",moda,1000)
                             break;
                         }
                     }
+                   
                 }
             }
             console.log(link);  
