@@ -675,7 +675,7 @@ const baseDatosJSON = {
       artista:"Santana",
       id_artista:21,
       descripcion:"Supernatural es el álbum más exitoso de Santana, lanzado en 1999. Combina el rock latino característico de Santana con elementos de pop, rock, y ritmos latinos.",
-      url_img:"https://indierocks.sfo3.digitaloceanspaces.com/wp-content/uploads/2021/08/Frank-Ocean_Blonde_portada.jpg"
+      url_img:"https://m.media-amazon.com/images/I/914YBikSBjL._UF1000,1000_QL80_.jpg"
     },
     {
       id:24,
@@ -713,44 +713,73 @@ let siguiente=document.getElementById("btn_reproduciendo_siguiente");
 let regresar=document.getElementById("btn_reproduciendo_regresar");
 let formato_resultado;
 let player;
+let duration=0;
+let VolumenAntes=0;
+let volume;
+let Intervalo;
 let link;
 let id_genero=[1,2,3,4,5,6,7,8];
 let id_canciones=[];
-
+let moda;
 let maximo=baseDatosJSON.canciones.length;
+const seekBar = document.getElementById('seekBar');
+const volumeSlider = document.getElementById('volumeSlider');
+const playPauseBtn = document.getElementById('playPauseBtn');
 //Función para mostrar el video
 function hacer(link)
 {
-    if(player)
-      player.destroy();
-    player = new YT.Player("player", 
+  if(player)
+  player.destroy();
+  player = new YT.Player("player", 
+  {
+    videoId: link,
+    playerVars: 
     {
-      videoId: link,
-      playerVars: 
-      {
-          controls: 0,
-          modestbranding: 1,
-          rel: 0
-      },
-      events:
-      {
-          onReady: onPlayerReady,
-      }
-    });
-    function onPlayerReady()
+        controls: 0,
+        modestbranding: 1,
+        rel: 0
+    },
+    events:
     {
-      player.playVideo();
+        onReady: onPlayerReady,
     }
-    play.addEventListener("click",()=>{
-        let state = player.getPlayerState();
-        if(state == YT.PlayerState.PLAYING){
-            player.pauseVideo();
-        }
-        else
-        {
-            player.playVideo();
-        }
-    });
+  });  
+}
+play.addEventListener("click",()=>
+{
+  let state = player.getPlayerState();
+  if(state == YT.PlayerState.PLAYING){
+    player.pauseVideo();
+    play.innerHTML = "X";
+  }
+  else
+  {
+    player.playVideo();
+  }
+});
+seekBar.addEventListener("input", ()=>
+{
+  let seekTo = seekBar.value;
+  player.seekTo(seekTo, true);
+});
+function onPlayerReady(event)
+{
+  duration = player.getDuration();
+  player.playVideo();
+  seekBar.max =duration;
+  volumeSlider.value =player.getVolume();
+  Intervalo =setInterval(()=>
+  {
+    if(player && player.getPlayerState() === YT.PlayerState.PLAYING)
+    {
+      seekBar.value = player.getCurrentTime();
+    }
+    volumeActual=player.getVolume();
+    if(volumeActual !== VolumenAntes)
+    {
+      volumeSlider.value = volumeActual;
+    }
+  }, 100);
 }
 buscador_form.addEventListener("submit", function(e)
 { //se le hace prevent para evitar que se recargue la pagina 
@@ -759,7 +788,7 @@ buscador_form.addEventListener("submit", function(e)
 busqueda.addEventListener("input",function(event){
     event.preventDefault();
     pi.innerHTML="";
-    let siVacio = busqueda.value.trim();
+    let siVacio =busqueda.value.trim();
     if (siVacio === "")
     {
         return;
@@ -785,23 +814,33 @@ busqueda.addEventListener("input",function(event){
                 {
                     link=baseDatosJSON.canciones[e].link;
                     id_canciones.push(baseDatosJSON.canciones[e].id_genero);
-                    let suma=0;
-                    for (let i=0; i<id_canciones.length; i++) 
+                    // Calcular la moda de id_canciones de forma aún más fácil, sin filter ni sort
+                    if (id_canciones.length>0) 
                     {
-                      suma += id_canciones[i];
+                      let conteo={};
+                      moda=id_canciones[0];
+                      let maxiiii=1;
+                      for (let i=0; i<id_canciones.length; i++)
+                      {
+                          let numa=id_canciones[i];
+                          conteo[numa]=(conteo[numa] || 0) + 1;
+                          if (conteo[numa]>maxiiii) 
+                          {
+                            maxiiii=conteo[numa];
+                            moda=numa;
+                          }
+                      }
                     }
-                    let promedio=suma/id_canciones.length;
-                    let promedioRedondeado=Math.round(promedio);
                     // Obtener el arreglo de usuario desde la cookie de forma sencilla, sin parse, try ni catch
-                    console.log(usuario_puesto);
+                    console.log(Usuario_actual);
                     let donCookie=document.cookie.split("; ");
                     for (let i=0; i<donCookie.length; i++) 
                     {
                       let [key, valor]=donCookie[i].split("=");
-                        if (key === usuario_puesto+"_are")
+                        if (key === Usuario_actual+"_are")
                         {
-                            console.log(valor);
-                            setCookie(usuario_puesto+"_are",promedioRedondeado,1000)
+                            console.log(id_canciones);
+                            setCookie(Usuario_actual+"_are",moda,1000)
                             break;
                         }
                     }
@@ -813,7 +852,7 @@ busqueda.addEventListener("input",function(event){
     });
     if (pi.children.length === 0) 
     { 
-        let sinCoincidencias = document.createElement("p");
+        let sinCoincidencias=document.createElement("p");
         sinCoincidencias.textContent = "Sin coincidencias";
         pi.appendChild(sinCoincidencias);
     }
@@ -937,3 +976,10 @@ for(let p=0; p<artistasN_aleatorio.length; p++)
 }
 
 
+volumeSlider.addEventListener("input", () => //evento que actualiza el volumen
+{
+  if (player) 
+  {
+    player.setVolume(parseInt(volumeSlider.value));
+  }
+});

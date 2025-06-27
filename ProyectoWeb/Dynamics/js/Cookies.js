@@ -14,6 +14,7 @@ let usuarios_creados;
 let input_usuario_creado=document.getElementById("usuario_nuevo");
 let input_contrasena_creada=document.getElementById("contrasena_del_usuario_nuevo");
 let usuarios={};
+let Usuario_actual
 /*contenedores*/
 //////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////Declaracion de funciones
@@ -28,7 +29,6 @@ function setCookie(nombre, valor, dias){
 function getCookie(nombre){
     let cookies = document.cookie;
     cookies = cookies.split(";");
-    console.log=(cookies);
     for(let i=0 ; i<cookies.length; i++)
     {
         let galleta = cookies[i].trim();
@@ -148,56 +148,28 @@ envia_sesion.addEventListener("click", function(event) // Evento detecta cuando 
 ////////////////////////////INICIO DE SESION AUTOMATICO///////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-/*let verificacion2;
-let arreglo_cuenta=document.cookie.split(";"); //guarda las cookies en arreglos
-//pude haber usado directamente el valor de arreglo_usuarios, pero así mantengo un orden
-let numero=arreglo_cuenta.length;  
-let inicio_automatico=arreglo_cuenta[numero-1]; //obtengo la cookie más reciente del arreglo
-//que es el iniciode sesión
-console.log("ESPEREMOS");
-console.log(inicio_automatico)
-
-for(let d=0; d<arreglo_cuenta.length; d++) //itero para comparar la última cookie
-//con las demás que contiene las cuentas
+document.addEventListener("DOMContentLoaded", ()=>
 {
-    let texto_de_cookie=inicio_automatico.slice(2); //para que no tome el _I y compare
-    //de manera la cookie del inicio de sesión (_I) con la de la cuenta
-    console.log(texto_de_cookie);
-    console.log("Ya se hizo");
-    //devuelve verdadero o falso
-    verificacion2=arreglo_cuenta[d].includes(texto_de_cookie);
-    console.log(verificacion2);
-    if(arreglo_cuenta.length>1)
+    Usuario_actual = getCookie("ACTUAL");
+    if(Usuario_actual !== null)
     {
-        if(verificacion2) 
-            {
-                console.log("Se inició automáticamente");
-                //esconder la interfaz del login
-                display_signup.classList.add('oculto');
-                //Para que aparezca ahora el display de home con el reproductor, el aside
-                cont_reproduciendo.classList.remove('oculto');
-                buscador_sec.classList.remove('oculto');
-                interfaz.classList.remove('oculto');
-                break; //se pone para evitar el resto de iteraciones
-            }
-            else
-            {
-                console.log("No se pudo iniciar sesión de manera automática");
-            }
+        contra = getCookie(Usuario_actual);
+        if(contra)
+        {
+            console.log("Inicio automatico con" + Usuario_actual)
+            //////////////////////////////////////ESCONDER DISPLAY LOGIN Y MOSTRAR INTERFAZ DE LA APP/////////////////////////////////////////////////
+            display_signup.classList.add('oculto'); //esconder la interfaz del login
+            cont_reproduciendo.classList.remove('oculto'); //Para que aparezca ahora el display de home con el reproductor, el aside
+            buscador_sec.classList.remove('oculto');
+            interfaz.classList.remove('oculto'); 
         }
     }
-    }
-let numero2=arreglo_usuarios.length;
-let cookie_sesion=arreglo_usuarios[numero2-1]; //selecciona el último elemento de la lista de 
-//todas las cookies, el cual es la cookie que tiene _I
-console.log(cookie_sesion);
-console.log("TAKAKAKAKAK");
-cerrar_sesion_btn= document.getElementById("cerrar_sesion_btn");
-cerrar_sesion_btn.addEventListener("click", ()=>{
-    let solo_nombre=cookie_sesion.split("=");
-    let nombre_correcto=solo_nombre[0];
-    let valor_correcto=solo_nombre[1];
-    console.log("TATGSGSGSGSHSJSJSJSJSK");
-    document.cookie=`${cookie_sesion}; max-age=0; path=/`;
+
+});
+////////////////////CERRAR SESION///////////////////////
+let cerrar_sesion_btn = document.getElementById('cerrar_sesion_btn');
+cerrar_sesion_btn.addEventListener('click', ()=>
+{
+    deleteCookie("ACTUAL");
     window.location.reload();
-});*/
+})
