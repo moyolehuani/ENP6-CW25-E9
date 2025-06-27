@@ -5,7 +5,7 @@ ForBeat es un reproductor de música con una selección de artistas y canciones 
 
 En nuestro reproductor, buscamos que se lograra la perfecta cohesión entre los elementos, dándole prioridad al funcionamiento de estos mediante el uso de herramientas de programación, tales como JavaScript, así como la implementación del diseño mediante CSS y la formación de toda nuestra estructura (o maquetado) en HTML. 
 
-Como equipo, uno de nuestros objetivos principales era conseguir desarrollar completamente todas las ideas que se habían planteado al elaborar nuestro prototipo, tales ideas consideradas en base a las habilidades y posibilidades de cada uno de los integrantes, es decir, pensamos en que nos gustaría desarollar y cómo podríamos desarrollarlo, así como también si seríamos capaces de realizarlo y culminarlo. 
+Como equipo, uno de nuestros objetivos principales era conseguir desarrollar completamente todas las ideas que se habían planteado al elaborar nuestro prototipo, tales ideas consideradas con base en las habilidades y posibilidades de cada uno de los integrantes, es decir, pensamos en que nos gustaría desarollar y cómo podríamos desarrollarlo, así como también, si seríamos capaces de realizarlo y culminarlo. 
 
 De igual forma, como otro objetivo, nos pusimos del lado del usuario, enriqueciendo a nuestro reproductor de cosas dinámicas y atractivas, como animaciones entre los botones, carruseles, cambio de tema, creación de playlist personalizadas, barra de búsqueda con scroll incluído, una sección de recomendaciones, además de una clasificación de sus preferencias en una bliblioteca conforme a canción, artista y albumes; así como también un resguardo eficaz de sus datos mediante el uso de cookies. Todo esto, esperando el entretenimiento y la posibilidad de brindarles una experiencia agradable y personalizada. 
 
@@ -51,7 +51,7 @@ Inicia sesión : ingresa los datos que colocaste anteriormente para poder accede
 Cambio de tema 
 
 
-<img engranaje > En este icono podras acceder a la configuracion en donde encontrarás la opcion "temas", ahí podras elegir entre el tema que más sea de tu agrado, para así tener tu reproductor más personalizado de igual forma podrás ver los creditos del equipo que hizo posible este trabajo 
+<img engranaje > En este icono podrás acceder a la configuración en donde encontrarás la opcion "temas", ahí podras elegir entre el tema que más sea de tu agrado, para así tener tu reproductor más personalizado de igual forma podrás ver los creditos del equipo que hizo posible este trabajo.
 
 
 
@@ -95,4 +95,4 @@ Dentro de nuestro reproductor contamos con nuestro menú principal
 
 "" fue hecho con mucho esfuerzo y dedicación, así como el cariño de cada uno de nosotros. Esperamos les guste. 
 
-Agradecemos a nuestra asesora ariadna etc etc
+Agradecemos a nuestra asesora Ariadna etc etc
