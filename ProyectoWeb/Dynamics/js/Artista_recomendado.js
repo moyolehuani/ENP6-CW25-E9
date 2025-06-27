@@ -39,3 +39,8 @@ boton_Izq2.addEventListener("click", function(){
      }
     )
 });
+
+
+
+
+//artistas_recomendados.innerHTML=` `;
