@@ -135,10 +135,14 @@
                             <div id="encabezado_crear_playlist">
                                 <p>Crea tu nueva playlist</p>
                                 <button id="quitar_crear_playlistBtn">x</button>
+                                <div id="cancionesPlay_cont" class="oculto"></div>
                             </div>
-                            <form>
+                            <form id="poner_nom_playlist">
                                 <input type="text" id="nombre_playlist" name="nombre_playlist" placeholder="Nombre de tu nueva Playlist" required>
-                                <input type="submit" name="btn_terminar_playlist" value="Crea tu nueva playlist">
+                                <input type="submit" name="btn_elegir_nombre" value="Verificar el nombre de tu playlist">
+                            </form>
+                            <form id="terminar_playlist" class="oculto">
+                                <input type="submit" name="btn_terminar_playlist" value="Terminar tu playlist">
                             </form>
                         </div>
                     </div>

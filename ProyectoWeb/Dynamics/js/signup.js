@@ -125,6 +125,13 @@ let contenedor_signup= document.getElementById("contenedor_signup");
 let añadir_playlistBtn=document.getElementById("añadir_playlistBtn");
 let quitar_crear_playlistBtn=document.getElementById("quitar_crear_playlistBtn");
 let crear_playlist=document.getElementById("crear_playlist");
+let terminar_playlist=document.getElementById("terminar_playlist");
+let poner_nom_playlist=document.getElementById("poner_nom_playlist");
+let nom_playlist=document.getElementById("nombre_playlist");
+let cont_botones_playlist=document.getElementById("cont_botones_playlist");
+let cancionesPlay_cont=document.getElementById("cancionesPlay_cont");
+let playlist_nom;
+console.log(nom_playlist.value);
 
 let interfaz= document.getElementById("interfaz"); //interfaz con lo del home y el aside y el reproductor
 let contenedor_playlist=document.getElementById("playlist_contenedor");
@@ -137,6 +144,11 @@ let btn_registrarse= document.getElementById("btn_registarte");
 let contenedor_registarse= document.getElementById("contenedor_registarse");
 let buscador_sec= document.getElementById("buscador_sec"); //estas como no se pueden ocultar ya que (position:fixed),se tienen que ocultar una por una
 let cont_reproduciendo= document.getElementById("cont_reproduciendo");
+
+//JSON de playlist
+let JSON_Playlist={
+    
+}
 
 /*///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /*//////////////////////////////////////////////LOGICA DEL LOGIN/////////////////////////////////////////////////////////////////////// */
@@ -316,20 +328,63 @@ seleccion_tema.addEventListener("change", function () {
 //Crear y quitar playlist
 añadir_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.remove("oculto");
-    for(let i=0;i<baseDatosJSON.canciones.length;i++)
-    {
-        if(baseDatosJSON.canciones[i].nombre.includes(texto))
-        {
-            formato_resultado=document.createElement("button");
-            formato_resultado.classList.add("estilo_por_resultado");
-            formato_resultado.id = "cancion_" + baseDatosJSON.canciones[i].nombre;
-            formato_resultado.textContent=baseDatosJSON.canciones[i].nombre;
-            pi.appendChild(formato_resultado); 
-        }
-    }
 });
 quitar_crear_playlistBtn.addEventListener("click", ()=>{
     crear_playlist.classList.add("oculto");
 });
+poner_nom_playlist.addEventListener("submit", function(e){
+    e.preventDefault();
+    cancionesPlay_cont.innerHTML="";
+    poner_nom_playlist.classList.add("oculto");
+    terminar_playlist.classList.remove("oculto");
+    cancionesPlay_cont.classList.remove("oculto");
+    playlist_nom=nom_playlist.value;
+    JSON_Playlist[playlist_nom]=[];
+    console.log(JSON_Playlist);
+    console.log(playlist_nom);
+
+    for(let i=0;i<baseDatosJSON.canciones.length;i++)
+    {
+        formato_resultado=document.createElement("button");
+        formato_resultado.classList.add("estilo_por_resultado");
+        formato_resultado.id = "cancion_" + baseDatosJSON.canciones[i].nombre;
+        formato_resultado.textContent=baseDatosJSON.canciones[i].nombre;
+        cancionesPlay_cont.appendChild(formato_resultado);
+        console.log(baseDatosJSON.canciones.length);
+    }
+    let butones = crear_playlist.querySelectorAll("button.estilo_por_resultado");
+    butones.forEach(boton => {
+        boton.addEventListener("click", ()=>{
+            let linki;
+            for(let e=0;e<baseDatosJSON.canciones.length;e++)
+            {
+                if(boton.textContent===baseDatosJSON.canciones[e].nombre){
+                    linki=baseDatosJSON.canciones[e].link;
+                    if(!JSON_Playlist[playlist_nom].includes(linki))
+                        JSON_Playlist[playlist_nom].push(linki);
+                }
+            };
+            return;
+            
+        });
+    });
+});
+terminar_playlist.addEventListener("submit", function(e){
+    e.preventDefault();
+    console.log(JSON_Playlist);
+    let nueva_playlist=document.createElement("button");
+    nueva_playlist.setAttribute("class", "nueva_playlist");
+    cont_botones_playlist.appendChild(nueva_playlist);
+    nueva_playlist.textContent=nom_playlist.value;
+    terminar_playlist.classList.add("oculto");
+    poner_nom_playlist.classList.remove("oculto");
+    cancionesPlay_cont.classList.add("oculto");
+    crear_playlist.classList.add("oculto");
+    nueva_playlist.addEventListener("click", ()=>{
+        let nomPlay = nueva_playlist.textContent
+        console.log(JSON_Playlist[nomPlay]);
+    });
+});
+
 
 
