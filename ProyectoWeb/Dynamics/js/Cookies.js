@@ -84,15 +84,18 @@ formulario_registro.addEventListener("submit", function(e) //Evento que registra
     input_contrasena_creada.value="";
     console.log(usuario_creado +"= usuario creado");
     console.log(contrasena_creada + "= contra creada");
-    //se crea la cookie de la cuenta
     
     setCookie(usuario_creado, contrasena_creada, 1000); // cookie perpetua
-    usuarios[usuario_creado]=[];
-    console.log(usuarios)
+
+    //Crea el arreglo para cada usuarui
+    let arregloUsuario = [];
+    setCookie(usuario_creado+"_are",JSON.stringify(arregloUsuario), 1000);
+    console.log(document.cookie);
+    //Desaparecer contenedor
     desaparecer_contenedor(contenedor_registarse);
     aparecer_contendor(contenedor_signup);
     console.log(document.cookie + "estas son las cookies");//lo anterior es una pequeña comprobación de que todo salió bien
-    
+    //se crea la cookie de la cuenta
 });
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////Comprobación de información al iniciar sesión///////////////////
@@ -130,6 +133,7 @@ envia_sesion.addEventListener("click", function(event) // Evento detecta cuando 
             interfaz.classList.remove('oculto'); 
             ////////////////////////////////////////////////////////////////////////////////////////
             setCookie("ACTUAL", usuario_puesto, 10000);
+
             break; //detiene la ejecución del for cuando ya se inicia sesión//esto evita el resto de las alertas por los demás elementos
         }
     }
@@ -183,7 +187,6 @@ for(let d=0; d<arreglo_cuenta.length; d++) //itero para comparar la última cook
         }
     }
     }
-/*
 let numero2=arreglo_usuarios.length;
 let cookie_sesion=arreglo_usuarios[numero2-1]; //selecciona el último elemento de la lista de 
 //todas las cookies, el cual es la cookie que tiene _I
