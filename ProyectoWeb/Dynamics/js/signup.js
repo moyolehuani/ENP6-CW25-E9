@@ -429,6 +429,11 @@ terminar_playlist.addEventListener("submit", function(e){
         contenido_playlists.classList.add("oculto");
     });
 });
-
+//////////////EVENTO de cambio a creditos///////////////
+let creditos = document.getElementById('creditos');
+creditos.addEventListener('click', ()=>
+{
+    window.location.href = "./Templates/creditos.html";
+})
 
 
