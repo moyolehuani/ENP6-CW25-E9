@@ -1,5 +1,7 @@
+///////////////////////////////////////////Declaraciones///////////////////////////////////////////
 let contenedor_dinamico_biblioteca= document.getElementById('contenedor_dinamico_biblioteca');
 let selectArtis= document.getElementById('selectArtis');
+/*Funciones*/
 function limpiar()
 {
     contenedor_dinamico_biblioteca.innerHTML = "";
@@ -20,7 +22,7 @@ function mostrarArtistas()
         contenedor_dinamico_biblioteca.appendChild(div);
         let btn = div.querySelector(".btn-artista");
         let descripcion = div.querySelector(".descripcion-artista");
-        btn.addEventListener("click", () => 
+        btn.addEventListener("click", () => //evento para 
         {
             descripcion.classList.toggle("oculto");
             descripcion.classList.add('animar-aparicion')
