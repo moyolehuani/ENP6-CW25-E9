@@ -59,8 +59,27 @@ Cambio de tema
 
 ## Lista de Tecnologías utilizadas 
 
-  <img src="https://img.shields.io/badge/📖-bookworm-ffd3e2?style=flat-square">
+<p align="center">
 
+  <!-- Languages -->
+  <img src="https://img.shields.io/badge/JavaScript-ffd3e2?logo=javascript&logoColor=white&style=flat-square">
+  <img src="https://img.shields.io/badge/HTML-c2d4f8?logo=html5&logoColor=white&style=flat-square">
+  <img src="https://img.shields.io/badge/CSS-ffebc7?logo=css3&logoColor=white&style=flat-square">
+
+  <br>
+
+  <!-- Tools -->
+  <img src="https://img.shields.io/badge/GitHub-d8e2dc?logo=github&logoColor=white&style=flat-square">
+  <img src="https://img.shields.io/badge/VSCode-fdc3d9?logo=visualstudiocode&logoColor=white&style=flat-square">
+  <img src="https://img.shields.io/badge/XAMPP-f3d1ff?logo=xampp&logoColor=white&style=flat-square">
+
+  <br>
+
+  <!-- APIs -->
+  <img src="https://img.shields.io/badge/YouTube_API-ffd3e2?logo=youtube&logoColor=white&style=flat-square">
+  <img src="https://img.shields.io/badge/JSON-c2d4f8?logo=json&logoColor=white&style=flat-square">
+
+</p>
 
 ## Integrantes del equipo y aportación al proyecto
 
