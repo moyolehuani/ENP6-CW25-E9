@@ -432,20 +432,121 @@ input:checked
 .estilo_por_resultado:hover p:hover {
     background: var(--color-resultado-busqueda-hover);
 }
+#Izquierda
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
+#Derecha
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
+#Izquierda2
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
+#Derecha2
+{
+    margin: 20px;
+    margin-top: 54px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(38, 35, 214, 0.511);
+}
 
-#cont_art_recom{
+
+#cont_art_recom
+{
     margin-top: 10vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth; 
+    
+}
+#cont_album_recom
+{
+    margin-top: 10vh;
+    display: flex;
+    overflow-x: auto;   
+    scroll-behavior: smooth;
+}
+.elemento
+{
+    padding: 10px; 
+    margin: 2vh;
+    margin-top: 1vh;
+    width: 17vw; 
+    height: 17vh;
+    border-radius: 100%;
+}
+.elemento:hover
+{
+    width: 22vw;
+    height: 22vh;
+}
+
+#contiene_artistas
+{
+    width: 70vw;
+    height: 30vh;
+    overflow-x: auto;
+    overflow-x: hidden; 
+    display: flex;
+    flex-direction: row;
+}
+#contiene_album
+{
+    width: 70vw;
+    height: 30vh;
+    overflow-x: auto;
+    overflow-x: hidden;  
+    display: flex;
+    flex-direction: row;
 }
 .recomendado
 {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
     margin-left: 3vw;
-    height: 25vh;
+    height: 37vh;
+    width: 80vw;
+    background-color: rgba(66, 221, 66, 0.082);
+    border-radius: 10%;
+}
+.recomendado2
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 3vw;
+    height: 37vh;
+    width: 80vw;
+    background-color: rgba(57, 57, 205, 0.058);
+    border-radius: 10%;
 }
 .recomendado_title
 {
     color: white;
+    text-align: center;
+    margin-top: 2vh;
+    font-size: 3vh;
 }
 .horizontal_recom{
     display: flex;

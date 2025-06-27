@@ -716,7 +716,9 @@ let previousVolume=0;
 let volume;
 let updateInterval;
 let link;
-let cancion_cambio;
+let id_genero=[1,2,3,4,5,6,7,8];
+let id_canciones=[];
+
 let maximo=baseDatosJSON.canciones.length;
 const seekBar = document.getElementById('seekBar');
 const volumeSlider = document.getElementById('volumeSlider');
@@ -808,13 +810,37 @@ busqueda.addEventListener("input",function(event){
             for(let e=0;e<baseDatosJSON.canciones.length;e++)
             {
                 if(boton.textContent===baseDatosJSON.canciones[e].nombre)
-                  link=baseDatosJSON.canciones[e].link;
+                {
+                    link=baseDatosJSON.canciones[e].link;
+                    id_canciones.push(baseDatosJSON.canciones[e].id_genero);
+                    let suma=0;
+                    for (let i=0; i<id_canciones.length; i++) 
+                    {
+                      suma += id_canciones[i];
+                    }
+                    let promedio=suma/id_canciones.length;
+                    let promedioRedondeado=Math.round(promedio);
+                    // Obtener el arreglo de usuario desde la cookie de forma sencilla, sin parse, try ni catch
+                    console.log(usuario_puesto);
+                    let donCookie=document.cookie.split("; ");
+                    for (let i=0; i<donCookie.length; i++) 
+                    {
+                      let [key, valor]=donCookie[i].split("=");
+                        if (key === usuario_puesto+"_are")
+                        {
+                            console.log(valor);
+                            setCookie(usuario_puesto+"_are",promedioRedondeado,1000)
+                            break;
+                        }
+                    }
+                }
             }
             console.log(link);  
             hacer(link)
         });
     });
-    if (pi.children.length === 0) {
+    if (pi.children.length === 0) 
+    { 
         let sinCoincidencias = document.createElement("p");
         sinCoincidencias.textContent = "Sin coincidencias";
         pi.appendChild(sinCoincidencias);
