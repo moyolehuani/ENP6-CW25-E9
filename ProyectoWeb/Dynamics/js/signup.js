@@ -304,7 +304,8 @@ const seleccion_tema = document.getElementById('seleccion_tema');
 function elegirTema(TemaElegido) {
   let tema = temas[TemaElegido];
   if (!tema) return;
-  for (const variable in tema) {
+  for (const variable in tema) 
+  {
     document.documentElement.style.setProperty(variable, tema[variable]);
   }
 }
