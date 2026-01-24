@@ -184,7 +184,7 @@ const baseDatosJSON = {
       nombre: "Hammer of justice",
       artista: "Toby Fox",
       id_artista: 15,
-      album: "Deltarune Soundtrack",
+      album: "UNDERTALE Soundtrack",
       id_album: 17,
       link: "FJQyqhU4HXY",
       genero: "musica de videojuego",
