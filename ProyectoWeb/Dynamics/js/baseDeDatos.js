@@ -1,5 +1,14 @@
 ///IMPORTANTE: AGREGAR A OSCAR CHÁVEZ// ARI SONGS, SI NO, FUNA
-
+let arreglo_de_generos = []
+//Lectura de cookies para que el arreglo de los géneros no esté vacío
+const cargarHistorialInicial = () => {
+    let historial = getCookie("historial_generos"); // Usando la función de Cookies.js
+    if (historial) {
+        arreglo_de_generos = historial.split(",");
+    }
+    console.log("Historial global cargado:", arreglo_de_generos);
+};
+cargarHistorialInicial();
 
 const baseDatosJSON = {
   canciones: [
@@ -413,13 +422,13 @@ const baseDatosJSON = {
       id: 13,
       nombre: "The Marias",
       descripcion: "Grupo con una identidad visual y sonora muy cuidada, liderado por una voz suave y enigmática.",
-      url_img: "https://static.stereogum.com/uploads/2024/04/The-Marias-1712432101.jpg"
+      url_img: "https://cdn-images.dzcdn.net/images/artist/9a81e875aa2689278b4ad8c385aacd12/1900x1900-000000-80-0-0.jpg"
     },
     {
       id: 14,
       nombre: "Kali Uchis",
       descripcion: "Artista colombo-estadounidense con una estética única y una narrativa visual marcada por el arte y la introspección.",
-      url_img: "https://www.universalmusic.com.pe/files/2023/10/IMG_7411-min-scaled-e1697833803358.jpeg"
+      url_img: "https://i.scdn.co/image/ab676161000051746a5bff9f9278d4eea13bb67e"
     },
     {
       id: 15,
@@ -795,6 +804,39 @@ const playPauseBtn = document.getElementById('playPauseBtn');
 //Función para mostrar el video
 function hacer(link)
 {
+  console.log("Este es el primer intento:", link);
+    
+    // 1. Encontrar la canción y su género en la base de datos
+    let canción = baseDatosJSON.canciones.find(c => c.link === link);
+    if (!canción) return; // Seguridad por si no se encuentra
+    
+    let ya_tenemos_el_genero = canción.genero;
+    console.log("El género de la canción es:", ya_tenemos_el_genero);
+
+    // 2. RECUPERAR EL HISTORIAL EXISTENTE
+    // Usamos la función getCookie que ya tienes definida en Cookies.js
+    let historial_previo = getCookie("historial_generos"); 
+
+    // 3. ACTUALIZAR EL HISTORIAL
+    // Si ya existe, le sumamos el nuevo género separado por una coma
+    // Si no existe, el nuevo género es el inicio del historial
+    let nuevo_historial = historial_previo ? historial_previo + "," + ya_tenemos_el_genero : ya_tenemos_el_genero;
+    // --- 3. ACTUALIZACIÓN DE LA VARIABLE GLOBAL Y LA COOKIE ---
+    // Agregamos el nuevo género al arreglo que vive afuera
+    arreglo_de_generos.push(ya_tenemos_el_genero);
+
+    // Guardamos el arreglo actualizado de vuelta en la cookie (como texto)
+    setCookie("historial_generos", arreglo_de_generos.join(","), 1000);
+
+    console.log("Arreglo global actualizado:", arreglo_de_generos);
+
+
+
+
+  console.log("El arreglo de los género es:", arreglo_de_generos);
+
+  //console.log("Cookies de género:", cookies_genero);
+
   if(player)
   player.destroy();
   player = new YT.Player("player", 
@@ -810,7 +852,11 @@ function hacer(link)
     {
         onReady: onPlayerReady,
     }
-  });  
+    
+    
+    
+  })
+  console.log("El link de la canción es:", link);
 }
 play.addEventListener("click",()=>
 {
@@ -998,58 +1044,112 @@ volumeSlider.addEventListener("input", () => //evento que actualiza el volumen
     player.setVolume(parseInt(volumeSlider.value));
   }
 });
-//CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
-let numeros_artistas=[]; //creo el arreglo con la cantidad de elementos igual
-//al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
-for(let a=0; a<baseDatosJSON.artistas.length; a++)
-{
-  numeros_artistas.push(a);
-}
-
-//ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
-//el número de artistas
-let artistasN_aleatorio=numeros_artistas; //creo el arreglo de 24 elementos
-for (let b=numeros_artistas.length - 1; b > 0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
-    let c=Math.floor(Math.random()*(b+1)); //la primera parte baja al entero más cercano los decimales
-    //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
-    [artistasN_aleatorio[b], artistasN_aleatorio[c]]=[artistasN_aleatorio[c], artistasN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
-}
-//posteriormente voy a poner imágenes aleatorias en Artistas recomendados
-let imagenes_contenedor=document.getElementById("contiene_artistas");
-let numero_imagen;
-for(let e=0; e<artistasN_aleatorio.length-1; e++)
-{
-  numero_imagen=artistasN_aleatorio[e];
-  imagenes_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.artistas[numero_imagen].url_img}" alt="Hola Mundo">`;
-}
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-//AHORA SIGUEN LOS ALBUMS RECOMENDADOS
-
-/////////////////////////////////
-
-//CREAR RECOMENDACIONES ALEATORIAS DE LOS ARTISTAS
-let numeros_album=[]; //creo el arreglo con la cantidad de elementos igual
-//al numero de artistas, y cada elemento es un número 1, 2,3,4 ...
-for(let a=0; a<baseDatosJSON.artistas.length; a++)
-{
-  numeros_album.push(a);
-}
-
-//ahora quiero un arreglo con números aleatorios del 1 al 24 en este caso, que es
-//el número de albumes
-let albumN_aleatorio=numeros_album; //creo el arreglo de 24 elementos
-for (let b=numeros_album.length-1; b>0; b--) {  //Lo hago del fin hacia atrás, porque no conseguí con b++ hacer el 0 como elemento
-    let c= Math.floor(Math.random()*(b+1)); //la primera parte baja al entero más cercano los decimales
-    //la parte del argumento aseguro que no se multiplique por cero y que devuelva un número mayor que el anterior ciclo
-    [albumN_aleatorio[b], albumN_aleatorio[c]]=[albumN_aleatorio[c], albumN_aleatorio[b]]; //se hace un intercambio, para que lo de en desorden y no en orden el arreglo
-}
-//posteriormente voy a poner imágenes aleatorias en Artistas recomendados
-let album_contenedor=document.getElementById("contiene_album");
-let numero_album;
-for(let e=0; e<albumN_aleatorio.length-1; e++)
-{
-  numero_album=albumN_aleatorio[e];
-  album_contenedor.innerHTML+=`<img class="elemento" src="${baseDatosJSON.album[numero_album].url_img}" alt="Hola Mundo">`;
-}
 
 
+
+// --- 1. LÓGICA DE RANKING Y MODA ---
+
+/**
+ * Devuelve un arreglo de géneros ordenados por frecuencia (del más al menos escuchado).
+ */
+function obtenerRankingGeneros() {
+    if (typeof arreglo_de_generos === 'undefined' || arreglo_de_generos.length === 0) return [];
+
+    let conteo = {};
+    arreglo_de_generos.forEach(g => {
+        conteo[g] = (conteo[g] || 0) + 1;
+    });
+
+    // Convertimos a arreglo, ordenamos por cantidad y devolvemos solo los nombres
+    return Object.entries(conteo)
+        .sort((a, b) => b[1] - a[1])
+        .map(entrada => entrada[0]);
+}
+
+/**
+ * Función para calcular el género más escuchado (la moda)
+ */
+function obtenerGeneroMasEscuchado() {
+    const ranking = obtenerRankingGeneros();
+    return ranking.length > 0 ? ranking[0] : "Aún no hay reproducciones registradas.";
+}
+
+// Variable para compatibilidad y verificación en consola
+let moda_genero = obtenerGeneroMasEscuchado();
+console.log("El género global más escuchado es:", moda_genero);
+console.log("Ranking de géneros:", obtenerRankingGeneros());
+
+
+// --- 2. LÓGICA DE GENERACIÓN DE RECOMENDACIONES PRIORIZADAS ---
+
+/**
+ * Genera una lista de artistas o álbumes priorizando los géneros del ranking.
+ * @param {string} tipo - 'artistas' o 'album' (debe coincidir con las claves de baseDatosJSON)
+ */
+function generarListaPriorizada(tipo) {
+    const ranking = obtenerRankingGeneros();
+    const mezclar = (arr) => arr.sort(() => Math.random() - 0.5); // Función para aleatorizar
+    
+    let seleccionados = [];
+    let idsAgregados = new Set(); // Para evitar duplicados de artistas/álbumes
+    let catalogoCompleto = baseDatosJSON[tipo];
+
+    // NIVEL 1: Recorrer el ranking de géneros (1ro, 2do, 3ro, etc.)
+    ranking.forEach(genero => {
+        // Obtenemos los IDs de los elementos que pertenecen a este género según las canciones
+        let idsEnGenero = baseDatosJSON.canciones
+            .filter(c => c.genero === genero)
+            .map(c => (tipo === 'artistas' ? c.id_artista : c.id_album));
+        
+        let idsUnicosEnGenero = [...new Set(idsEnGenero)];
+
+        // Filtramos del catálogo los que pertenecen al género y no han sido agregados
+        let elementosParaAgregar = catalogoCompleto.filter(item => 
+            idsUnicosEnGenero.includes(item.id) && !idsAgregados.has(item.id)
+        );
+
+        // Mezclamos este grupo y lo añadimos a la lista final
+        mezclar(elementosParaAgregar).forEach(item => {
+            seleccionados.push(item);
+            idsAgregados.add(item.id);
+        });
+    });
+
+    // NIVEL 2: Rellenar con el resto de la base de datos (lo que no entró en el ranking)
+    let restoDelCatalogo = catalogoCompleto.filter(item => !idsAgregados.has(item.id));
+    mezclar(restoDelCatalogo).forEach(item => {
+        seleccionados.push(item);
+        idsAgregados.add(item.id);
+    });
+
+    return seleccionados;
+}
+
+
+// --- 3. RENDERIZADO EN LA INTERFAZ ---
+
+// Renderizar Artistas Recomendados
+let imagenes_contenedor = document.getElementById("contiene_artistas");
+if (imagenes_contenedor) {
+    imagenes_contenedor.innerHTML = ""; // Limpiar antes de insertar
+    const listaFinalArtistas = generarListaPriorizada('artistas');
+    
+    listaFinalArtistas.forEach(artista => {
+        imagenes_contenedor.innerHTML += `
+            <img class="elemento" src="${artista.url_img}" alt="${artista.nombre}" title="${artista.nombre}">
+        `;
+    });
+}
+
+// Renderizar Álbumes Recomendados
+let album_contenedor = document.getElementById("contiene_album");
+if (album_contenedor) {
+    album_contenedor.innerHTML = ""; // Limpiar antes de insertar
+    const listaFinalAlbumes = generarListaPriorizada('album');
+    
+    listaFinalAlbumes.forEach(album => {
+        album_contenedor.innerHTML += `
+            <img class="elemento" src="${album.url_img}" alt="${album.nombre}" title="${album.nombre}">
+        `;
+    });
+}
